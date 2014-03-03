@@ -106,8 +106,8 @@ $focus: true; // .. true / false
 // .. Links
 //
 $link-color: #2980b9;
-$link-color-hover: #ccc;
-$link-color-active: darken($link-color-hover, 10%);
+$link-color-hover: '';
+$link-color-active: '';
 $link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 

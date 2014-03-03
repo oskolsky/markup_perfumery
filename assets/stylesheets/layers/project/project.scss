@@ -11,8 +11,12 @@
 //
 //****************************************************************************************************
 .header {
+  position: relative;
   height: 40px;
   background-color: #2f3235;
+  color: #fff;
+  line-height: 40px;
+  > .ctn > .grid > .grid-i {margin-bottom: 0;}
   @include media-query(desktop) {
     &.__sticky {
       position: fixed;
@@ -25,6 +29,34 @@
     }
   }
 }
+
+  .logo {
+    @include prefixes(transform, translateY(-50%));
+    position: absolute;
+    top: 50%;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .header_nav {
+    text-align: right;
+    white-space: nowrap;
+  }
+    .header_nav_i {
+      @include prefixes(box-sizing, border-box);
+      display: inline-block;
+      width: 14.285%; // .. 1/7
+      border-left: 1px solid #414446;
+      text-align: center;
+      text-transform: uppercase;
+      &:last-child {border-right: 1px solid #414446;}
+    }
+      .header_nav_i_a {
+        display: block;
+        color: inherit;
+        &.__login {background-color: #fc5e7c;}
+      }
 
 
 
@@ -41,18 +73,14 @@
   line-height: 70px;
 }
   .nav_i {
-    @include prefixes(box-sizing, border-box);
-    display: inline-block;
-    width: 15.285%;
-    border-left: 1px solid #edeeee;
-    text-align: center;
+    @extend .header_nav_i;
+    border-color: #edeeee;
     font-size: 14px;
-    &:last-child {border-right: 1px solid #edeeee;}
-    a {
-      display: block;
-      color: inherit;
-    }
+    &:last-child {border-color: #edeeee;}
   }
+    .nav_i_a {
+      @extend .header_nav_i_a;
+    }
 
 
 
@@ -100,6 +128,7 @@
   background-color: #465065;
   color: #d0d0d4;
   line-height: 100px;
+  > .ctn > .grid > .grid-i {margin-bottom: 0;}
 }
 
   .footer_nav {
