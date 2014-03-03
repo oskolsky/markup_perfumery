@@ -1,0 +1,56 @@
+.header .grid-i {vertical-align: middle;}
+  .header_nav {
+    @media all and (min-width: 641px) {text-align: right;}
+    a {
+      color: #fff;
+      white-space: nowrap;
+      @media all and (max-width: 640px) {&:not(:last-child) {margin-right: 3rem;}}
+      @media all and (min-width: 641px) {&:not(:first-child) {margin-left: 3rem;}}
+      i {margin-top: -.3rem;}
+    }
+  }
+
+.intro {
+  padding: 12rem 0;
+  @media all and (min-width: 641px) and (max-width: 960px) {padding: 9rem 0;}
+  @media all and (max-width: 640px) {padding: 6rem 0;}
+}
+
+.features {margin-bottom: -4rem;}
+  .features_i {
+    margin-bottom: 4rem;
+    @media all and (max-width: 640px) {text-align: center;}
+  }
+    .features_ico {
+      @media all and (min-width: 641px) {margin-left: -1rem;}
+      margin-bottom: 2rem;
+      width: 120px;
+      height: 120px;
+      vertical-align: top;
+      background: {
+        color: transparent;
+        image: url(/landing/features.svg);
+        repeat: no-repeat;
+      }
+      &.__tools      {background-position: 0 0;}
+      &.__responsive {background-position: -120px 0;}
+      &.__forms      {background-position: -240px 0;}
+      &.__docs       {background-position: -360px 0;}
+      &.__more       {background-position: -480px 0;}
+      &.__feedback   {background-position: -600px 0;}
+    }
+
+.examples {
+  border: {
+    top: 1px solid lighten(#95a5a6, 25%);
+    bottom: 1px solid lighten(#95a5a6, 25%);
+  }
+}
+
+.footer_share {
+  @media all and (min-width: 641px) {text-align: right;}
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

@@ -1,0 +1,9 @@
+@if $grid == "responsive" {
+  
+  html {font-size: nth($root-font-size-list, 3);}
+  
+  @include body(3);
+
+  @include headers(3);
+  
+}
