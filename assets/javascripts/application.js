@@ -132,7 +132,6 @@ $(document).on('click touchstart', '[data-dialog="close"]', function() {
 //****************************************************************************************************
 $(function() {
   
-  $('#header').stickyHeader();
   $('#footer').stickyFooter();
 
 
@@ -191,7 +190,6 @@ $(function() {
   //****************************************************************************************************
   $(window).smartresize(function() {
 
-    $('#header').stickyHeader();
     $('#footer').stickyFooter();
 
   });

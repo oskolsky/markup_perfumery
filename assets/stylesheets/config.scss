@@ -3,7 +3,7 @@
 // .. FONTS
 //
 //****************************************************************************************************
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600&subset=latin,cyrillic);
 
 
 
@@ -12,15 +12,15 @@
 // .. GRID
 //
 //****************************************************************************************************
-$grid: fluid; // .. fixed / fluid / responsive
+$grid: fixed; // .. fixed / fluid / responsive
 $grid-width-transition: false; // .. true / false
 
 //
 // .. Fixed
 //
-$grid-fixed-col-qty:    12;
-$grid-fixed-col-width:  60px;
-$grid-fixed-col-gutter: 20px;
+$grid-fixed-col-qty:    24;
+$grid-fixed-col-width:  30px;
+$grid-fixed-col-gutter: 10px;
 $grid-fixed-col-indent: 20px;
 $grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-fixed-col-qty;
 
@@ -58,11 +58,11 @@ $max-width-list: (1180px, 940px, 620px);
 // .. Body
 //
 $base-bg: #fff;
-$base-color: #333;
+$base-color: #5f6674;
 $base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-$base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
+$base-font-size-list: (12px, 12px, 12px);
 $base-font-weight: 400;
-$base-line-height-list: (2rem, 2rem, 2rem);
+$base-line-height-list: (16px, 16px, 16px);
 
 //
 // .. Headings
@@ -108,7 +108,7 @@ $focus: true; // .. true / false
 $link-color: #2980b9;
 $link-color-hover: #ccc;
 $link-color-active: darken($link-color-hover, 10%);
-$link-style: un;        // .. nn / uu / un / nu
+$link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 
 //

@@ -11,6 +11,8 @@
 //
 //****************************************************************************************************
 .header {
+  height: 40px;
+  background-color: #2f3235;
   @include media-query(desktop) {
     &.__sticky {
       position: fixed;
@@ -28,9 +30,95 @@
 
 //****************************************************************************************************
 //
+// .. NAVIGATION
+//
+//****************************************************************************************************
+.nav {
+  height: 70px;
+  border-bottom: 1px solid #979595;
+  color: #465065;
+  white-space: nowrap;
+  line-height: 70px;
+}
+  .nav_i {
+    @include prefixes(box-sizing, border-box);
+    display: inline-block;
+    width: 15.285%;
+    border-left: 1px solid #edeeee;
+    text-align: center;
+    font-size: 14px;
+    &:last-child {border-right: 1px solid #edeeee;}
+    a {
+      display: block;
+      color: inherit;
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. BREADCRUMBS
+//
+//****************************************************************************************************
+.breadcrumbs {
+  height: 65px;
+  border-bottom: 1px solid #979595;
+  background-color: #c390cf;
+  color: #fff;
+  line-height: 65px;
+}
+  .breadcrumbs_i {
+    display: inline-block;    
+    font-size: 14px;
+    &:not(:last-child) {
+      &::after {
+        content: '>';
+        padding: 0 5px;
+      }
+    }
+    a {
+      color: inherit;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
 // .. FOOTER
 //
 //****************************************************************************************************
 .footer {
-
+  height: 100px;
+  border: {
+    top: 1px solid #d5d5d5;
+    bottom: 1px solid #d5d5d5;
+  }
+  background-color: #465065;
+  color: #d0d0d4;
+  line-height: 100px;
 }
+
+  .footer_nav {
+    &.__devider {
+      .footer_nav_i {
+        &:not(:last-child) {
+          &::after {content: '|';}
+        }
+      }
+    }
+    &.__icon {
+      .footer_nav_i {
+        margin: 0 10px;
+      }
+    }
+  }
+    .footer_nav_i {
+      display: inline-block;
+      font-size: 14px;
+      a {color: inherit;}
+      .fa {font-size: 18px;}
+    }

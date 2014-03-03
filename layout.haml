@@ -1,0 +1,15 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Page Title
+    = haml :"views/layouts/_head"
+  
+  %body#page.page
+    = haml :"views/common/_alerts"
+    = haml :"views/layouts/_header"
+    = haml :"views/layouts/_nav"
+    
+    %main#main.main{role: "main"}
+      = yield
+
+    = haml :"views/layouts/_footer"
