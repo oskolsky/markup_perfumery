@@ -1,4 +1,32 @@
 = haml :"views/common/_breadcrumbs"
 
-%section{role: "region", "aria-label" => "Catalog"}
-  .ctn
+.ctn
+  .p-t_2.p-b_6
+    .grid
+      
+      .grid-i.__grid-18>
+        %section{role: "region", "aria-label" => "Catalog"}
+          1
+      
+      .grid-i.__grid-6>
+        %aside#sidebar.sidebar{role: "sidebar"}
+          .p-t_2.p-b_2
+            %h2.tx.__center.__upper.__700 Perfume reviews
+          %hr.hr
+          .p-t_2
+            .reviews-thumbs
+              - 1.upto(5) do |i|
+                %figure.reviews-thumbs_i
+                  .grid
+                    .grid-i.__grid-2>
+                      .tx.__center
+                        %img.reviews-thumbs_i_photo{src: "/assets/images/fake/reviews-thumb-#{rand(1..5)}.jpg", width: 54, height: 54, alt: "Alexandra Toms, commented on Cerutti 1881 for woman"}
+                    .grid-i.__grid-4>
+                      %p <b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b>
+                      .grid
+                        .grid-i.__grid-2>
+                          %p.tx.__muted.__s 1 day ago
+                        .grid-i.__grid-2>
+                          %p.tx.__s
+                            %a{href: "#"} Check
+                            %a{href: "#"} Reply

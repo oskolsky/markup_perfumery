@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
 
   @for $i from 1 through 9 {
     $i: $i * 100;
-    .__#{$i} {font-weight: $i;}
+    &.__#{$i} {font-weight: $i;}
   }
 
   &.__i   {font-style: italic;}

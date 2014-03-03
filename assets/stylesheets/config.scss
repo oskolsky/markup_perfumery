@@ -69,22 +69,22 @@ $base-line-height-list: (16px, 16px, 16px);
 //
 $h-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
-$h1-font-size-list: (4rem, 4rem, 4rem);
-$h2-font-size-list: (3rem, 3rem, 3rem);
+$h1-font-size-list: (18px, 18px, 18px);
+$h2-font-size-list: (16px, 16px, 16px);
 $h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
 $h4-font-size-list: (2rem, 2rem, 2rem);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
 
-$h1-font-weight-list: (600, 600, 600);
-$h2-font-weight-list: (600, 600, 600);
+$h1-font-weight-list: (700, 700, 700);
+$h2-font-weight-list: (400, 400, 400);
 $h3-font-weight-list: (600, 600, 600);
 $h4-font-weight-list: (600, 600, 600);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
-$h1-line-height-list: (4rem, 4rem, 4rem);
-$h2-line-height-list: (3.2rem, 3.2rem, 3.2rem);
+$h1-line-height-list: (16px, 16px, 16px);
+$h2-line-height-list: (20px, 20px, 20px);
 $h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
 $h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h5-line-height-list: (inherit, inherit, inherit);
@@ -93,9 +93,10 @@ $h6-line-height-list: (inherit, inherit, inherit);
 //
 // .. Colors
 //
-$major-color: #333;
-$minor-color: #eee;
-$muted-color: #ccc;
+$major-color:  #333;
+$minor-color:  #eee;
+$muted-color:  #888;
+$border-color: #e8e8ea;
 
 //
 // .. Focus
@@ -105,7 +106,7 @@ $focus: true; // .. true / false
 //
 // .. Links
 //
-$link-color: #2980b9;
+$link-color: #3b86c4;
 $link-color-hover: '';
 $link-color-active: '';
 $link-style: nn;        // .. nn / uu / un / nu
