@@ -9,16 +9,10 @@
     color: transparent;
     repeat: no-repeat;
   }
-  // &.__16 {
-  //   @include size(16, 16);
-  //   background-image: url(/assets/images/icons/ico-16.png);
-  //   &.__cat {background-position: 0 0;}
-  //   &.__dog {background-position: -16px 0;}
-  // }
-  // &.__32 {
-  //   @include size(32, 32);
-  //   background-image: url(/assets/images/icons/ico-32.png);
-  //   &.__eagle {background-position: 0 0;}
-  //   &.__stork {background-position: -32px 0;}
-  // }
+  &.__22 {
+    @include size(22, 22);
+    background-image: url(/assets/images/icons/ico-22.png);
+    &.__prev {background-position: 0 0;}
+    &.__next {background-position: -22px 0;}
+  }
 }
