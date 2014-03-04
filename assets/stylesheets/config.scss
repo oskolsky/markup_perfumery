@@ -71,7 +71,7 @@ $h-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
 $h1-font-size-list: (18px, 18px, 18px);
 $h2-font-size-list: (16px, 16px, 16px);
-$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h3-font-size-list: (14px, 14px, 14px);
 $h4-font-size-list: (2rem, 2rem, 2rem);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
@@ -83,9 +83,9 @@ $h4-font-weight-list: (600, 600, 600);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
-$h1-line-height-list: (16px, 16px, 16px);
+$h1-line-height-list: (20px, 20px, 20px);
 $h2-line-height-list: (20px, 20px, 20px);
-$h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
+$h3-line-height-list: (20px, 20px, 20px);
 $h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h5-line-height-list: (inherit, inherit, inherit);
 $h6-line-height-list: (inherit, inherit, inherit);
@@ -101,7 +101,7 @@ $border-color: #e8e8ea;
 //
 // .. Focus
 //
-$focus: true; // .. true / false
+$focus: false; // .. true / false
 
 //
 // .. Links
