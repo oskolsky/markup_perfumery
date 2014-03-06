@@ -12,7 +12,7 @@
 // .. GRID
 //
 //****************************************************************************************************
-$grid: fixed; // .. fixed / fluid / responsive
+$grid: fluid; // .. fixed / fluid / responsive
 $grid-width-transition: false; // .. true / false
 
 //
@@ -27,9 +27,9 @@ $grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-
 //
 // .. Fluid
 //
-$grid-fluid-col-qty:    12;
-$grid-fluid-col-gutter: 2%;
-$grid-fluid-col-indent: 2rem; // .. rem / px
+$grid-fluid-col-qty:    24;
+$grid-fluid-col-gutter: 1%;
+$grid-fluid-col-indent: 20px; // .. rem / px
 
 //
 // .. Responsive
@@ -44,8 +44,8 @@ $grid-responsive-col-indent: 2rem; // .. rem / px
 //
 $root-font-size-list: (62.5%, 57.5%, 52.5%);
 $ctn-width-list: (80%, 80%, 80%);
-$min-width-list: (940px, 620px, 300px); 
-$max-width-list: (1180px, 940px, 620px);
+$min-width-list: (950px, 620px, 300px); 
+$max-width-list: (950px, 940px, 620px);
   
 
 
@@ -60,9 +60,9 @@ $max-width-list: (1180px, 940px, 620px);
 $base-bg: #fff;
 $base-color: #5f6674;
 $base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-$base-font-size-list: (12px, 12px, 12px);
+$base-font-size-list: (13px, 13px, 13px);
 $base-font-weight: 400;
-$base-line-height-list: (16px, 16px, 16px);
+$base-line-height-list: (13px, 13px, 13px);
 
 //
 // .. Headings
@@ -71,29 +71,29 @@ $h-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
 $h1-font-size-list: (18px, 18px, 18px);
 $h2-font-size-list: (16px, 16px, 16px);
-$h3-font-size-list: (14px, 14px, 14px);
-$h4-font-size-list: (2rem, 2rem, 2rem);
+$h3-font-size-list: (15px, 15px, 15px);
+$h4-font-size-list: (14px, 14px, 14px);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
 
 $h1-font-weight-list: (700, 700, 700);
-$h2-font-weight-list: (400, 400, 400);
-$h3-font-weight-list: (600, 600, 600);
-$h4-font-weight-list: (600, 600, 600);
+$h2-font-weight-list: (700, 700, 700);
+$h3-font-weight-list: (400, 400, 400);
+$h4-font-weight-list: (400, 400, 400);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
-$h1-line-height-list: (20px, 20px, 20px);
+$h1-line-height-list: (16px, 16px, 16px);
 $h2-line-height-list: (20px, 20px, 20px);
-$h3-line-height-list: (20px, 20px, 20px);
-$h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
+$h3-line-height-list: (19px, 19px, 19px);
+$h4-line-height-list: (14px, 14px, 14px);
 $h5-line-height-list: (inherit, inherit, inherit);
 $h6-line-height-list: (inherit, inherit, inherit);
 
 //
 // .. Colors
 //
-$major-color:  #333;
+$major-color:  #c390cf;
 $minor-color:  #eee;
 $muted-color:  #888;
 $border-color: #e8e8ea;
@@ -127,11 +127,11 @@ $content-link-color-active: darken($content-link-color-hover, 10%);
 $tx-xxs-font-size:   70%;
 $tx-xxs-line-height: 160%;
 
-$tx-xs-font-size:    80%;
-$tx-xs-line-height:  160%;
+$tx-xs-font-size:    85%;
+$tx-xs-line-height:  181%; // .. to use
 
 $tx-s-font-size:     90%;
-$tx-s-line-height:   160%;
+$tx-s-line-height:   136%; // .. to use
 
 $tx-l-font-size:     110%;
 $tx-l-line-height:   160%;

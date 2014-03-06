@@ -39,25 +39,6 @@
     font-size: 25px;
   }
 
-  .header_nav {
-    text-align: right;
-    white-space: nowrap;
-  }
-    .header_nav_i {
-      @include prefixes(box-sizing, border-box);
-      display: inline-block;
-      width: 14.285%; // .. 1/7
-      border-left: 1px solid #414446;
-      text-align: center;
-      text-transform: uppercase;
-      &:last-child {border-right: 1px solid #414446;}
-    }
-      .header_nav_i_a {
-        display: block;
-        color: inherit;
-        &.__login {background-color: #fc5e7c;}
-      }
-
 
 
 //****************************************************************************************************
@@ -67,19 +48,44 @@
 //****************************************************************************************************
 .nav {
   height: 70px;
-  border-bottom: 1px solid #979595;
-  color: #465065;
-  white-space: nowrap;
+  border-bottom: 1px solid #807f7f;
+  font-size: 15px;
   line-height: 70px;
 }
-  .nav_i {
-    @extend .header_nav_i;
-    border-color: #edeeee;
-    font-size: 14px;
-    &:last-child {border-color: #edeeee;}
+
+
+
+//****************************************************************************************************
+//
+// .. MENU
+//
+//****************************************************************************************************
+.menu {
+  
+}
+  .menu_i {
+    display: inline-block;
+    text-align: center;
+    &:last-child .menu_i_a {border-right: 1px solid #eee;}
   }
-    .nav_i_a {
-      @extend .header_nav_i_a;
+    .menu_i_a {
+      @include prefixes(transition, all .33s);
+      display: block;
+      border-left: 1px solid #eee;
+      color: inherit;
+      text-transform: uppercase;
+      &.__search {
+        border-left: 1px solid #414446;
+      }
+      &.__login {
+        border-right: 1px solid #fc5e7c !important;
+        border-left: 1px solid #2f3235;
+        background-color: #fc5e7c;
+      }
+      &:hover, &.__current {
+        background-color: $major-color;  
+        color: #fff;
+      }
     }
 
 
@@ -91,8 +97,8 @@
 //****************************************************************************************************
 .breadcrumbs {
   height: 65px;
-  border-bottom: 1px solid #979595;
-  background-color: #c390cf;
+  border-bottom: 1px solid #807f7f;
+  background-color: $major-color;
   color: #fff;
   line-height: 65px;
 }
@@ -116,23 +122,28 @@
 
 //****************************************************************************************************
 //
-// .. SIDEBAR
+// .. SIDEBAR AREA
 //
 //****************************************************************************************************
-.sidebar {
-  box-shadow: 0 0 0 1px $border-color;
-}
+.sidebar {box-shadow: 0 0 0 1px $border-color;}
 
 
 
+//****************************************************************************************************
 //
-// .. Section
+// .. CONTENT AREA
 //
+//****************************************************************************************************
+.content {margin-right: 20px;}
+
+//****************************************************************************************************
+//
+// .. SECTION BLOCK
+//
+//****************************************************************************************************
 .section {
   padding: 30px 0;
-  &:not(:last-child) {
-    border-bottom: 1px solid #d0d0d4;
-  }  
+  &:not(:last-child) {border-bottom: 1px solid #d0d0d4;}
 }
 
 
@@ -146,7 +157,7 @@
 
 }
   .reviews-thumbs_i {
-    margin-bottom: 20px;
+    &:not(:last-child) {margin-bottom: 20px;}
     nav {
       a {
         &:not(:last-child) {
@@ -166,6 +177,7 @@
       border-radius: 50%;
       vertical-align: top;
     }
+    .reviews-thumbs_i_data {color: #888;}
 
 
 
@@ -184,7 +196,7 @@
           border: 1px solid $border-color;
           display: block;
           height: 40px;
-          color: $base-color;
+          color: inherit;
           text-align: center;
           text-transform: uppercase;
           font-size: 14px;
@@ -217,16 +229,17 @@
 
 }
 .carousel-nav {  
-  &.__square {
-
-  }
-  &.__default {
-    font-size: 20px;
-    color: #bbbbbe;
-  }
+  font-size: 10px;
+  color: #fff;
 }
   .carousel-nav_i {
     color: inherit;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background-color: #5f6674;
     &.__prev {}
     &.__next {}
   }
@@ -240,28 +253,18 @@
 //****************************************************************************************************
 .catalog-i {
   text-align: center;
-  font-size: 10px;
-  img {
-    margin-bottom: 10px;
-    vertical-align: top;
-  }
+  font-size: 12px;
+  padding-right: 10px;
+  img {vertical-align: top;}
   a {color: $base-color;}
-}
-
-
-
-//****************************************************************************************************
-//
-// .. VIDEO ITEM
-//
-//****************************************************************************************************
-.video-i {
-  text-align: center;
-  font-size: 14px;
-  .video-i_photo {
+  > a {
     position: relative;
+    display: block;
     margin-bottom: 10px;
-    a::before {
+  }
+  &.__video > a {
+    &::before {
+      @include prefixes(transform, translate(-50%, -50%));
       position: absolute;
       top: 50%;
       left: 50%;
@@ -269,11 +272,8 @@
       height: 83px;
       background: url(/assets/images/play.png) center no-repeat;
       content: '';
-      @include prefixes(transform, translate(-50%, -50%));
     }
-    img {vertical-align: top;}
   }
-  a {color: $base-color;}
 }
 
 
@@ -318,14 +318,15 @@
       }
     }
     &.__icon {
-      .footer_nav_i {
-        margin: 0 10px;
-      }
+      .footer_nav_i {margin: 0 10px;}
     }
   }
     .footer_nav_i {
       display: inline-block;
       font-size: 14px;
-      a {color: inherit;}
+      a {
+        color: inherit;
+        &:hover {color: #fff;}
+      }
       .fa {font-size: 18px;}
     }
