@@ -82,11 +82,14 @@
         border-left: 1px solid #2f3235;
         background-color: #fc5e7c;
       }
-      &:hover, &.__current {
-        background-color: $major-color;  
-        color: #fff;
-      }
     }
+
+.nav .menu_i_a {
+  &:hover, &.__current {
+    background-color: $major-color;  
+    color: #fff;
+  }
+}
 
 
 
