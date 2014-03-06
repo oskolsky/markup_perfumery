@@ -28,6 +28,7 @@
     <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/accounting.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
     <script src='/assets/javascripts/polyfill/polyfill.js'></script>
     <script src='/assets/javascripts/config.js'></script>
     <script src='/assets/javascripts/jquery.extensions.js'></script>
@@ -58,10 +59,27 @@
     <header class='header' id='header' role='banner'>
       <div class='ctn'>
         <a class='logo' href='/'>Logo</a>
-        <menu class='menu grid __no-gutter'><li class='menu_i grid-i __grid-1-7 __prefix-5-7'>
-            <a class='menu_i_a __search' href='#'>Search</a>
-          </li><li class='menu_i grid-i __grid-1-7'>
-            <a class='menu_i_a __login' href='#'>Login / Register</a>
+        <menu class='menu grid __no-gutter'><li class='menu_i __search grid-i __grid-1-7 __prefix-5-7'>
+            <a class='menu_i_a' href='#'>Search</a>
+          </li><li class='menu_i __login grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Login / Register</a>
+            <div class='menu_i_dropdown'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_1'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Login'>
+                </div>
+                <p class='tx __upper'>
+                  Not a member?
+                  <a href='#'>Register now</a>
+                </p>
+              </form>
+            </div>
           </li></menu>
       </div>
     </header>

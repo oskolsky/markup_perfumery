@@ -28,6 +28,7 @@
     <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/accounting.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
     <script src='/assets/javascripts/polyfill/polyfill.js'></script>
     <script src='/assets/javascripts/config.js'></script>
     <script src='/assets/javascripts/jquery.extensions.js'></script>
@@ -58,10 +59,27 @@
     <header class='header' id='header' role='banner'>
       <div class='ctn'>
         <a class='logo' href='/'>Logo</a>
-        <menu class='menu grid __no-gutter'><li class='menu_i grid-i __grid-1-7 __prefix-5-7'>
-            <a class='menu_i_a __search' href='#'>Search</a>
-          </li><li class='menu_i grid-i __grid-1-7'>
-            <a class='menu_i_a __login' href='#'>Login / Register</a>
+        <menu class='menu grid __no-gutter'><li class='menu_i __search grid-i __grid-1-7 __prefix-5-7'>
+            <a class='menu_i_a' href='#'>Search</a>
+          </li><li class='menu_i __login grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Login / Register</a>
+            <div class='menu_i_dropdown'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_1'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Login'>
+                </div>
+                <p class='tx __upper'>
+                  Not a member?
+                  <a href='#'>Register now</a>
+                </p>
+              </form>
+            </div>
           </li></menu>
       </div>
     </header>
@@ -116,7 +134,277 @@
                       <a href='#deals'>Deals</a>
                     </li></ul>
                   <div class='tabs_page' id='votes'></div>
-                  <div class='tabs_page' id='review'></div>
+                  <div class='tabs_page' id='review'>
+                    <section class='section'>
+                      <div class='reviews-add'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <a class='avatar' href='#'>
+                              <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-1.jpg' width='86'>
+                            </a>
+                          </div><div class='grid-i __grid-17-23'>
+                            <form class='form'>
+                              <div class='m-b_1'>
+                                <textarea class='form-el __textarea __block' placeholder='Leave your review' rows='4'></textarea>
+                              </div>
+                              <div class='grid'><div class='grid-i __grid-1-2'>
+                                  <div class='stars'></div>
+                                </div><div class='grid-i __grid-1-2'>
+                                  <div class='tx __right'>
+                                    <input class='form-el __btn __purple grid-i __grid-3-5' type='submit' value='Send'>
+                                  </div>
+                                </div></div>
+                            </form>
+                          </div></div>
+                      </div>
+                    </section>
+                    <section class='section'>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-2.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='3'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-2.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='3'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-2.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='1'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-1.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='2'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-1.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='1'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-1.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='1'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                      <article class='reviews-i'>
+                        <div class='grid'><div class='grid-i __grid-4-23 __prefix-1-23'>
+                            <div class='m-b_1'>
+                              <a class='avatar' href='#'>
+                                <img alt='Taylor Swift' height='86' src='/assets/images/fake/user-1.jpg' width='86'>
+                              </a>
+                            </div>
+                            <ul class='reviews-i_rating'>
+                              <li class='reviews-i_rating_control __plus'>
+                                <a href='#'>+</a>
+                                <span>10</span>
+                              </li>
+                              <li class='reviews-i_rating_control __minus'>
+                                <a href='#'>&ndash;</a>
+                                <span>5</span>
+                              </li>
+                            </ul>
+                          </div><div class='grid-i __grid-17-23'>
+                            <header class='m-b_2'>
+                              <div class='grid'><div class='grid-i __grid-3-4 va-m'>
+                                  <h3 class='tx __upper __700'>
+                                    <a href='#'>Taylor Swift</a>
+                                  </h3>
+                                </div><div class='grid-i __grid-1-4 va-m'>
+                                  <div class='tx __right'>
+                                    <div class='stars __readonly' data-score='3'></div>
+                                  </div>
+                                </div></div>
+                            </header>
+                            <p class='m-b_1'>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                            <footer>
+                              <p class='tx __s __muted __right'>28 February 2014&nbsp;&nbsp;&nbsp;11:20</p>
+                            </footer>
+                          </div></div>
+                      </article>
+                    </section>
+                  </div>
                   <div class='tabs_page' id='deals'>
                     <section class='section __border'>
                       <div class='m-b_3'>
@@ -136,79 +424,7 @@
                       <div class='carousel' data-items='5'>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
                             <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -224,7 +440,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -232,7 +448,23 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-2.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -241,6 +473,62 @@
                         <figure class='catalog-i'>
                           <a href='#'>
                             <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -264,7 +552,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-2.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -272,7 +560,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -280,7 +568,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -288,7 +576,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-3.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -314,63 +602,7 @@
                       <div class='carousel' data-items='5'>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
                             <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-2.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -386,7 +618,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -394,7 +626,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-2.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -403,6 +635,30 @@
                         <figure class='catalog-i'>
                           <a href='#'>
                             <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-6.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -418,6 +674,30 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-2.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
                             <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
                           </a>
                           <figcaption>
@@ -434,7 +714,23 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-1.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-8.jpg' width='110'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Britney Spears Fantasy</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i'>
+                          <a href='#'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -458,15 +754,7 @@
                         </figure>
                         <figure class='catalog-i'>
                           <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-5.jpg' width='110'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Britney Spears Fantasy</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i'>
-                          <a href='#'>
-                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-4.jpg' width='110'>
+                            <img alt='Britney Spears Fantasy' height='160' src='/assets/images/fake/deals-7.jpg' width='110'>
                           </a>
                           <figcaption>
                             <a href='#'>Britney Spears Fantasy</a>
@@ -492,70 +780,6 @@
                       <div class='carousel' data-items='3'>
                         <figure class='catalog-i __video'>
                           <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
-                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                          </a>
-                          <figcaption>
-                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
-                          </figcaption>
-                        </figure>
-                        <figure class='catalog-i __video'>
-                          <a href='#'>
                             <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
                           </a>
                           <figcaption>
@@ -580,6 +804,14 @@
                         </figure>
                         <figure class='catalog-i __video'>
                           <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
                             <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
                           </a>
                           <figcaption>
@@ -621,6 +853,54 @@
                         <figure class='catalog-i __video'>
                           <a href='#'>
                             <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
                           </a>
                           <figcaption>
                             <a href='#'>Meet ner perfume "Miss Chanel"</a>
@@ -645,6 +925,14 @@
                         <figure class='catalog-i __video'>
                           <a href='#'>
                             <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                          </a>
+                          <figcaption>
+                            <a href='#'>Meet ner perfume "Miss Chanel"</a>
+                          </figcaption>
+                        </figure>
+                        <figure class='catalog-i __video'>
+                          <a href='#'>
+                            <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
                           </a>
                           <figcaption>
                             <a href='#'>Meet ner perfume "Miss Chanel"</a>
@@ -663,162 +951,322 @@
                 <hr class='hr'>
                 <div class='p-t_2 p-b_2'>
                   <div class='reviews-thumbs'>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-2.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-2.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-3.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-2.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-3.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-2.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
                     </figure>
-                    <figure class='reviews-thumbs_i'>
+                    <figure class='reviews-thumbs'>
                       <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
                           <div class='tx __center'>
-                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_i_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
                           </div>
                         </div><div class='grid-i __grid-5-7 va-m'>
                           <figcaption>
                             <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
                             <div class='grid'><div class='grid-i __grid-1-2'>
-                                <p class='tx __xs reviews-thumbs_i_data'>1 day ago</p>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
                               </div><div class='grid-i __grid-1-2'>
-                                <nav class='tx __xs'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-2.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-1.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-4.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
+                              </div></div>
+                          </figcaption>
+                        </div></div>
+                    </figure>
+                    <figure class='reviews-thumbs'>
+                      <div class='grid __no-gutter'><div class='grid-i __grid-2-7 va-m'>
+                          <div class='tx __center'>
+                            <img alt='Alexandra Toms, commented on Cerutti 1881 for woman' class='reviews-thumbs_photo' height='54' src='/assets/images/fake/reviews-thumb-5.jpg' width='54'>
+                          </div>
+                        </div><div class='grid-i __grid-5-7 va-m'>
+                          <figcaption>
+                            <p class='tx __s'><b>Alexandra Toms,</b> commented on&nbsp;<b>Cerutti 1881 for woman</b></p>
+                            <div class='grid'><div class='grid-i __grid-1-2'>
+                                <p class='tx __xs reviews-thumbs_data'>1 day ago</p>
+                              </div><div class='grid-i __grid-1-2'>
+                                <nav class='tx __xs __right'><a href='#'>Check</a><a href='#'>Reply</a></nav>
                               </div></div>
                           </figcaption>
                         </div></div>
