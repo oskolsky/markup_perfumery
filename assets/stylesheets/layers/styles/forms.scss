@@ -65,7 +65,7 @@ input {
   //
   &.__tx {
     padding: 0 13px;
-    height: 31px;
+    height: 30px;
     border: none;
     background-color: #fff;
     font-size: inherit;
@@ -77,11 +77,12 @@ input {
   // .. Textarea
   //
   &.__textarea {
-    padding: .5rem .75rem;
-    border: 1px solid #ccc;
-    border-radius: .3rem;
+    padding: 10px 20px;
+    border: 1px solid #d0d0d4;
     background: #fff;
     font-size: inherit;
+    &::-webkit-input-placeholder {color: inherit;}
+    &.__tx:-moz-placeholder {color: inherit;}
   }
 
   //
@@ -89,14 +90,20 @@ input {
   //
   &.__btn {
     padding: 0 13px;
-    height: 31px;
+    height: 30px;
     border: none;
-    background-color: #2f3235;
-    color: #fff;
     text-transform: uppercase;
-    line-height: 31px;
+    line-height: 30px;
     &:not([disabled]):hover {}
     &:not([disabled]):active {}
+    &.__black {
+      background-color: #2f3235;
+      color: #fff;
+    }
+    &.__purple {
+      background-color: #7978b4;
+      color: #fff;
+    }
   }
 
   //

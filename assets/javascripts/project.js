@@ -17,8 +17,10 @@ $(function() {
 
     var 
       $carousel = $(this),
-      $prev = $carousel.closest('.section').find('.carousel-nav_i.__prev'),
-      $next = $carousel.closest('.section').find('.carousel-nav_i.__next');
+      $section  = $carousel.closest('.section'),
+      $nav  = $section.find('.carousel-nav'),
+      $prev = $nav.find('.carousel-nav_i.__prev'),
+      $next = $nav.find('.carousel-nav_i.__next');
 
     $carousel.owlCarousel({
       responsive: false,
@@ -35,6 +37,34 @@ $(function() {
       return false;
     });
 
+    $section.on('mouseover', function() {
+      $nav.css({visibility: 'visible'});
+    });
+
+    $section.on('mouseout', function() {
+      $nav.css({visibility: 'hidden'});
+    });
+
+  });
+
+  //
+  // .. Stars raty
+  // .. http://wbotelhos.com/raty/
+  //
+  $('.stars').raty({
+    starOff: '/assets/images/star-off.png',
+    starOn:  '/assets/images/star-on.png',
+    width: 75
+  });
+
+  $('.stars.__readonly').raty({
+    starOff: '/assets/images/star-off.png',
+    starOn:  '/assets/images/star-on.png',
+    width: 75,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    readOnly: true
   });
 
 

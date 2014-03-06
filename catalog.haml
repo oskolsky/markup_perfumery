@@ -13,8 +13,29 @@
                 %a{href: "#review"} Review
               %li.grid-i.__grid-4-18>
                 %a{href: "#deals"} Deals
+            
             #votes.tabs_page
+            
             #review.tabs_page
+              %section.section
+                .reviews-add
+                  .grid
+                    .grid-i.__grid-4-23.__prefix-1-23>
+                      = haml :"/views/common/_avatar"
+                    .grid-i.__grid-17-23>
+                      %form.form
+                        .m-b_1
+                          %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Leave your review"}
+                        .grid
+                          .grid-i.__grid-1-2>
+                            .stars
+                          .grid-i.__grid-1-2>
+                            .tx.__right
+                              %input.form-el.__btn.__purple.grid-i.__grid-3-5{type: "submit", value: "Send"}
+              %section.section
+                - 1.upto(7) do
+                  = haml :"/views/common/_review_item"
+            
             #deals.tabs_page
               %section.section.__border
                 .m-b_3
@@ -29,7 +50,7 @@
                           %i.fa.fa-chevron-right
                 .carousel{data: {items: 5}}
                   - 1.upto(20) do
-                    = haml :"/views/common/_catalog_item"
+                    = haml :"/views/common/_deals_catalog_item"
               %section.section.__border
                 .m-b_3
                   .grid
@@ -43,7 +64,7 @@
                           %i.fa.fa-chevron-right
                 .carousel{data: {items: 5}}
                   - 1.upto(20) do
-                    = haml :"/views/common/_catalog_item"
+                    = haml :"/views/common/_deals_catalog_item"
               %section.section.__border
                 .m-b_3
                   .grid
@@ -57,7 +78,7 @@
                           %i.fa.fa-chevron-right
                 .carousel{data: {items: 3}}
                   - 1.upto(20) do
-                    = haml :"/views/common/_video_item"
+                    = haml :"/views/common/_deals_video_item"
 
       .grid-i.__grid-6-24>
         %aside#sidebar.sidebar{role: "sidebar"}
@@ -66,5 +87,5 @@
           %hr.hr
           .p-t_2.p-b_2
             .reviews-thumbs
-              - 1.upto(10) do |i|
-                = haml :"/views/common/_reviews_item"
+              - 1.upto(20) do |i|
+                = haml :"/views/common/_reviews_thumbs"
