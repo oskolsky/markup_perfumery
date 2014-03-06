@@ -2,7 +2,18 @@
   .ctn
     %a.logo{href: "/"} Logo
     %menu.menu.grid.__no-gutter
-      %li.menu_i.grid-i.__grid-1-7.__prefix-5-7>
-        %a.menu_i_a.__search{href: "#"} Search
-      %li.menu_i.grid-i.__grid-1-7>
-        %a.menu_i_a.__login{href: "#"} Login / Register
+      %li.menu_i.__search.grid-i.__grid-1-7.__prefix-5-7>
+        %a.menu_i_a{href: "#"} Search
+      %li.menu_i.__login.grid-i.__grid-1-7>
+        %a.menu_i_a{href: "#"} Login / Register
+        .menu_i_dropdown
+          %form.form
+            .m-b_1
+              %input.form-el.__tx.__block{type: "text", placeholder: "E-MAIL"}
+            .m-b_2
+              %input.form-el.__tx.__block{type: "password", placeholder: "PASSWORD"}
+            .m-b_1
+              %input.form-el.__btn.grid-i.__grid-1-2{type: "submit", value: "Login"}
+            %p.tx.__upper
+              Not a member?
+              %a{href: "#"} Register now
