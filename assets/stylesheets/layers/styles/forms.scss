@@ -45,13 +45,13 @@ input {
     .form-el.__radio {
       &.__fake {
         position: absolute;
-        top: .2rem;
+        top: -.3rem;
         left: 0;
       }
     }
     span:last-child {
       display: inline-block;
-      margin-left: 2.1rem;
+      margin-left: 2.5rem;
     }
   }
 
@@ -110,12 +110,13 @@ input {
   // .. Checkbox
   //
   &.__checkbox.__fake {
-    width: 1.6rem;
-    height: 1.6rem;
-    border: 1px solid #ccc;
-    border-radius: .3rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1px solid #ececec;
+    border-radius: .1rem;
     background: #fff;
     &[data-checked="true"]::after {
+      color: #3b86c4;
       line-height: 1.4rem;
       content:"\f00c";
       text-align: center;

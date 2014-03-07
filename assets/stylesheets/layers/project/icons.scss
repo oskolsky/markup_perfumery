@@ -9,10 +9,13 @@
     color: transparent;
     repeat: no-repeat;
   }
-  &.__22 {
-    @include size(22, 22);
-    background-image: url(/assets/images/icons/ico-22.png);
-    &.__prev {background-position: 0 0;}
-    &.__next {background-position: -22px 0;}
+  &.__52 {
+    @include size(52, 52);
+    background-image: url(/assets/images/icons/ico-52.png);
+    &.__autumn {background-position: 0 0;}
+    &.__night  {background-position: -52px 0;}
+    &.__love   {background-position: -104px 0;}
+    &.__hours  {background-position: -156px 0;}
+    &.__meters {background-position: -208px 0;}
   }
 }

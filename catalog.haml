@@ -15,7 +15,92 @@
                 %a{href: "#deals"} Deals
             
             #votes.tabs_page
-            
+              %section.section.__border
+                .grid.__no-gutter
+                  %figure.preference-i.grid-i.__grid-1-5>
+                    %p.preference-i_t Seasonality
+                    %i.ico.__52.__autumn
+                    %figcaption
+                      %p Autumn
+                  %figure.preference-i.grid-i.__grid-1-5>
+                    %p.preference-i_t Day Time
+                    %i.ico.__52.__night
+                    %figcaption
+                      %p Night
+                  %figure.preference-i.grid-i.__grid-1-5>
+                    %p.preference-i_t Feelings
+                    %i.ico.__52.__love
+                    %figcaption
+                      %p Love
+                  %figure.preference-i.grid-i.__grid-1-5>
+                    %p.preference-i_t Longevity
+                    %i.ico.__52.__hours
+                    %figcaption
+                      %p 3-4 hours
+                  %figure.preference-i.grid-i.__grid-1-5>
+                    %p.preference-i_t Sillage
+                    %i.ico.__52.__meters
+                    %figcaption
+                      %p 1-2 meters
+              %section.section.__border
+                .m-b_3
+                  %h4.tx.__upper Personal preferences
+                %form.form.preference-personal
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Был
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Есть
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Хочу
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Попробовать
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Куплю
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Продам
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Обменяю
+                  %label.form-el.__label
+                    %span.form-el.__checkbox.__fake
+                      %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %span Распив
+              %section.section
+                %h4.tx.__upper Perfume Pyramid: <b>Top notes</b>
+              %section.section
+                %h4.tx.__upper Perfume Pyramid: <b>Middle notes</b>
+              %section.section
+                %h4.tx.__upper Perfume Pyramid: <b>Base Notes</b>
+              %section.section.__border
+                %h4.tx.__upper Notes <b>According to Your Votes</b>
+              %section.section.__border
+                .m-b_3
+                  .grid
+                    .grid-i.__grid-2-3.va-m>
+                      %h4.tx.__upper.__700 This perfume reminds me
+                    .grid-i.__grid-1-3.va-m>
+                      %nav.carousel-nav.tx.__right
+                        %a.carousel-nav_i.__prev{href: "#"}
+                          %i.fa.fa-chevron-left
+                        %a.carousel-nav_i.__next{href: "#"}
+                          %i.fa.fa-chevron-right
+                .carousel{data: {items: 5}}
+                  - 1.upto(20) do
+                    = haml :"/views/common/_deals_catalog_item"
+
             #review.tabs_page
               %section.section
                 .reviews-add
