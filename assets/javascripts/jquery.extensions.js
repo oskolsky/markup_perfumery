@@ -6,42 +6,38 @@
   //
   //****************************************************************************************************
   $.fn.stickyHeader = function() {
-    if (window.matchMedia) {
-      if (matchMedia('all and (min-width: ' + config.matchMedia.desktop.minWidth + 'px)').matches) {
-        if (this.length) {
-          var
-            $page = $('#page'),
-            $header = this,
-            headerOuterHeight = $header.outerHeight(),
-            headerPositionTop = $header.position().top,
-            headerOffsetTop = $header.data('offset-top'),
-            windowScrollTop = $(window).scrollTop();
-              
-          if ($header.length) {
-            $header.data('offset-top', $header.offset().top);
-          }
-
-          if (windowScrollTop > headerPositionTop) {
-            $page.css({'padding-top': headerOuterHeight + 'px'});
-            $header.addClass('__sticky');
-          }
-
-          $(window).scroll(function() {
-            windowScrollTop = $(window).scrollTop();
-            headerOffsetTop = $header.data('offset-top');
-
-            if (windowScrollTop > headerOffsetTop) {
-              $page.css({'padding-top': headerOuterHeight + 'px'});
-              $header.addClass('__sticky');
-            } else {
-              $header.removeClass('__sticky');
-              $page.css({'padding-top': '0'});
-            }
-          });
-
-          return this;
-        }
+    if (this.length) {
+      var
+        $page = $('#page'),
+        $header = this,
+        headerOuterHeight = $header.outerHeight(),
+        headerPositionTop = $header.position().top,
+        headerOffsetTop = $header.data('offset-top'),
+        windowScrollTop = $(window).scrollTop();
+          
+      if ($header.length) {
+        $header.data('offset-top', $header.offset().top);
       }
+
+      if (windowScrollTop > headerPositionTop) {
+        $page.css({'padding-top': headerOuterHeight + 'px'});
+        $header.addClass('__sticky');
+      }
+
+      $(window).scroll(function() {
+        windowScrollTop = $(window).scrollTop();
+        headerOffsetTop = $header.data('offset-top');
+
+        if (windowScrollTop > headerOffsetTop) {
+          $page.css({'padding-top': headerOuterHeight + 'px'});
+          $header.addClass('__sticky');
+        } else {
+          $header.removeClass('__sticky');
+          $page.css({'padding-top': '0'});
+        }
+      });
+
+      return this;
     }
   };
 

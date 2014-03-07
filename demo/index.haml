@@ -5,7 +5,14 @@
         %a.a.__inner{href: "/"}
           %span Demo
 
-    %nav.demo
-      %ol
-        %li 
-          %a{href: "/catalog"} Catalog
+    .grid
+      .grid-i.__grid-1-3>
+        %nav.demo
+          %ol
+            %li 
+              %a{href: "/catalog"} Catalog
+      .grid-i.__grid-1-3>
+        %nav.demo
+          %ol
+            %li 
+              %a.a.__pseudo{href: "#", data: {dialog: "open", url: "/dialogs/voting", tab: 0}} Voting user          

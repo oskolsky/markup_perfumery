@@ -1,9 +1,10 @@
 .dialog {
-  padding: 4rem;
+  padding: 4rem 2rem;
+  border: 5px solid #d0d0d4;
   background: #fff;
 }
   .dialog_close {
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
     cursor: pointer;
   }

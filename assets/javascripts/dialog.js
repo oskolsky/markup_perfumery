@@ -1,4 +1,8 @@
-$('.form').customForm();
+$(function() {
 
-formatNumber();
-formatMoney();
+  $('.form').customForm();  
+
+  formatNumber();
+  formatMoney();
+
+});

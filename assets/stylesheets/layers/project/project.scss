@@ -187,7 +187,7 @@
 .tabs {
   &.__content {    
     .ui-tabs-nav {
-      margin-left: 1px;      
+      margin-left: 1px;
       li {
         a {
           margin-left: -1px;
@@ -205,6 +205,29 @@
           a {
             border-bottom: 1px solid transparent;
             background-color: $base-bg;
+          }
+        }
+      }
+    }
+  }
+  &.__dialog {    
+    .ui-tabs-nav {
+      margin-left: 1px;
+      li {
+        a {
+          @include prefixes(transition, none);
+          display: block;
+          margin-left: -1px;
+          height: 34px;
+          border: 1px solid $border-color;
+          color: inherit;
+          text-align: center;
+          line-height: 34px;
+        }
+        &.ui-tabs-active {
+          a {
+            background-color: $major-color;
+            color: #fff;
           }
         }
       }
