@@ -1,15 +1,17 @@
 %article.reviews-i
   .grid
     .grid-i.__grid-4-23.__prefix-1-23>
-      .m-b_1
-        = haml :"/views/common/_avatar"
-      %ul.reviews-i_rating
-        %li.reviews-i_rating_control.__plus
-          %a{href: "#"} +
-          %span 10
-        %li.reviews-i_rating_control.__minus
-          %a{href: "#"} &ndash;
-          %span 5
+      .reviews-i_user
+        .p-r.m-b_1
+          %img.reviews-i_photo{src: "/assets/images/fake/reviews-mini-#{rand(1..2)}.png", alt: ""}
+          = haml :"/views/common/_avatar"
+        %ul.reviews-i_rating
+          %li.reviews-i_rating_control.__plus
+            %a{href: "#"} +
+            %span 10
+          %li.reviews-i_rating_control.__minus
+            %a{href: "#"} &ndash;
+            %span 5
     .grid-i.__grid-17-23>
       %header.m-b_2
         .grid
