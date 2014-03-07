@@ -10,7 +10,7 @@ $.arcticmodal('setDefault', {
   overlay: {
     css: {
       backgroundColor: '#000',
-      opacity: 0.5
+      opacity: 0.66
     }
   },
   openEffect: {
@@ -55,7 +55,7 @@ function formatNumber() {
 
     $(this).text(formatNumber);
   });
-};
+}
 
 function formatMoney() {
   $('.format-money').each(function() {
@@ -81,7 +81,7 @@ function formatMoney() {
       $(this).text(formatMoney);
     }
   });
-};
+}
 
 
 
@@ -94,31 +94,49 @@ function formatMoney() {
 // .. Open dialog
 //
 $(document).on('click touchstart', '[data-dialog="open"]', function() {
-  var 
-      url = $(this).data('url'),
-      tab = $(this).data('tab');
+  if (window.matchMedia) {
+    if (matchMedia('all and (min-width: ' + config.matchMedia.desktop.minWidth + 'px)').matches) {
+      var 
+          url = $(this).data('url'),
+          tab = $(this).data('tab');
 
-  $.arcticmodal('close');
+      $.arcticmodal('close');
 
-  $.arcticmodal({
-    type: 'ajax',
-    url: url,
-    afterLoadingOnShow: function() {
-      $('.tabs.__dialog').tabs({
-        active: tab
-      });
+      if (!tab) {
+        
+        $.arcticmodal({
+          type: 'ajax',
+          url: url
+        });
+
+      } else {
+        
+        $.arcticmodal({
+          type: 'ajax',
+          url: url,
+          afterLoadingOnShow: function() {
+            $('.tabs.__dialog').tabs({active: tab - 1});
+          }
+        });
+
+      }
+
+      return false;
     }
-  });
-  
-  return false;
+  }
 });
 
 //
 // .. Close dialog
 //
 $(document).on('click touchstart', '[data-dialog="close"]', function() {
-  $.arcticmodal('close');
-  return false;
+  if (window.matchMedia) {
+    if (matchMedia('all and (min-width: ' + config.matchMedia.desktop.minWidth + 'px)').matches) {
+      $.arcticmodal('close');
+
+      return false;
+    }
+  }
 });
 
 
@@ -184,6 +202,7 @@ $(function() {
   //****************************************************************************************************
   $(window).smartresize(function() {
 
+    $('#header').stickyHeader();
     $('#footer').stickyFooter();
 
   });
@@ -199,6 +218,7 @@ $(function() {
 //****************************************************************************************************
 $(window).load(function() {
 
+  $('#header').stickyHeader();
   $('#footer').stickyFooter();
 
 });
