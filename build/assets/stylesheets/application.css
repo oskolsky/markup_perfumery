@@ -4638,6 +4638,18 @@ th, td {
   max-width: 950px;
   width: 80%; }
 
+.m-t_0 {
+  margin-top: 0rem !important; }
+
+.m-b_0 {
+  margin-bottom: 0rem !important; }
+
+.p-t_0 {
+  padding-top: 0rem !important; }
+
+.p-b_0 {
+  padding-bottom: 0rem !important; }
+
 .m-t_1 {
   margin-top: 1rem !important; }
 
@@ -5481,12 +5493,13 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     background: #eee; }
 
 .dialog {
-  padding: 4rem;
+  padding: 4rem 2rem;
+  border: 5px solid #d0d0d4;
   background: #fff; }
 
 .dialog_close {
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
   cursor: pointer; }
 
 .rotate {
@@ -5837,6 +5850,12 @@ a.c-btn:hover {
   display: inline-block;
   background-color: transparent;
   background-repeat: no-repeat; }
+  .ico.__26 {
+    width: 26px;
+    height: 26px;
+    background-image: url(/assets/images/icons/ico-26.png); }
+    .ico.__26.__plus {
+      background-position: 0 0; }
   .ico.__52 {
     width: 52px;
     height: 52px;
@@ -5983,6 +6002,24 @@ a.c-btn:hover {
   .tabs.__content .ui-tabs-nav li.ui-tabs-active a {
     border-bottom: 1px solid transparent;
     background-color: white; }
+.tabs.__dialog .ui-tabs-nav {
+  margin-left: 1px; }
+  .tabs.__dialog .ui-tabs-nav li a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    display: block;
+    margin-left: -1px;
+    height: 34px;
+    border: 1px solid #e8e8ea;
+    color: inherit;
+    text-align: center;
+    line-height: 34px; }
+  .tabs.__dialog .ui-tabs-nav li.ui-tabs-active a {
+    background-color: #c390cf;
+    color: #fff; }
 
 .tabs_page {
   margin-top: -1px;
@@ -6001,6 +6038,49 @@ a.c-btn:hover {
   line-height: 22px;
   text-align: center;
   background-color: #5f6674; }
+
+.preferences-personal .form-el {
+  margin-right: 13px;
+  margin-bottom: 10px; }
+
+.preferences-i {
+  text-align: center; }
+  .preferences-i .ico {
+    margin-bottom: 10px; }
+  .preferences-i:not(:last-child) {
+    border-right: 1px dotted #ccc; }
+  .preferences-i figcaption {
+    cursor: pointer; }
+
+.preferences-i_t {
+  margin: 0 20px 20px;
+  border: 1px solid #d0d0d4;
+  border-radius: 10px;
+  background-color: #f5f5f9;
+  line-height: 20px; }
+
+.flavors-i {
+  text-align: center; }
+  .flavors-i img {
+    border-radius: 50%; }
+  .flavors-i figcaption {
+    cursor: pointer; }
+    .flavors-i figcaption .fa {
+      color: #488ec8;
+      position: relative;
+      top: -2px;
+      margin-left: 10px; }
+
+.flavors-i_photo {
+  margin: 0 auto 20px auto;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d0d0d4;
+  text-align: center;
+  line-height: 96px;
+  border-radius: 50%; }
+  .flavors-i_photo .ico {
+    vertical-align: middle; }
 
 .reviews-thumbs:not(:last-child) {
   margin-bottom: 20px; }
@@ -6071,19 +6151,19 @@ a.c-btn:hover {
   .reviews-i_action_i.__report:hover {
     color: #903d1e; }
 
-.catalog-i {
+.products-i {
   text-align: center;
   font-size: 12px;
   padding-right: 10px; }
-  .catalog-i img {
+  .products-i img {
     vertical-align: top; }
-  .catalog-i a {
+  .products-i a {
     color: #5f6674; }
-  .catalog-i > a {
+  .products-i > a {
     position: relative;
     display: block;
     margin-bottom: 10px; }
-  .catalog-i.__video > a::before {
+  .products-i.__video > a::before {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -6096,24 +6176,6 @@ a.c-btn:hover {
     height: 83px;
     background: url(/assets/images/play.png) center no-repeat;
     content: ''; }
-
-.preference-i {
-  text-align: center; }
-  .preference-i .ico {
-    margin-bottom: 10px; }
-  .preference-i:not(:last-child) {
-    border-right: 1px dotted #ccc; }
-
-.preference-i_t {
-  margin: 0 20px 20px;
-  border: 1px solid #d0d0d4;
-  border-radius: 10px;
-  background-color: #f5f5f9;
-  line-height: 20px; }
-
-.preference-personal .form-el {
-  margin-right: 13px;
-  margin-bottom: 10px; }
 
 .hr {
   margin: 0 auto;

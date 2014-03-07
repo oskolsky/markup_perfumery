@@ -37,13 +37,17 @@ $(function() {
       return false;
     });
 
-    $section.on('mouseover', function() {
-      $nav.css({visibility: 'visible'});
-    });
+    var owl = $carousel.data('owlCarousel');
+    
+    if (owl.itemsAmount > $carousel.data('items')) {
+      $section.on('mouseover', function() {
+        $nav.css({visibility: 'visible'});
+      });
 
-    $section.on('mouseout', function() {
-      $nav.css({visibility: 'hidden'});
-    });
+      $section.on('mouseout', function() {
+        $nav.css({visibility: 'hidden'});
+      });
+    }
 
   });
 
