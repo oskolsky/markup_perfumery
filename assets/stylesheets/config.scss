@@ -22,7 +22,7 @@ $grid-fixed-col-qty:    24;
 $grid-fixed-col-width:  30px;
 $grid-fixed-col-gutter: 10px;
 $grid-fixed-col-indent: 20px;
-$grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-fixed-col-qty;
+$grid-fixed-ctn-width:  ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-fixed-col-qty;
 
 //
 // .. Fluid

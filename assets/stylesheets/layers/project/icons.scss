@@ -9,6 +9,11 @@
     color: transparent;
     repeat: no-repeat;
   }
+  &.__26 {
+    @include size(26, 26);
+    background-image: url(/assets/images/icons/ico-26.png);
+    &.__plus {background-position: 0 0;}
+  }
   &.__52 {
     @include size(52, 52);
     background-image: url(/assets/images/icons/ico-52.png);

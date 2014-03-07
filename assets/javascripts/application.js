@@ -72,8 +72,8 @@ function formatMoney() {
     }
 
     var
-      number = parseFloat($(this).text()),
-      formatMoney = accounting.formatMoney(number);
+      money = parseFloat($(this).text()),
+      formatMoney = accounting.formatMoney(money);
     
     if ($(this).hasClass('__rub')) {
       $(this).text(formatMoney).append('&nbsp;<i class="fa fa-ruble"></i>');
@@ -132,10 +132,6 @@ $(document).on('click touchstart', '[data-dialog="close"]', function() {
 //****************************************************************************************************
 $(function() {
   
-  $('#footer').stickyFooter();
-
-
-
   //****************************************************************************************************
   //
   // .. DOUBLE HOVER
@@ -194,4 +190,17 @@ $(function() {
 
   });
   
+});
+
+
+
+//****************************************************************************************************
+//
+// .. LOAD
+//
+//****************************************************************************************************
+$(window).load(function() {
+
+  $('#footer').stickyFooter();
+
 });
