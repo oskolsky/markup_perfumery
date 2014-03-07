@@ -138,12 +138,12 @@
         padding: 0 5px;
       }
     }
-    a {
+  }
+    .breadcrumbs_i_a {
       color: inherit;
       text-transform: uppercase;
       font-weight: 700;
     }
-  }
 
 
 
@@ -243,6 +243,35 @@
 
 //****************************************************************************************************
 //
+// .. ACCORDION
+//
+//****************************************************************************************************
+.accordion {
+  .ui-accordion-header {
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e7e9;
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content: '\f067';
+      font-family: FontAwesome;
+      @include prefixes(transform, translateY(-50%));
+    }
+    &.ui-accordion-header-active {
+      &::after {content: '\f068';}
+    }
+  }
+  .ui-accordion-content {
+    line-height: 20px;
+  }
+}
+
+
+
+//****************************************************************************************************
+//
 // .. CARAUSEL
 //
 //****************************************************************************************************
@@ -275,7 +304,7 @@
 //****************************************************************************************************
 .preferences-personal {
   .form-el {
-    margin-right: 13px;
+    margin-right: 15px;
     margin-bottom: 10px;
   }
 }
@@ -290,17 +319,12 @@
 .preferences-i {
   text-align: center; 
   .ico {margin-bottom: 10px;} 
-  &:not(:last-child) {
-    border-right: 1px dotted #ccc;
-  }
-  figcaption {cursor: pointer;}
+  &:not(:last-child) {border-right: 1px dotted #ccc;}
 }
   .preferences-i_t {
+    @extend .progressbar;
     margin: 0 20px 20px;
-    border: 1px solid #d0d0d4;
-    border-radius: 10px;
     background-color: #f5f5f9;
-    line-height: 20px;
   }
 
 
@@ -312,9 +336,7 @@
 //****************************************************************************************************
 .flavors-i {
   text-align: center;
-  img {border-radius: 50%;}  
   figcaption {
-    cursor: pointer;
     .fa {
       color: #488ec8;
       position: relative;
@@ -331,6 +353,7 @@
     text-align: center;
     line-height: 96px;
     border-radius: 50%;
+    img {border-radius: 50%;}
     .ico {vertical-align: middle;}
   }
 
@@ -353,8 +376,21 @@
       padding-left: 6px;
     }
   }
-  nav {
-    a {
+}
+  .reviews-thumbs_photo {
+    border: 1px solid #d5d5d9;
+    border-radius: 50%;
+    vertical-align: top;
+  }
+  .reviews-thumbs_data {
+    @extend .tx.__xs;
+    color: #888;
+  }
+  .reviews-thumbs_nav {
+    @extend .tx.__xs;
+    text-align: right;
+  }
+    .reviews-thumbs_nav_i {
       &:not(:last-child) {
         &::after {
           position: relative;
@@ -364,15 +400,7 @@
           content: '|';
         }
       }
-    }  
-  }
-}
-  .reviews-thumbs_photo {
-    border: 1px solid #d5d5d9;
-    border-radius: 50%;
-    vertical-align: top;
-  }
-  .reviews-thumbs_data {color: #888;}
+    }
 
 //
 // .. Item
@@ -431,9 +459,7 @@
 //
 // .. Action
 //
-.reviews-i_action {
-  display: none;
-}
+.reviews-i_action {display: none;}
   .reviews-i_action_i{
     color: $muted-color;
     &:first-child {
@@ -461,14 +487,8 @@
   text-align: center;
   font-size: 12px;
   padding-right: 10px;
-  img {vertical-align: top;}
-  a {color: $base-color;}
-  > a {
+  &.__video > .products-i_photo {
     position: relative;
-    display: block;
-    margin-bottom: 10px;
-  }
-  &.__video > a {
     &::before {
       @include prefixes(transform, translate(-50%, -50%));
       position: absolute;
@@ -489,6 +509,7 @@
 // .. ELEMENTS
 //
 //****************************************************************************************************
+// .. HR line
 .hr {
   margin: 0 auto;
   width: 94%;
@@ -496,19 +517,21 @@
   background-color: $border-color;
 }
 
+// .. User avatar
 .avatar {
   @include prefixes(box-sizing, border-box);
   display: inline-block;
   padding: 5px;
   border: 1px solid #d3d3d7;
   border-radius: 50%;
-  img {
+}
+  .avatar_photo {
     border: 1px solid #d3d3d7;
     border-radius: 50%;
     vertical-align: top;
   }
-}
 
+// .. Stars raty
 .stars {
   display: inline-block;
   font-size: 0;
@@ -517,6 +540,28 @@
     vertical-align: middle;
   }
 }
+
+// .. Progress bar
+.progressbar {
+  position: relative;
+  border: 1px solid #d0d0d4;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  .ui-progressbar-value {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 10px 0 0 10px;
+    background-color: #f5f5f9;
+  }
+}
+  .progressbar_inner {
+    position: relative;
+    z-index: 2;
+  }
 
 
 
@@ -534,7 +579,6 @@
   background-color: #465065;
   color: #d0d0d4;
   line-height: 100px;
-  > .ctn > .grid > .grid-i {margin-bottom: 0;}
 }
 
   .footer_nav {

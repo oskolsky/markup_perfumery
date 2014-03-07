@@ -11,6 +11,24 @@ $(function() {
   $('.tabs').tabs();
 
   //
+  // .. jQuery Accordion init
+  //  
+  $('.accordion').accordion({
+    collapsible: false,
+    animate: false,
+    heightStyle: 'content'
+  });
+
+  //
+  // .. jQuery Progressbar init
+  //  
+  $('.progressbar').each(function() {
+    $(this).progressbar({
+      value: $(this).data('progress')
+    });
+  });
+
+  //
   // .. OWL Carousel init
   //
   $('.carousel').each(function() {

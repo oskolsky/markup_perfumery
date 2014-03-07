@@ -45,7 +45,7 @@ input {
     .form-el.__radio {
       &.__fake {
         position: absolute;
-        top: -.3rem;
+        top: -.2rem;
         left: 0;
       }
     }
@@ -117,7 +117,7 @@ input {
     background: #fff;
     &[data-checked="true"]::after {
       color: #3b86c4;
-      line-height: 1.4rem;
+      line-height: 1.7rem;
       content:"\f00c";
       text-align: center;
       font: {
