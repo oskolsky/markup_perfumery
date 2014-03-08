@@ -8,10 +8,23 @@
 
           .p-t_2.p-b_7
             .grid
-              .grid-i.__grid-2-18>
-              .grid-i.__grid-7-18>
-                .tx.__center
-                  %img.va-t{src: "/assets/images/fake/product-main-1.jpg", width: 220, height: 340, alt: "Marc Jacobs Honey (50 ml)"}
+              .grid-i.__grid-9-18>
+                .photo-gallery
+                  .grid
+                    .grid-i.__grid-2-9>
+                      .photo-gallery_thumbs
+                        .vertical-carousel
+                          - 1.upto(4) do |i|
+                            %img.va-t.c-bg.__green{src: "/assets/images/fake/product-thumb-#{i}.jpg", width: 71, height: 88, alt: "Marc Jacobs Honey (50 ml)", data: {src: "/assets/images/fake/product-main-#{i}.jpg"}}
+                        %nav.vertical-carousel-nav.cf
+                          %a.vertical-carousel-nav_i.__prev{href: "#"}
+                            %i.fa.fa-chevron-up
+                          %a.vertical-carousel-nav_i.__next{href: "#"}
+                            %i.fa.fa-chevron-down
+                    .grid-i.__grid-7-9>
+                      .photo-gallery_preview
+                        .tx.__center
+                          %img.va-t{src: "/assets/images/fake/product-main-1.jpg", width: 220, height: 332, alt: "Marc Jacobs Honey (50 ml)"}
               .grid-i.__grid-9-18>
                 .m-b_1
                   %h1.tx.__upper Marc Jacobs Honey (50 ml)

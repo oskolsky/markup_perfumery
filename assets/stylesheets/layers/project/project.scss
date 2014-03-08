@@ -275,6 +275,9 @@
 // .. CARAUSEL
 //
 //****************************************************************************************************
+//
+// .. OWL Carousel (horizontal)
+//
 .carousel {
 
 }
@@ -293,6 +296,52 @@
     background-color: #5f6674;
     &.__prev {}
     &.__next {}
+  }
+
+//
+// .. Cycle2 carousel (vertical)
+//
+.vertical-carousel {
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 290px !important;
+  img {
+    margin-bottom: 10px;
+    border: 1px solid #d0d0d4;
+    cursor: pointer;
+  }  
+}
+.vertical-carousel-nav {
+  color: #fff;
+  font-size: 14px;
+}
+  .vertical-carousel-nav_i {
+    color: inherit;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #5f6674;
+    &.__prev {float: left;}
+    &.__next {float: right;}
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. PHOTO GALLERY
+//
+//****************************************************************************************************
+.photo-gallery {
+
+}
+  .photo-gallery_thumbs {
+
+  }
+  .photo-gallery_preview {
+    
   }
 
 
