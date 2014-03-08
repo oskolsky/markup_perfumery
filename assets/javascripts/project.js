@@ -79,6 +79,7 @@ $(function() {
       timeout: 0,
       carouselVisible: 3,
       carouselVertical: true,
+      swipe: true,
       prev: $(_this).siblings('.vertical-carousel-nav').find('.vertical-carousel-nav_i.__prev'),
       next: $(_this).siblings('.vertical-carousel-nav').find('.vertical-carousel-nav_i.__next')
     });
