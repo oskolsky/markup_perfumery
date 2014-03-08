@@ -70,6 +70,21 @@ $(function() {
   });
 
   //
+  // .. Cycle2 vertical carousel init
+  //
+  $('.vertical-carousel').each(function() {
+    var _this = this;
+    $(this).cycle({
+      fx: 'carousel',
+      timeout: 0,
+      carouselVisible: 3,
+      carouselVertical: true,
+      prev: $(_this).siblings('.vertical-carousel-nav').find('.vertical-carousel-nav_i.__prev'),
+      next: $(_this).siblings('.vertical-carousel-nav').find('.vertical-carousel-nav_i.__next')
+    });
+  });
+
+  //
   // .. Stars raty
   // .. http://wbotelhos.com/raty/
   //
@@ -87,6 +102,15 @@ $(function() {
       return $(this).attr('data-score');
     },
     readOnly: true
+  });
+
+  //
+  // .. Photo gallery
+  //
+  $('.photo-gallery').find('.photo-gallery_thumbs').find('img').on('click touchstart', function() {
+    var src = $(this).data('src');
+    $('.photo-gallery').find('.photo-gallery_preview').find('img').attr({src: src});
+    return false;
   });
 
 
