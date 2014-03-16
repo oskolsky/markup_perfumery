@@ -67,7 +67,7 @@ $base-line-height-list: (13px, 13px, 13px);
 //
 // .. Headings
 //
-$h-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$h-font-family: $base-font-family;
 
 $h1-font-size-list: (18px, 18px, 18px);
 $h2-font-size-list: (16px, 16px, 16px);

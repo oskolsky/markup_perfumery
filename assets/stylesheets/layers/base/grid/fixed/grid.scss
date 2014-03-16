@@ -35,8 +35,6 @@
   //
   .grid {
     &.__no-gutter {
-      margin-bottom: 0;
-      margin-left: -#{$grid-fixed-col-gutter / 2};
       @include grid-fixed("> .grid-i.__prefix", "margin-left", 0);
     }
     @include grid-fixed(".grid-i.__prefix", "margin-left", $grid-fixed-col-gutter);
@@ -47,8 +45,6 @@
   //
   .grid {
     &.__no-gutter {
-      margin-bottom: 0;
-      margin-left: -#{$grid-fixed-col-gutter / 2};
       @include grid-fixed("> .grid-i.__suffix", "margin-right", 0);
     }
     @include grid-fixed(".grid-i.__suffix", "margin-right", $grid-fixed-col-gutter);

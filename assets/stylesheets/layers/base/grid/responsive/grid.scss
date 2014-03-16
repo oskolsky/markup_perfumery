@@ -47,14 +47,13 @@
         }
       }
       > .grid-i {
-        @include grid-responsive("desktop", "grid", "width", -$grid-responsive-col-gutter);
         @include grid-responsive("desktop", "prefix", "margin-left", $grid-responsive-col-gutter);
         @include grid-responsive("desktop", "suffix", "margin-right", 0);
       }
     }
 
     .grid-i {
-      @include grid-responsive("desktop", "grid", "width", 0);
+      @include grid-responsive("desktop", "grid", "width", -$grid-responsive-col-gutter);
     }
 
     .tx {@include cols-responsive("desktop");}
@@ -73,7 +72,6 @@
         }
       }
       > .grid-i {
-        @include grid-responsive("tablet", "grid", "width", -$grid-responsive-col-gutter);
         @include grid-responsive("tablet", "prefix", "margin-left", $grid-responsive-col-gutter);
         @include grid-responsive("tablet", "suffix", "margin-right", 0);
       }
@@ -81,7 +79,7 @@
     }
 
     .grid-i {
-      @include grid-responsive("tablet", "grid", "width", 0);
+      @include grid-responsive("tablet", "grid", "width", -$grid-responsive-col-gutter);
     }
 
     .tx {@include cols-responsive("tablet");}
@@ -100,14 +98,13 @@
         }
       }
       > .grid-i {
-        @include grid-responsive("phone", "grid", "width", -$grid-responsive-col-gutter);
         @include grid-responsive("phone", "prefix", "margin-left", $grid-responsive-col-gutter);
         @include grid-responsive("phone", "suffix", "margin-right", 0);
       }
     }
 
     .grid-i {
-      @include grid-responsive("phone", "grid", "width", 0);
+      @include grid-responsive("phone", "grid", "width", -$grid-responsive-col-gutter);
     }
 
     .tx {@include cols-responsive("phone");}

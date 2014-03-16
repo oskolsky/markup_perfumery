@@ -27,7 +27,6 @@
       margin-bottom: #{$grid-fluid-col-indent};
       margin-left: #{$grid-fluid-col-gutter};
     }
-    @include grid-fluid(".grid-i.__grid", "width", -$grid-fluid-col-gutter);
   }
   @include grid-fluid(".grid-i.__grid", "width", -$grid-fluid-col-gutter);
   
@@ -36,8 +35,6 @@
   //
   .grid {
     &.__no-gutter {
-      margin-bottom: 0;
-      margin-left: 0;
       @include grid-fluid("> .grid-i.__prefix", "margin-left", 0);
     }
     @include grid-fluid(".grid-i.__prefix", "margin-left", $grid-fluid-col-gutter);
@@ -48,8 +45,6 @@
   //
   .grid {
     &.__no-gutter {
-      margin-bottom: 0;
-      margin-left: 0;
       @include grid-fluid("> .grid-i.__suffix", "margin-right", 0);
     }
     @include grid-fluid(".grid-i.__suffix", "margin-right", $grid-fluid-col-gutter);
