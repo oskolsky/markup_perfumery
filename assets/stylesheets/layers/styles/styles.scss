@@ -72,7 +72,6 @@ body {
     weight: $base-font-weight;
     family: $base-font-family;
   }
-  -webkit-backface-visibility: hidden; // .. http://goo.gl/bNpRD4
 }
 
 @include body(1);

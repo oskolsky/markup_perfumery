@@ -17,17 +17,6 @@
   color: #fff;
   line-height: 40px;
   > .ctn > .grid > .grid-i {margin-bottom: 0;}
-  @include media-query(desktop) {
-    &.__sticky {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1000;
-      background: $base-bg;
-      box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
-    }
-  }
 }
 
   .logo {
@@ -49,8 +38,20 @@
 .nav {
   height: 70px;
   border-bottom: 1px solid #807f7f;
+  background-color: #fff;
   font-size: 15px;
   line-height: 70px;
+  @include media-query(desktop) {
+    &.__sticky {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      border: none;
+      box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
+    }
+  }
 }
 
 
@@ -152,7 +153,7 @@
 // .. SIDEBAR AREA
 //
 //****************************************************************************************************
-.sidebar {box-shadow: 0 0 0 1px $border-color;}
+.sidebar {}
 
 
 
@@ -171,7 +172,7 @@
 //
 //****************************************************************************************************
 .section {
-  padding: 30px 0;
+  &.__bg {background-color: #f5f5f9;}
   &.__border {
     &:not(:last-child) {border-bottom: 1px solid #d0d0d4;}
   }
@@ -325,6 +326,79 @@
     background-color: #5f6674;
     &.__prev {float: left;}
     &.__next {float: right;}
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. PROMO
+//
+//****************************************************************************************************
+.promo {
+  position: relative;
+  border-bottom: 1px solid #d0d0d4;
+  .slider_i {
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .owl-controls {
+
+  }
+    .owl-pagination {
+      @include prefixes(transform, translateX(-50%));
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+    }
+      .owl-page {
+        display: inline-block;
+        margin: 0 3px;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #c2b1b1;
+        border-radius: 50%;
+        background-color: #fff;
+        &.active {background-color: #c2b1b1;}
+      }
+}
+  .promo_nav {
+
+  }
+    .promo_nav_i {
+      @include prefixes(transform, translateY(-50%));
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+      font-size: 40px;
+      &.__prev {
+        left: 50px;
+      }
+      &.__next {
+        right: 50px;
+      }
+    }
+
+
+
+//****************************************************************************************************
+//
+// .. PARALAX
+//
+//****************************************************************************************************
+.paralax {
+  border-top: 1px solid #d0d0d4;
+  border-bottom: 1px solid #d0d0d4;
+}
+  .paralax_layer {
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
 
@@ -561,7 +635,7 @@
 // .. HR line
 .hr {
   margin: 0 auto;
-  width: 94%;
+  width: 100%;
   height: 1px;
   background-color: $border-color;
 }
@@ -611,6 +685,31 @@
     position: relative;
     z-index: 2;
   }
+
+// .. Block
+.block {
+  padding: 0 10px;
+  border: 1px solid $border-color;
+  background-color: #fff;
+}
+
+// .. Flags
+.flag {
+  width: 98px;
+  height: 98px;
+  border: 1px solid #d0d0d4;
+  border-radius: 50%;
+  background-image: url(/assets/images/flags.png);
+  background-repeat: no-repeat;
+  &.__usa     {background-position: 0 0;}
+  &.__belgium {background-position: -98px 0;}
+  &.__italy   {background-position: -196px 0;}
+  &.__uk      {background-position: -294px 0;}
+  &.__china   {background-position: -392px 0;}
+  &.__india   {background-position: -490px 0;}
+  &.__russia  {background-position: -588px 0;}
+  &.__ireland {background-position: -686px 0;}
+}
 
 
 

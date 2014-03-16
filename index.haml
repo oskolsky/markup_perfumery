@@ -1,2 +1,129 @@
-%section{role: "region", "aria-label" => ""}
+%section{role: "region", "aria-label" => "Promo slider"}
+  .promo
+    .slider
+      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-1.jpg);"}
+      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-2.jpg);"}
+      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-3.jpg);"}
+      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-4.jpg);"}
+      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-5.jpg);"}
+    %nav.promo_nav.slider-nav
+      %a.promo_nav_i.slider-nav_i.__prev{href: "#"}
+        %i.fa.fa-chevron-left
+      %a.promo_nav_i.slider-nav_i.__next{href: "#"}
+        %i.fa.fa-chevron-right
+
+%section.section.__bg{role: "region", "aria-label" => "News"}
   .ctn
+    .p-t_2.p-b_2
+      .grid
+        - 1.upto(4) do
+          .grid-i.__grid-1-4>
+            .block
+              .p-t_2.p-b_2
+                %p.delta.tx.__center.__upper.__700 Новое в энциклопедии
+              %hr.hr
+              .p-t_1.p-b_1
+                %figure
+                  .m-b_1
+                    %a{href: "/encyclopedia_show"}
+                      %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
+                  %figcaption.tx.__center.__upper
+                    %p.gamma.tx.__700 
+                      %a.a.__base{href: "/encyclopedia_show"} Marc Jacobs Honey
+                    %p Eau de Parfum Spray
+
+%section{role: "region", "aria-label" => "Promo paralax"}
+  .paralax
+    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+
+%section{role: "region", "aria-label" => "Hot offers"}
+  .ctn
+    .p-t_2.p-b_2
+
+%section{role: "region", "aria-label" => "Set sellings brands"}
+  .ctn
+    .p-t_2.p-b_2
+
+%section{role: "region", "aria-label" => "Promo paralax"}
+  .paralax
+    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+
+%section.section.__bg{role: "region", "aria-label" => "Views review"}
+  .ctn
+    .p-t_4.p-b_4
+      .carousel{data: {items: 4}}
+        - 1.upto(20) do
+          = haml :"/views/common/_products_video"
+
+%section.section.__bg{role: "region", "aria-label" => "Country"}
+  .ctn
+    .p-t_4.p-b_4
+      .grid
+        .grid-i.__grid-1-8>
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__usa{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p United States
+              %p (<b>1287</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__belgium{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p Belgium
+              %p (<b>15</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__italy{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p Italy
+              %p (<b>458</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__uk{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p UK
+              %p (<b>48</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__china{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p China
+              %p (<b>1458</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__india{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p India
+              %p (<b>458</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__russia{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p Russia
+              %p (<b>588</b>)
+        .grid-i.__grid-1-8> 
+          %figure
+            .m-b_1
+              %a{href: "#"}
+                %img.va-t.b-center.flag.__ireland{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+            %figcaption.tx.__l.__center
+              %p Ireland
+              %p (<b>28</b>)
+
+%section.section{role: "region", "aria-label" => "Promo paralax"}
+  .paralax
+    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
