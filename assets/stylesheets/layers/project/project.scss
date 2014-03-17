@@ -531,16 +531,13 @@
 .reviews-i {
   &:not(:last-child) {margin-bottom: 60px;}
   &:hover {
-    .reviews-i_action {display: block;}    
+    .reviews-i_photo, .reviews-i_action {display: block;}    
   }
   header a {color: inherit;}
   p {line-height: 19px;}
 }
   .reviews-i_user {
    position: relative;
-   &:hover {
-    .reviews-i_photo {display: block;}
-   }
   }
     .reviews-i_photo {
       @include prefixes(transform, translateY(-50%));

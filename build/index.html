@@ -29,8 +29,10 @@
     <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/accounting.js'></script>
     <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
-    <script src='/assets/javascripts/vendor/jquery.cycle2.min.js'></script>
-    <script src='/assets/javascripts/vendor/jquery.cycle2.carousel.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.carousel.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.swipe.min.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.parallax-1.1.3.js'></script>
     <script src='/assets/javascripts/polyfill/polyfill.js'></script>
     <script src='/assets/javascripts/config.js'></script>
     <script src='/assets/javascripts/jquery.extensions.js'></script>
@@ -105,8 +107,455 @@
       </div>
     </nav>
     <main class='main' id='main' role='main'>
-      <section aria-label='' role='region'>
-        <div class='ctn'></div>
+      <section aria-label='Promo slider' role='region'>
+        <div class='promo'>
+          <div class='slider'>
+            <div class='slider_i' style='background-image: url(/assets/images/fake/promo-slider-1.jpg);'></div>
+            <div class='slider_i' style='background-image: url(/assets/images/fake/promo-slider-2.jpg);'></div>
+            <div class='slider_i' style='background-image: url(/assets/images/fake/promo-slider-3.jpg);'></div>
+            <div class='slider_i' style='background-image: url(/assets/images/fake/promo-slider-4.jpg);'></div>
+            <div class='slider_i' style='background-image: url(/assets/images/fake/promo-slider-5.jpg);'></div>
+          </div>
+          <nav class='promo_nav slider-nav'>
+            <a class='promo_nav_i slider-nav_i __prev' href='#'>
+              <i class='fa fa-chevron-left'></i>
+            </a>
+            <a class='promo_nav_i slider-nav_i __next' href='#'>
+              <i class='fa fa-chevron-right'></i>
+            </a>
+          </nav>
+        </div>
+      </section>
+      <section aria-label='News' class='section __bg' role='region'>
+        <div class='ctn'>
+          <div class='p-t_2 p-b_2'>
+            <div class='grid'><div class='grid-i __grid-1-4'>
+                <div class='block'>
+                  <div class='p-t_2 p-b_2'>
+                    <p class='delta tx __center __upper __700'>Новое в энциклопедии</p>
+                  </div>
+                  <hr class='hr'>
+                  <div class='p-t_1 p-b_1'>
+                    <figure>
+                      <div class='m-b_1'>
+                        <a href='/encyclopedia_show'>
+                          <img alt='Marc Jacobs Honey' class='b-center' src='/assets/images/fake/product-main-1.jpg' width='211'>
+                        </a>
+                      </div>
+                      <figcaption class='tx __center __upper'>
+                        <p class='gamma tx __700'>
+                          <a class='a __base' href='/encyclopedia_show'>Marc Jacobs Honey</a>
+                        </p>
+                        <p>Eau de Parfum Spray</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div><div class='grid-i __grid-1-4'>
+                <div class='block'>
+                  <div class='p-t_2 p-b_2'>
+                    <p class='delta tx __center __upper __700'>Новое в энциклопедии</p>
+                  </div>
+                  <hr class='hr'>
+                  <div class='p-t_1 p-b_1'>
+                    <figure>
+                      <div class='m-b_1'>
+                        <a href='/encyclopedia_show'>
+                          <img alt='Marc Jacobs Honey' class='b-center' src='/assets/images/fake/product-main-1.jpg' width='211'>
+                        </a>
+                      </div>
+                      <figcaption class='tx __center __upper'>
+                        <p class='gamma tx __700'>
+                          <a class='a __base' href='/encyclopedia_show'>Marc Jacobs Honey</a>
+                        </p>
+                        <p>Eau de Parfum Spray</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div><div class='grid-i __grid-1-4'>
+                <div class='block'>
+                  <div class='p-t_2 p-b_2'>
+                    <p class='delta tx __center __upper __700'>Новое в энциклопедии</p>
+                  </div>
+                  <hr class='hr'>
+                  <div class='p-t_1 p-b_1'>
+                    <figure>
+                      <div class='m-b_1'>
+                        <a href='/encyclopedia_show'>
+                          <img alt='Marc Jacobs Honey' class='b-center' src='/assets/images/fake/product-main-1.jpg' width='211'>
+                        </a>
+                      </div>
+                      <figcaption class='tx __center __upper'>
+                        <p class='gamma tx __700'>
+                          <a class='a __base' href='/encyclopedia_show'>Marc Jacobs Honey</a>
+                        </p>
+                        <p>Eau de Parfum Spray</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div><div class='grid-i __grid-1-4'>
+                <div class='block'>
+                  <div class='p-t_2 p-b_2'>
+                    <p class='delta tx __center __upper __700'>Новое в энциклопедии</p>
+                  </div>
+                  <hr class='hr'>
+                  <div class='p-t_1 p-b_1'>
+                    <figure>
+                      <div class='m-b_1'>
+                        <a href='/encyclopedia_show'>
+                          <img alt='Marc Jacobs Honey' class='b-center' src='/assets/images/fake/product-main-1.jpg' width='211'>
+                        </a>
+                      </div>
+                      <figcaption class='tx __center __upper'>
+                        <p class='gamma tx __700'>
+                          <a class='a __base' href='/encyclopedia_show'>Marc Jacobs Honey</a>
+                        </p>
+                        <p>Eau de Parfum Spray</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div></div>
+          </div>
+        </div>
+      </section>
+      <section aria-label='Promo paralax' role='region'>
+        <div class='paralax'>
+          <div class='paralax_layer' style='background-image: url(/assets/images/fake/paralax-layer-1.jpg);'></div>
+        </div>
+      </section>
+      <section aria-label='Hot offers' role='region'>
+        <div class='ctn'>
+          <div class='p-t_2 p-b_2'></div>
+        </div>
+      </section>
+      <section aria-label='Set sellings brands' role='region'>
+        <div class='ctn'>
+          <div class='p-t_2 p-b_2'></div>
+        </div>
+      </section>
+      <section aria-label='Promo paralax' role='region'>
+        <div class='paralax'>
+          <div class='paralax_layer' style='background-image: url(/assets/images/fake/paralax-layer-1.jpg);'></div>
+        </div>
+      </section>
+      <section aria-label='Views review' class='section __bg' role='region'>
+        <div class='ctn'>
+          <div class='p-t_4 p-b_4'>
+            <div class='carousel' data-items='4'>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-label='Country' class='section __bg' role='region'>
+        <div class='ctn'>
+          <div class='p-t_4 p-b_4'>
+            <div class='grid'><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __usa' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>United States</p>
+                    <p>(<b>1287</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __belgium' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>Belgium</p>
+                    <p>(<b>15</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __italy' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>Italy</p>
+                    <p>(<b>458</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __uk' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>UK</p>
+                    <p>(<b>48</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __china' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>China</p>
+                    <p>(<b>1458</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __india' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>India</p>
+                    <p>(<b>458</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __russia' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>Russia</p>
+                    <p>(<b>588</b>)</p>
+                  </figcaption>
+                </figure>
+              </div><div class='grid-i __grid-1-8'>
+                <figure>
+                  <div class='m-b_1'>
+                    <a href='#'>
+                      <img alt='United States' class='va-t b-center flag __ireland' height='98' src='/assets/images/blank.gif' width='98'>
+                    </a>
+                  </div>
+                  <figcaption class='tx __l __center'>
+                    <p>Ireland</p>
+                    <p>(<b>28</b>)</p>
+                  </figcaption>
+                </figure>
+              </div></div>
+          </div>
+        </div>
+      </section>
+      <section aria-label='Promo paralax' class='section' role='region'>
+        <div class='paralax'>
+          <div class='paralax_layer' style='background-image: url(/assets/images/fake/paralax-layer-1.jpg);'></div>
+        </div>
       </section>
     </main>
     <footer class='footer' id='footer' role='contentinfo'>
