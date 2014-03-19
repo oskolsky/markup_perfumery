@@ -84,10 +84,11 @@ th, td {@include prefixes(box-sizing, border-box);}
   display: block;
   margin-right: auto;
   margin-left:  auto;
-  @if $grid == "fixed" {width: #{$grid-fixed-ctn-width - $grid-fixed-col-gutter};}
+  padding-right: $ctn-padding;
+  padding-left:  $ctn-padding;
+  @if $grid == "fixed" {width: #{$grid-fixed-ctn-width};}
   @if $grid == "fluid" {
-    min-width: nth($min-width-list, 1);
-    max-width: nth($max-width-list, 1);
-    width:     nth($ctn-width-list, 1);
+    min-width: $mq-desktop-min-width;
+    max-width: $mq-desktop-max-width;
   }
 }

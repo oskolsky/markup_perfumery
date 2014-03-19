@@ -1,7 +1,7 @@
 @mixin body($list) {
   body {
-    font-size: nth($base-font-size-list, 1);
-    line-height: nth($base-line-height-list, 1);
+    font-size: nth($base-font-size-list, $list);
+    line-height: nth($base-line-height-list, $list);
   }
 }
 
@@ -64,8 +64,8 @@ html {
 }
 
 body {
-  @if $grid == "fixed" {min-width: #{$grid-fixed-ctn-width};}
-  @if $grid == "fluid" {min-width: (nth($min-width-list, 1) + 20);}
+  @if $grid == "fixed" {min-width: $grid-fixed-ctn-width + $ctn-padding * 2;}
+  @if $grid == "fluid" {min-width: $mq-desktop-min-width + $ctn-padding * 2;}
   background: $base-bg;
   color: $base-color;
   font: {
@@ -74,7 +74,7 @@ body {
   }
 }
 
-@include body(1);
+@if $grid == "fixed" or $grid == "fluid" {@include body(1);}
 
 img {font-style: italic;}
 
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
 //
 .va-bl {vertical-align: baseline;}
 .va-t  {vertical-align: top;}
-.va-m  {vertical-align: middle !important;}
+.va-m  {vertical-align: middle;}
 .va-b  {vertical-align: bottom;}
 
 

@@ -1,9 +1,8 @@
 @if $grid == "responsive" {
-  
+
   .ctn {
-    min-width: nth($min-width-list, 3);
-    max-width: nth($max-width-list, 3);
-    width:     nth($ctn-width-list, 3);
+    min-width: $mq-phone-min-width - $ctn-padding * 2;
+    max-width: $mq-phone-max-width - $ctn-padding * 2;
   }
 
   .hidden-phone,

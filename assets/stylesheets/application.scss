@@ -52,7 +52,6 @@
 @import "layers/styles/alerts";
 @import "layers/styles/dialogs";
 @import "layers/styles/popups";
-@import "layers/styles/animations";
 
 
 
@@ -81,19 +80,19 @@
 // .. RESPONSIVE
 //
 //****************************************************************************************************
-@media all and (max-width: (nth($max-width-list, 3) + 20)) {
+@media all and (max-width: $mq-phone-max-width) {
   @import "layers/base/responsive/phone/styles";
   @import "layers/styles/responsive/phone/styles";
   @import "layers/project/responsive/phone/project";
 }
 
-@media all and (min-width: (nth($min-width-list, 2) + 21)) and (max-width: (nth($max-width-list, 2) + 20)) {
+@media all and (min-width: $mq-tablet-min-width) and (max-width: $mq-tablet-max-width) {
   @import "layers/base/responsive/tablet/styles";
   @import "layers/styles/responsive/tablet/styles";
   @import "layers/project/responsive/tablet/project";
 }
 
-@media all and (min-width: (nth($min-width-list, 1) + 21)) {
+@media all and (min-width: $mq-desktop-min-width) {
   @import "layers/base/responsive/desktop/styles";
   @import "layers/styles/responsive/desktop/styles";
   @import "layers/project/responsive/desktop/project";
