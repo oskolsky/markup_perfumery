@@ -32,17 +32,41 @@
                       %a.a.__base{href: "/encyclopedia_show"} Marc Jacobs Honey
                     %p Eau de Parfum Spray
 
-%section.section.__border{role: "region", "aria-label" => "Promo paralax"}
+%section.section{role: "region", "aria-label" => "Promo paralax"}
   .paralax
     .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
 
-%section.section.__border{role: "region", "aria-label" => "Hot offers"}
+%section.section{role: "region", "aria-label" => "Hot offers"}
+  .section_header.__red
+    .ctn
+      .section_header_inner
+        .grid
+          .grid-i.__grid-1-6.va-m>
+            .section_header_title Hot offers
+          .grid-i.__grid-5-6.va-m>
+            .section_header_summary Discover luxury products at everyday prices
   .ctn
-    .p-t_2.p-b_2
+    .p-t_4.p-b_4.p-r
+      .carousel{data: {items: 4}}
+        - 1.upto(20) do
+          = haml :"/views/common/_products_item_main"
+      = haml :"/views/common/_carousel_nav_main"
 
 %section.section.__border{role: "region", "aria-label" => "Set sellings brands"}
+  .section_header.__blue
+    .ctn
+      .section_header_inner
+        .grid
+          .grid-i.__grid-1-6.va-m>
+            .section_header_title Best selling
+          .grid-i.__grid-5-6.va-m>
+            .section_header_summary Discover luxury products at everyday prices
   .ctn
-    .p-t_2.p-b_2
+    .p-t_4.p-b_4.p-r
+      .carousel{data: {items: 4}}
+        - 1.upto(20) do
+          = haml :"/views/common/_products_item_main"
+      = haml :"/views/common/_carousel_nav_main"
 
 %section.__border{role: "region", "aria-label" => "Promo paralax"}
   .paralax
@@ -53,24 +77,25 @@
     .ctn
       .section_header_inner
         .grid
-          .grid-i.__grid-1-8.va-m>
+          .grid-i.__grid-1-6.va-m>
             .section_header_title Video Review
-          .grid-i.__grid-7-8.va-m>
+          .grid-i.__grid-5-6.va-m>
             .section_header_summary It’s so easy to discover new products
   .ctn
-    .p-t_4.p-b_4
+    .p-t_4.p-b_4.p-r
       .carousel{data: {items: 4}}
         - 1.upto(20) do
           = haml :"/views/common/_products_video"
+      = haml :"/views/common/_carousel_nav_main"
 
 %section.section.__bg.__border{role: "region", "aria-label" => "Country"}
   .section_header.__major
     .ctn
       .section_header_inner
         .grid
-          .grid-i.__grid-1-8.va-m>
+          .grid-i.__grid-1-6.va-m>
             .section_header_title Country
-          .grid-i.__grid-7-8.va-m>
+          .grid-i.__grid-5-6.va-m>
             .section_header_summary You can choose the country and then check designers list
   .ctn
     .p-t_4.p-b_4
