@@ -6,10 +6,10 @@ var config = {
     },
     tablet: {
       minWidth: '641',
-      maxWidth: '960'
+      maxWidth: '940'
     },
     desktop: {
-      minWidth: '961',
+      minWidth: '941',
       maxWidth: '1180'
     }
   }
