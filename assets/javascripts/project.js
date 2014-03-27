@@ -146,11 +146,9 @@ $(function() {
   });
 
   //
-  // .. Paralax script
+  // .. YTPlayer init
   //
-  // $('.paralax').each(function() {
-    // $(this).find('.paralax_layer').parallax('50%', 0.1);
-  // });
+  $(".movie").mb_YTPlayer();
   
 
 

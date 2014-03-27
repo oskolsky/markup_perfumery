@@ -25,14 +25,15 @@
     <script src='/assets/javascripts/vendor/doublehover.js'></script>
     <script src='/assets/javascripts/vendor/jquery.arcticmodal.js'></script>
     <script src='/assets/javascripts/vendor/owl.carousel.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.carousel.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.swipe.min.js'></script>
     <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
     <script src='/assets/javascripts/vendor/accounting.js'></script>
     <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
-    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.min.js'></script>
-    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.carousel.min.js'></script>
-    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.swipe.min.js'></script>
     <script src='/assets/javascripts/vendor/jquery.parallax-1.1.3.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.mb.YTPlayer.js'></script>
     <script src='/assets/javascripts/polyfill/polyfill.js'></script>
     <script src='/assets/javascripts/config.js'></script>
     <script src='/assets/javascripts/jquery.extensions.js'></script>
@@ -107,6 +108,7 @@
       </div>
     </nav>
     <main class='main' id='main' role='main'>
+      <a class="movie {opacity:.4, isBgndMovie:{width:900,mute:true}, ID:'bgndEl', ratio:'16/9', quality:'default'}" href='http://www.youtube.com/watch?v=UnrKi-lwWgA' id='bgndVideo'></a>
       <section aria-label='Promo slider' class='section __border' role='region'>
         <div class='promo'>
           <div class='slider'>
@@ -126,7 +128,7 @@
           </nav>
         </div>
       </section>
-      <section aria-label='News' class='section __bg __border' role='region'>
+      <section aria-label='News' class='section __border __bg __gray' role='region'>
         <div class='ctn'>
           <div class='p-t_2 p-b_2'>
             <div class='grid'><div class='grid-i __grid-1-4'>
@@ -226,7 +228,7 @@
           <div class='paralax_layer' style='background-image: url(/assets/images/fake/paralax-layer-1.jpg);'></div>
         </div>
       </section>
-      <section aria-label='Hot offers' class='section' role='region'>
+      <section aria-label='Hot offers' class='section __bg __white' role='region'>
         <div class='section_header __red'>
           <div class='ctn'>
             <div class='section_header_inner'>
@@ -241,6 +243,139 @@
         <div class='ctn'>
           <div class='p-t_4 p-b_4 p-r'>
             <div class='carousel' data-items='4'>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
@@ -301,7 +436,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -320,64 +455,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -434,7 +512,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -453,45 +531,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -567,45 +607,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -633,7 +635,7 @@
           </div>
         </div>
       </section>
-      <section aria-label='Set sellings brands' class='section __border' role='region'>
+      <section aria-label='Set sellings brands' class='section __border __bg __white' role='region'>
         <div class='section_header __blue'>
           <div class='ctn'>
             <div class='section_header_inner'>
@@ -651,7 +653,216 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
                     <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
+                  </a>
+                </div>
+                <figcaption class='tx __l'>
+                  <p class='tx __600 m-b_1'>
+                    <a class='a __base' href='#'>
+                      Jimmy Choo
+                      <br>
+                      Eau de Parfum Spray 100ml
+                    </a>
+                  </p>
+                  <p class='tx __upper'>
+                    Price £68.00
+                  </p>
+                </figcaption>
+              </figure>
+              <figure class='products-i __main'>
+                <div class='products-i_photo m-b_2'>
+                  <a href='#'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -746,121 +957,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -898,7 +995,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -917,102 +1014,7 @@
               <figure class='products-i __main'>
                 <div class='products-i_photo m-b_2'>
                   <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-3.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-1.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
-                  </a>
-                </div>
-                <figcaption class='tx __l'>
-                  <p class='tx __600 m-b_1'>
-                    <a class='a __base' href='#'>
-                      Jimmy Choo
-                      <br>
-                      Eau de Parfum Spray 100ml
-                    </a>
-                  </p>
-                  <p class='tx __upper'>
-                    Price £68.00
-                  </p>
-                </figcaption>
-              </figure>
-              <figure class='products-i __main'>
-                <div class='products-i_photo m-b_2'>
-                  <a href='#'>
-                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-4.png' width='200'>
+                    <img alt='Jimmy Choo' class='va-t' height='280' src='/assets/images/fake/hot-offers-2.png' width='200'>
                   </a>
                 </div>
                 <figcaption class='tx __l'>
@@ -1045,7 +1047,7 @@
           <div class='paralax_layer' style='background-image: url(/assets/images/fake/paralax-layer-1.jpg);'></div>
         </div>
       </section>
-      <section aria-label='Views review' class='section __bg' role='region'>
+      <section aria-label='Views review' class='section __bg __gray' role='region'>
         <div class='section_header __green'>
           <div class='ctn'>
             <div class='section_header_inner'>
@@ -1063,6 +1065,146 @@
               <figure class='products-i __video'>
                 <div class='products-i_photo m-b_1'>
                   <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
+                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
+                  </a>
+                </div>
+                <figcaption>
+                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
+                </figcaption>
+              </figure>
+              <figure class='products-i __video'>
+                <div class='products-i_photo m-b_1'>
+                  <a href='#'>
                     <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
                   </a>
                 </div>
@@ -1093,116 +1235,6 @@
               <figure class='products-i __video'>
                 <div class='products-i_photo m-b_1'>
                   <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
                     <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-3.jpg' width='100%'>
                   </a>
                 </div>
@@ -1214,36 +1246,6 @@
                 <div class='products-i_photo m-b_1'>
                   <a href='#'>
                     <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-1.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
-                  </a>
-                </div>
-                <figcaption>
-                  <a class='a __base' href='#'>Meet ner perfume "Miss Chanel"</a>
-                </figcaption>
-              </figure>
-              <figure class='products-i __video'>
-                <div class='products-i_photo m-b_1'>
-                  <a href='#'>
-                    <img alt='Meet ner perfume Miss Chanel' src='/assets/images/fake/video-2.jpg' width='100%'>
                   </a>
                 </div>
                 <figcaption>
@@ -1272,7 +1274,7 @@
           </div>
         </div>
       </section>
-      <section aria-label='Country' class='section __bg __border' role='region'>
+      <section aria-label='Country' class='section __border __bg __gray' role='region'>
         <div class='section_header __major'>
           <div class='ctn'>
             <div class='section_header_inner'>

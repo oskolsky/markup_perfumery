@@ -5314,7 +5314,9 @@ a.c-btn:hover {
 .content {
   margin-right: 20px; }
 
-.section.__bg {
+.section.__bg.__white {
+  background-color: #fff; }
+.section.__bg.__gray {
   background-color: #f5f5f9; }
 .section.__border:not(:last-child) {
   border-bottom: 1px solid #d0d0d4; }
@@ -5543,6 +5545,9 @@ a.c-btn:hover {
     left: 50px; }
   .promo_nav_i.__next {
     right: 50px; }
+
+.paralax {
+  position: relative; }
 
 .paralax_layer {
   height: 500px;

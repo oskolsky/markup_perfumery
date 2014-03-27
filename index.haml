@@ -1,3 +1,5 @@
+%a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity:.4, isBgndMovie:{width:900, mute:true}, ID:'bgndEl', ratio:'16/9', quality:'default'}"}
+
 %section.section.__border{role: "region", "aria-label" => "Promo slider"}
   .promo
     .slider
@@ -12,7 +14,7 @@
       %a.promo_nav_i.slider-nav_i.__next{href: "#"}
         %i.fa.fa-chevron-right
 
-%section.section.__bg.__border{role: "region", "aria-label" => "News"}
+%section.section.__border.__bg.__gray{role: "region", "aria-label" => "News"}
   .ctn
     .p-t_2.p-b_2
       .grid
@@ -36,7 +38,7 @@
   .paralax
     .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
 
-%section.section{role: "region", "aria-label" => "Hot offers"}
+%section.section.__bg.__white{role: "region", "aria-label" => "Hot offers"}
   .section_header.__red
     .ctn
       .section_header_inner
@@ -52,7 +54,7 @@
           = haml :"/views/common/_products_item_main"
       = haml :"/views/common/_carousel_nav_main"
 
-%section.section.__border{role: "region", "aria-label" => "Set sellings brands"}
+%section.section.__border.__bg.__white{role: "region", "aria-label" => "Set sellings brands"}
   .section_header.__blue
     .ctn
       .section_header_inner
@@ -72,7 +74,7 @@
   .paralax
     .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
 
-%section.section.__bg{role: "region", "aria-label" => "Views review"}
+%section.section.__bg.__gray{role: "region", "aria-label" => "Views review"}
   .section_header.__green
     .ctn
       .section_header_inner
@@ -88,7 +90,7 @@
           = haml :"/views/common/_products_video"
       = haml :"/views/common/_carousel_nav_main"
 
-%section.section.__bg.__border{role: "region", "aria-label" => "Country"}
+%section.section.__border.__bg.__gray{role: "region", "aria-label" => "Country"}
   .section_header.__major
     .ctn
       .section_header_inner

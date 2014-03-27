@@ -44,11 +44,11 @@
   line-height: 70px;
   @include media-query(desktop) {
     &.__sticky {
-      position: fixed;
+      position: fixed !important;
       top: 0;
       right: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 9999;
       border: none;
       box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
     }
@@ -173,7 +173,10 @@
 //
 //****************************************************************************************************
 .section {
-  &.__bg {background-color: #f5f5f9;}
+  &.__bg {
+    &.__white {background-color: #fff;}
+    &.__gray  {background-color: #f5f5f9;}
+  }
   &.__border {
     &:not(:last-child) {border-bottom: 1px solid #d0d0d4;}
   }
@@ -496,8 +499,7 @@
 //
 //****************************************************************************************************
 .paralax {
-  // border-top: 1px solid #d0d0d4;
-  // border-bottom: 1px solid #d0d0d4;
+  position: relative;  
 }
   .paralax_layer {
     height: 500px;
