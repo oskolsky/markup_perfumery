@@ -4,7 +4,7 @@
       .reviews-i_user
         .p-r.m-b_1
           %img.reviews-i_photo{src: "/assets/images/fake/reviews-mini-#{rand(1..2)}.png", alt: ""}
-          = haml :"/views/common/_avatar"
+          = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
         %ul.reviews-i_rating
           %li.reviews-i_rating_control.__plus
             %a{href: "#"} +

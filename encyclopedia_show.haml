@@ -1,263 +1,279 @@
-= haml :"views/common/_breadcrumbs"
-.ctn
-  .p-t_2.p-b_6
-    .grid
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Page Title
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      
+      = Haml::Engine.new(File.read('views/common/_breadcrumbs.haml')).render
 
-      .grid-i.__grid-18-24>
-        %section.content{role: "region", "aria-label" => "Catalog"}
+      .ctn
+        .p-t_2.p-b_6
+          .grid
 
-          .p-t_2.p-b_7
-            .grid
-              .grid-i.__grid-9-18>
-                .photo-gallery
+            .grid-i.__grid-18-24>
+              %section.content{role: "region", "aria-label" => "Catalog"}
+
+                .p-t_2.p-b_7
                   .grid
-                    .grid-i.__grid-2-9>
-                      .photo-gallery_thumbs
-                        .vertical-carousel
-                          - 1.upto(4) do |i|
-                            %img.va-t.c-bg.__green{src: "/assets/images/fake/product-thumb-#{i}.jpg", width: 71, height: 88, alt: "Marc Jacobs Honey (50 ml)", data: {src: "/assets/images/fake/product-main-#{i}.jpg"}}
-                        %nav.vertical-carousel-nav.cf
-                          %a.vertical-carousel-nav_i.__prev{href: "#"}
-                            %i.fa.fa-chevron-up
-                          %a.vertical-carousel-nav_i.__next{href: "#"}
-                            %i.fa.fa-chevron-down
-                    .grid-i.__grid-7-9>
-                      .photo-gallery_preview
-                        .tx.__center
-                          %img.va-t{src: "/assets/images/fake/product-main-1.jpg", width: 220, height: 332, alt: "Marc Jacobs Honey (50 ml)"}
-              .grid-i.__grid-9-18>
-                .m-b_1
-                  %h1.tx.__upper Marc Jacobs Honey (50 ml)
-                .m-b_2
-                  .stars.__readonly.va-m{data: {score: "#{rand(1..5)}"}}
-                  &nbsp;&nbsp;&nbsp;
-                  %span.tx.__muted.va-m 28 reviews
-                .accordion
-                  %h4.tx.__upper.c-p Specifications
-                  %div 
-                    .p-t_1.p-b_1
-                      The fragrance opens with a&nbsp;fresh fruity hook, and melts to&nbsp;a&nbsp;beautiful floral honey heart for a&nbsp;long lasting and sunny signature fragrance.
-                  %h4.tx.__upper.c-p Main Accords
-                  %div
-                    .p-t_2.p-b_1
-                      .grid.m-b_0
-                        - 1.upto(5) do
-                          .grid-i.__grid-1-3.m-b_1>
-                            .progressbar{data: {progress: "#{rand(25..80)}"}} 
-                              %span.progressbar_inner white floral
-                  %h4.tx.__upper.c-p Buy From
-                  %div 
-                    .p-t_1.p-b_1
-                      %p The fragrance opens with a&nbsp;fresh fruity hook, and melts to&nbsp;a&nbsp;beautiful floral honey heart for a&nbsp;long lasting and sunny signature fragrance.
+                    .grid-i.__grid-9-18>
+                      .photo-gallery
+                        .grid
+                          .grid-i.__grid-2-9>
+                            .photo-gallery_thumbs
+                              .vertical-carousel
+                                - 1.upto(4) do |i|
+                                  %img.va-t.c-bg.__green{src: "/assets/images/fake/product-thumb-#{i}.jpg", width: 71, height: 88, alt: "Marc Jacobs Honey (50 ml)", data: {src: "/assets/images/fake/product-main-#{i}.jpg"}}
+                              %nav.vertical-carousel-nav.cf
+                                %a.vertical-carousel-nav_i.__prev{href: "#"}
+                                  %i.fa.fa-chevron-up
+                                %a.vertical-carousel-nav_i.__next{href: "#"}
+                                  %i.fa.fa-chevron-down
+                          .grid-i.__grid-7-9>
+                            .photo-gallery_preview
+                              .tx.__center
+                                %img.va-t{src: "/assets/images/fake/product-main-1.jpg", width: 220, height: 332, alt: "Marc Jacobs Honey (50 ml)"}
+                    .grid-i.__grid-9-18>
+                      .m-b_1
+                        %h1.tx.__upper Marc Jacobs Honey (50 ml)
+                      .m-b_2
+                        .stars.__readonly.va-m{data: {score: "#{rand(1..5)}"}}
+                        &nbsp;&nbsp;&nbsp;
+                        %span.tx.__muted.va-m 28 reviews
+                      .accordion
+                        %h4.tx.__upper.c-p Specifications
+                        %div 
+                          .p-t_1.p-b_1
+                            The fragrance opens with a&nbsp;fresh fruity hook, and melts to&nbsp;a&nbsp;beautiful floral honey heart for a&nbsp;long lasting and sunny signature fragrance.
+                        %h4.tx.__upper.c-p Main Accords
+                        %div
+                          .p-t_2.p-b_1
+                            .grid.m-b_0
+                              - 1.upto(5) do
+                                .grid-i.__grid-1-3.m-b_1>
+                                  .progressbar{data: {progress: "#{rand(25..80)}"}} 
+                                    %span.progressbar_inner white floral
+                        %h4.tx.__upper.c-p Buy From
+                        %div 
+                          .p-t_1.p-b_1
+                            %p The fragrance opens with a&nbsp;fresh fruity hook, and melts to&nbsp;a&nbsp;beautiful floral honey heart for a&nbsp;long lasting and sunny signature fragrance.
 
-          .tabs.__content
-            %ul.grid.__no-gutter
-              %li.grid-i.__grid-4-18>
-                %a{href: "#votes"} Votes
-              %li.grid-i.__grid-4-18>
-                %a{href: "#review"} Review
-              %li.grid-i.__grid-4-18>
-                %a{href: "#deals"} Deals
-            
-            #votes.tabs_page
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .grid.__no-gutter
-                    %figure.preferences-i.grid-i.__grid-1-5>
-                      %p.preferences-i_t Seasonality
-                      %i.ico.__52.__autumn
-                      %figcaption
-                        %p Autumn
-                    %figure.preferences-i.grid-i.__grid-1-5>
-                      %p.preferences-i_t Day Time
-                      %i.ico.__52.__night
-                      %figcaption
-                        %p Night
-                    %figure.preferences-i.grid-i.__grid-1-5>
-                      %p.preferences-i_t Feelings
-                      %i.ico.__52.__love
-                      %figcaption
-                        %p Love
-                    %figure.preferences-i.grid-i.__grid-1-5>
-                      %p.preferences-i_t Longevity
-                      %i.ico.__52.__hours
-                      %figcaption
-                        %p 3-4 hours
-                    %figure.preferences-i.grid-i.__grid-1-5>
-                      %p.preferences-i_t Sillage
-                      %i.ico.__52.__meters
-                      %figcaption
-                        %p 1-2 meters
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    %h4.tx.__upper Personal preferences
-                  %form.form.preferences-personal
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab1", data: {dialog: "open", url: "/data/dialogs/voting", tab: 1}} Был
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab2", data: {dialog: "open", url: "/data/dialogs/voting", tab: 2}} Есть
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab3", data: {dialog: "open", url: "/data/dialogs/voting", tab: 3}} Хочу
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab4", data: {dialog: "open", url: "/data/dialogs/voting", tab: 4}} Попробую
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab5", data: {dialog: "open", url: "/data/dialogs/voting", tab: 5}} Куплю
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab6", data: {dialog: "open", url: "/data/dialogs/voting", tab: 6}} Продам
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab7", data: {dialog: "open", url: "/data/dialogs/voting", tab: 7}} Обменяю
-                    %label.form-el.__label
-                      %span.form-el.__checkbox.__fake
-                        %input.form-el.__checkbox.__real{type: "checkbox"}
-                      %span 
-                        %a.a.__base.__pseudo{href: "/dialogs/voting#tab8", data: {dialog: "open", url: "/data/dialogs/voting", tab: 8}} Распив
-              %section.section
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Perfume Pyramid: <b>Top notes</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 6}}
-                    - 1.upto(20) do
-                      = haml :"/views/common/_flavors_item"
-              %section.section
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Perfume Pyramid: <b>Middle notes</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 6}}
-                    - 1.upto(5) do
-                      = haml :"/views/common/_flavors_item"
-              %section.section
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Perfume Pyramid: <b>Base Notes</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 6}}
-                    - 1.upto(4) do
-                      = haml :"/views/common/_flavors_item"
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Notes <b>According to Your Votes</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 6}}
-                    - 1.upto(4) do
-                      = haml :"/views/common/_flavors_item"
-                    %figure.flavors-i>
-                      .flavors-i_photo
-                        %i.ico.__26.__plus
-                      %figcaption
-                        %p Add Yours
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper.__700 This perfume reminds me
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 5}}
-                    - 1.upto(20) do
-                      = haml :"/views/common/_products_item"
-
-            #review.tabs_page
-              %section.section
-                .p-t_3.p-b_3
-                  .reviews-add
-                    .grid
-                      .grid-i.__grid-4-23.__prefix-1-23>
-                        = haml :"/views/common/_avatar"
-                      .grid-i.__grid-17-23>
-                        %form.form
-                          .m-b_1
-                            %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Leave your review"}
+                .tabs.__content
+                  %ul.grid.__no-gutter
+                    %li.grid-i.__grid-4-18>
+                      %a{href: "#votes"} Votes
+                    %li.grid-i.__grid-4-18>
+                      %a{href: "#review"} Review
+                    %li.grid-i.__grid-4-18>
+                      %a{href: "#deals"} Deals
+                  
+                  #votes.tabs_page
+                    %section.section.__border{role: "region", "aria-label" => "Votes"}
+                      .p-t_3.p-b_3
+                        .grid.__no-gutter
+                          %figure.preferences-i.grid-i.__grid-1-5>
+                            %p.preferences-i_t Seasonality
+                            %i.ico.__52.__autumn
+                            %figcaption
+                              %p Autumn
+                          %figure.preferences-i.grid-i.__grid-1-5>
+                            %p.preferences-i_t Day Time
+                            %i.ico.__52.__night
+                            %figcaption
+                              %p Night
+                          %figure.preferences-i.grid-i.__grid-1-5>
+                            %p.preferences-i_t Feelings
+                            %i.ico.__52.__love
+                            %figcaption
+                              %p Love
+                          %figure.preferences-i.grid-i.__grid-1-5>
+                            %p.preferences-i_t Longevity
+                            %i.ico.__52.__hours
+                            %figcaption
+                              %p 3-4 hours
+                          %figure.preferences-i.grid-i.__grid-1-5>
+                            %p.preferences-i_t Sillage
+                            %i.ico.__52.__meters
+                            %figcaption
+                              %p 1-2 meters
+                    %section.section.__border{role: "region", "aria-label" => "Personal preferences"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          %h4.tx.__upper Personal preferences
+                        %form.form.preferences-personal
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab1", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 1}} Был
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab2", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 2}} Есть
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab3", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 3}} Хочу
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab4", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 4}} Попробую
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab5", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 5}} Куплю
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab6", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 6}} Продам
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab7", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 7}} Обменяю
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span 
+                              %a.a.__base.__pseudo{href: "/dialogs/voting.html#tab8", data: {dialog: "open", url: "/data/dialogs/voting.html", tab: 8}} Распив
+                    %section.section{role: "region", "aria-label" => "Perfume Pyramid: Top notes"}
+                      .p-t_3.p-b_3
+                        .m-b_3
                           .grid
-                            .grid-i.__grid-1-2>
-                              .stars
-                            .grid-i.__grid-1-2>
-                              .tx.__right
-                                %input.form-el.__btn.__purple.grid-i.__grid-3-5{type: "submit", value: "Send"}
-              %section.section
-                .p-t_3.p-b_3
-                  - 1.upto(7) do
-                    = haml :"/views/common/_reviews_item"
-              
-            #deals.tabs_page
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper More from <b>Marc Jacobs</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 5}}
-                    - 1.upto(20) do
-                      = haml :"/views/common/_products_item"
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Customers <b>Who Viewed This Item Also Viewed</b>
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 5}}
-                    - 1.upto(20) do
-                      = haml :"/views/common/_products_item"
-              %section.section.__border
-                .p-t_3.p-b_3
-                  .m-b_3
-                    .grid
-                      .grid-i.__grid-2-3.va-m>
-                        %h4.tx.__upper Video reviews
-                      .grid-i.__grid-1-3.va-m>
-                        = haml :"/views/common/_carousel_nav"
-                  .carousel{data: {items: 3}}
-                    - 1.upto(20) do
-                      = haml :"/views/common/_products_video"
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Perfume Pyramid: <b>Top notes</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 6}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                    %section.section{role: "region", "aria-label" => "Perfume Pyramid: Middle notes"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Perfume Pyramid: <b>Middle notes</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 6}}
+                          - 1.upto(5) do
+                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                    %section.section{role: "region", "aria-label" => "Perfume Pyramid: Base notes"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .gridBase
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Perfume Pyramid: <b>Base Notes</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 6}}
+                          - 1.upto(4) do
+                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                    %section.section.__border{role: "region", "aria-label" => "Notes According to Your Votes"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Notes <b>According to Your Votes</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 6}}
+                          - 1.upto(4) do
+                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                          %figure.flavors-i>
+                            .flavors-i_photo
+                              %i.ico.__26.__plus
+                            %figcaption
+                              %p Add Yours
+                    %section.section.__border{role: "region", "aria-label" => "This perfume reminds me"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper.__700 This perfume reminds me
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 5}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
 
-      .grid-i.__grid-6-24>
-        %aside#sidebar.sidebar{role: "sidebar"}
-          .block
-            .p-t_2.p-b_2
-              %h2.tx.__center.__upper Perfume reviews
-            %hr.hr
-            .p-t_2.p-b_2
-              .reviews-thumbs
-                - 1.upto(20) do
-                  = haml :"/views/common/_reviews_thumbs"
+                  #review.tabs_page
+                    %section.section{role: "region", "aria-label" => "Leave your review"}
+                      .p-t_3.p-b_3
+                        .reviews-add
+                          .grid
+                            .grid-i.__grid-4-23.__prefix-1-23>
+                              = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                            .grid-i.__grid-17-23>
+                              %form.form
+                                .m-b_1
+                                  %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Leave your review"}
+                                .grid
+                                  .grid-i.__grid-1-2>
+                                    .stars
+                                  .grid-i.__grid-1-2>
+                                    .tx.__right
+                                      %input.form-el.__btn.__purple.grid-i.__grid-3-5{type: "submit", value: "Send"}
+                    %section.section{role: "region", "aria-label" => "Reviews"}
+                      .p-t_3.p-b_3
+                        - 1.upto(7) do
+                          = Haml::Engine.new(File.read('views/common/_reviews_item.haml')).render
+                    
+                  #deals.tabs_page
+                    %section.section.__border{role: "region", "aria-label" => "Deals"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper More from <b>Marc Jacobs</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 5}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
+                    %section.section.__border{role: "region", "aria-label" => "Deals"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Customers <b>Who Viewed This Item Also Viewed</b>
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 5}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
+                    %section.section.__border{role: "region", "aria-label" => "Video"}
+                      .p-t_3.p-b_3
+                        .m-b_3
+                          .grid
+                            .grid-i.__grid-2-3.va-m>
+                              %h4.tx.__upper Video reviews
+                            .grid-i.__grid-1-3.va-m>
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                        .carousel{data: {items: 3}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_products_video.haml')).render
+
+            .grid-i.__grid-6-24>
+              %aside#sidebar.sidebar{role: "sidebar"}
+                .block
+                  .p-t_2.p-b_2
+                    %h2.tx.__center.__upper Perfume reviews
+                  %hr.hr
+                  .p-t_2.p-b_2
+                    .reviews-thumbs
+                      - 1.upto(20) do
+                        = Haml::Engine.new(File.read('views/common/_reviews_thumbs.haml')).render
+    
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

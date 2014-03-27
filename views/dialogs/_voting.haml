@@ -17,83 +17,14 @@
       %a{href: "#tab7"} обменяю
     %li.grid-i.__grid-1-8>
       %a{href: "#tab8"} распив
-  #tab1
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab2
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab3
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab4
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab5
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab6
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab7
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
-  #tab8
-    .grid
-      - 1.upto(24) do
-        .grid-i.__grid-1-6>
-          .tx.__center
-            %figure
-              .m-b_1
-                = haml :"/views/common/_avatar"
-              %figcaption.tx.__s
-                %a.a.__base{href: "#"} Mongan Fox
+  - 1.upto(8) do |i|
+    %div{id: "tab#{i}"}
+      .grid
+        - 1.upto(24) do
+          .grid-i.__grid-1-6>
+            .tx.__center
+              %figure
+                .m-b_1
+                  = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                %figcaption.tx.__s
+                  %a.a.__base{href: "#"} Mongan Fox

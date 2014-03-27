@@ -1,172 +1,187 @@
-%a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity:.4, isBgndMovie:{width:900, mute:true}, ID:'bgndEl', ratio:'16/9', quality:'default'}"}
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Landing
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    %a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity:.4, isBgndMovie:{width:900, mute:true}, ID:'bgndEl', ratio:'16/9', quality:'default'}"}
 
-%section.section.__border{role: "region", "aria-label" => "Promo slider"}
-  .promo
-    .slider
-      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-1.jpg);"}
-      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-2.jpg);"}
-      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-3.jpg);"}
-      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-4.jpg);"}
-      .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-5.jpg);"}
-    %nav.promo_nav.slider-nav
-      %a.promo_nav_i.slider-nav_i.__prev{href: "#"}
-        %i.fa.fa-chevron-left
-      %a.promo_nav_i.slider-nav_i.__next{href: "#"}
-        %i.fa.fa-chevron-right
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
 
-%section.section.__border.__bg.__gray{role: "region", "aria-label" => "News"}
-  .ctn
-    .p-t_2.p-b_2
-      .grid
-        - 1.upto(4) do
-          .grid-i.__grid-1-4>
-            .block
-              .p-t_2.p-b_2
-                %p.delta.tx.__center.__upper.__700 Новое в энциклопедии
-              %hr.hr
-              .p-t_1.p-b_1
+      %section.section.__border{role: "region", "aria-label" => "Promo slider"}
+        .promo
+          .slider
+            .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-1.jpg);"}
+            .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-2.jpg);"}
+            .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-3.jpg);"}
+            .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-4.jpg);"}
+            .slider_i{style: "background-image: url(/assets/images/fake/promo-slider-5.jpg);"}
+          %nav.promo_nav.slider-nav
+            %a.promo_nav_i.slider-nav_i.__prev{href: "#"}
+              %i.fa.fa-chevron-left
+            %a.promo_nav_i.slider-nav_i.__next{href: "#"}
+              %i.fa.fa-chevron-right
+
+      %section.section.__border.__bg.__gray{role: "region", "aria-label" => "News"}
+        .ctn
+          .p-t_2.p-b_2
+            .grid
+              - 1.upto(4) do
+                .grid-i.__grid-1-4>
+                  .block
+                    .p-t_2.p-b_2
+                      %p.delta.tx.__center.__upper.__700 Новое в энциклопедии
+                    %hr.hr
+                    .p-t_1.p-b_1
+                      %figure
+                        .m-b_1
+                          %a{href: "/encyclopedia_show.html.html"}
+                            %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
+                        %figcaption.tx.__center.__upper
+                          %p.gamma.tx.__700 
+                            %a.a.__base{href: "/encyclopedia_show.html"} Marc Jacobs Honey
+                          %p Eau de Parfum Spray
+
+      %section.section{role: "region", "aria-label" => "Promo paralax"}
+        .paralax
+          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+
+      %section.section.__bg.__white{role: "region", "aria-label" => "Hot offers"}
+        .section_header.__red
+          .ctn
+            .section_header_inner
+              .grid
+                .grid-i.__grid-1-6.va-m>
+                  .section_header_title Hot offers
+                .grid-i.__grid-5-6.va-m>
+                  .section_header_summary Discover luxury products at everyday prices
+        .ctn
+          .p-t_4.p-b_4.p-r
+            .carousel{data: {items: 4}}
+              - 1.upto(20) do
+                = Haml::Engine.new(File.read('views/common/_products_item_main.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+
+      %section.section.__border.__bg.__white{role: "region", "aria-label" => "Best selling"}
+        .section_header.__blue
+          .ctn
+            .section_header_inner
+              .grid
+                .grid-i.__grid-1-6.va-m>
+                  .section_header_title Best selling
+                .grid-i.__grid-5-6.va-m>
+                  .section_header_summary Discover luxury products at everyday prices
+        .ctn
+          .p-t_4.p-b_4.p-r
+            .carousel{data: {items: 4}}
+              - 1.upto(20) do
+                = Haml::Engine.new(File.read('views/common/_products_item_main.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+
+      %section.__border{role: "region", "aria-label" => "Promo paralax"}
+        .paralax
+          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+
+      %section.section.__bg.__gray{role: "region", "aria-label" => "Video Review"}
+        .section_header.__green
+          .ctn
+            .section_header_inner
+              .grid
+                .grid-i.__grid-1-6.va-m>
+                  .section_header_title Video Review
+                .grid-i.__grid-5-6.va-m>
+                  .section_header_summary It’s so easy to discover new products
+        .ctn
+          .p-t_4.p-b_4.p-r
+            .carousel{data: {items: 4}}
+              - 1.upto(20) do
+                = Haml::Engine.new(File.read('views/common/_products_video.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+
+      %section.section.__border.__bg.__gray{role: "region", "aria-label" => "Country"}
+        .section_header.__major
+          .ctn
+            .section_header_inner
+              .grid
+                .grid-i.__grid-1-6.va-m>
+                  .section_header_title Country
+                .grid-i.__grid-5-6.va-m>
+                  .section_header_summary You can choose the country and then check designers list
+        .ctn
+          .p-t_4.p-b_4
+            .grid
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
-                    %a{href: "/encyclopedia_show"}
-                      %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
-                  %figcaption.tx.__center.__upper
-                    %p.gamma.tx.__700 
-                      %a.a.__base{href: "/encyclopedia_show"} Marc Jacobs Honey
-                    %p Eau de Parfum Spray
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__usa{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p United States
+                    %p (<b>1287</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__belgium{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p Belgium
+                    %p (<b>15</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__italy{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p Italy
+                    %p (<b>458</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__uk{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p UK
+                    %p (<b>48</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__china{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p China
+                    %p (<b>1458</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__india{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p India
+                    %p (<b>458</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__russia{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p Russia
+                    %p (<b>588</b>)
+              .grid-i.__grid-1-8> 
+                %figure
+                  .m-b_1
+                    %a{href: "#"}
+                      %img.va-t.b-center.flag.__ireland{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
+                  %figcaption.tx.__l.__center
+                    %p Ireland
+                    %p (<b>28</b>)
 
-%section.section{role: "region", "aria-label" => "Promo paralax"}
-  .paralax
-    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+      %section.section{role: "region", "aria-label" => "Promo paralax"}
+        .paralax
+          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
 
-%section.section.__bg.__white{role: "region", "aria-label" => "Hot offers"}
-  .section_header.__red
-    .ctn
-      .section_header_inner
-        .grid
-          .grid-i.__grid-1-6.va-m>
-            .section_header_title Hot offers
-          .grid-i.__grid-5-6.va-m>
-            .section_header_summary Discover luxury products at everyday prices
-  .ctn
-    .p-t_4.p-b_4.p-r
-      .carousel{data: {items: 4}}
-        - 1.upto(20) do
-          = haml :"/views/common/_products_item_main"
-      = haml :"/views/common/_carousel_nav_main"
-
-%section.section.__border.__bg.__white{role: "region", "aria-label" => "Set sellings brands"}
-  .section_header.__blue
-    .ctn
-      .section_header_inner
-        .grid
-          .grid-i.__grid-1-6.va-m>
-            .section_header_title Best selling
-          .grid-i.__grid-5-6.va-m>
-            .section_header_summary Discover luxury products at everyday prices
-  .ctn
-    .p-t_4.p-b_4.p-r
-      .carousel{data: {items: 4}}
-        - 1.upto(20) do
-          = haml :"/views/common/_products_item_main"
-      = haml :"/views/common/_carousel_nav_main"
-
-%section.__border{role: "region", "aria-label" => "Promo paralax"}
-  .paralax
-    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
-
-%section.section.__bg.__gray{role: "region", "aria-label" => "Views review"}
-  .section_header.__green
-    .ctn
-      .section_header_inner
-        .grid
-          .grid-i.__grid-1-6.va-m>
-            .section_header_title Video Review
-          .grid-i.__grid-5-6.va-m>
-            .section_header_summary It’s so easy to discover new products
-  .ctn
-    .p-t_4.p-b_4.p-r
-      .carousel{data: {items: 4}}
-        - 1.upto(20) do
-          = haml :"/views/common/_products_video"
-      = haml :"/views/common/_carousel_nav_main"
-
-%section.section.__border.__bg.__gray{role: "region", "aria-label" => "Country"}
-  .section_header.__major
-    .ctn
-      .section_header_inner
-        .grid
-          .grid-i.__grid-1-6.va-m>
-            .section_header_title Country
-          .grid-i.__grid-5-6.va-m>
-            .section_header_summary You can choose the country and then check designers list
-  .ctn
-    .p-t_4.p-b_4
-      .grid
-        .grid-i.__grid-1-8>
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__usa{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p United States
-              %p (<b>1287</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__belgium{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p Belgium
-              %p (<b>15</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__italy{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p Italy
-              %p (<b>458</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__uk{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p UK
-              %p (<b>48</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__china{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p China
-              %p (<b>1458</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__india{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p India
-              %p (<b>458</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__russia{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p Russia
-              %p (<b>588</b>)
-        .grid-i.__grid-1-8> 
-          %figure
-            .m-b_1
-              %a{href: "#"}
-                %img.va-t.b-center.flag.__ireland{src: "/assets/images/blank.gif", width: 98, height: 98, alt: "United States"}
-            %figcaption.tx.__l.__center
-              %p Ireland
-              %p (<b>28</b>)
-
-%section.section{role: "region", "aria-label" => "Promo paralax"}
-  .paralax
-    .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
