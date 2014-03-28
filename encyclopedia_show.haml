@@ -192,10 +192,11 @@
                           - 1.upto(4) do
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
                           %figure.flavors-i>
-                            .flavors-i_photo
-                              %i.ico.__26.__plus
-                            %figcaption
-                              %p Add Yours
+                            %a{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}}
+                              .flavors-i_photo
+                                %i.ico.__26.__plus
+                              %figcaption
+                                %p Add Yours
                     %section.section.__border{role: "region", "aria-label" => "This perfume reminds me"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -218,7 +219,7 @@
                             .grid-i.__grid-17-23>
                               %form.form
                                 .m-b_1
-                                  %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Leave your review"}
+                                  %textarea.form-el.__textarea.__border.__block{rows: 4, placeholder: "Leave your review"}
                                 .grid
                                   .grid-i.__grid-1-2>
                                     .stars

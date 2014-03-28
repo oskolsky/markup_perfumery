@@ -5,7 +5,7 @@
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
-    %a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity:.4, isBgndMovie:{width:900, mute:true}, ID:'bgndEl', ratio:'16/9', quality:'default'}"}
+    %a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity: 1, isBgndMovie:{width: 900, mute: true}, ID: 'bgndEl', ratio: '16/9', quality: '1180'}"}
 
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
@@ -49,7 +49,8 @@
 
       %section.section{role: "region", "aria-label" => "Promo paralax"}
         .paralax
-          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+          .paralax_layer
+          / .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
 
       %section.section.__bg.__white{role: "region", "aria-label" => "Hot offers"}
         .section_header.__red
@@ -85,7 +86,7 @@
 
       %section.__border{role: "region", "aria-label" => "Promo paralax"}
         .paralax
-          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+          .paralax_layer
 
       %section.section.__bg.__gray{role: "region", "aria-label" => "Video Review"}
         .section_header.__green
@@ -182,6 +183,6 @@
 
       %section.section{role: "region", "aria-label" => "Promo paralax"}
         .paralax
-          .paralax_layer{style: "background-image: url(/assets/images/fake/paralax-layer-1.jpg);"}
+          .paralax_layer
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

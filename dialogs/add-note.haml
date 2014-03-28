@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Voting
+    %title Add Your Note
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -10,10 +10,10 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => "Dolce & Gabbana Blue In Closet Other Participants"}
+      %section.section{role: "region", "aria-label" => "Add Your Note"}
         .ctn
           .p-t_6.p-b_6
             .grid-i.__grid-17-24.b-center
-              = Haml::Engine.new(File.read('views/dialogs/_voting.haml')).render
+              = Haml::Engine.new(File.read('views/dialogs/_add-note.haml')).render
             
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
