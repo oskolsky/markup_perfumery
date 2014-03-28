@@ -6,6 +6,11 @@
 $(function() {
 
   //
+  // .. YTPlayer init
+  //
+  $(".movie").mb_YTPlayer();
+
+  //
   // .. jQuery Tabs init
   //  
   $('.tabs').tabs();
@@ -146,9 +151,12 @@ $(function() {
   });
 
   //
-  // .. YTPlayer init
+  // .. Photo gallery
   //
-  $(".movie").mb_YTPlayer();
+  $('[data-resize="height"]').each(function() {
+    var itemClass = $(this).data('item');
+    $(this).find('.' + itemClass).resizeToMaxHeight();
+  });
   
 
 

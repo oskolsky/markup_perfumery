@@ -30,22 +30,32 @@
       %section.section.__border.__bg.__gray{role: "region", "aria-label" => "News"}
         .ctn
           .p-t_2.p-b_2
-            .grid
-              - 1.upto(4) do
+            %div{data: {resize: "height", item: "block"}}
+              .grid
+                - 1.upto(3) do
+                  .grid-i.__grid-1-4>
+                    .block
+                      .p-t_2.p-b_2
+                        %p.delta.tx.__center.__upper.__700 Новое в энциклопедии
+                      %hr.hr
+                      .p-t_1.p-b_1
+                        %figure
+                          .m-b_1
+                            %a{href: "/encyclopedia_show.html.html"}
+                              %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
+                          %figcaption.tx.__center.__upper
+                            %p.gamma.tx.__700 
+                              %a.a.__base{href: "/encyclopedia_show.html"} Marc Jacobs Honey
+                            %p Eau de Parfum Spray
                 .grid-i.__grid-1-4>
                   .block
                     .p-t_2.p-b_2
-                      %p.delta.tx.__center.__upper.__700 Новое в энциклопедии
+                      %p.delta.tx.__center.__upper.__700 Отзывы
                     %hr.hr
-                    .p-t_1.p-b_1
-                      %figure
-                        .m-b_1
-                          %a{href: "/encyclopedia_show.html.html"}
-                            %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
-                        %figcaption.tx.__center.__upper
-                          %p.gamma.tx.__700 
-                            %a.a.__base{href: "/encyclopedia_show.html"} Marc Jacobs Honey
-                          %p Eau de Parfum Spray
+                    .p-t_2.p-b_2
+                      .reviews-thumbs
+                        - 1.upto(4) do
+                          = Haml::Engine.new(File.read('views/common/_reviews_thumbs.haml')).render
 
       %section.section{role: "region", "aria-label" => "Promo paralax"}
         .paralax
