@@ -47,6 +47,6 @@
     &.__no-gutter {
       @include grid-fluid("> .grid-i.__suffix", "margin-right", 0);
     }
-    @include grid-fluid(".grid-i.__suffix", "margin-right", $grid-fluid-col-gutter);
+    @include grid-fluid(".grid-i.__suffix", "margin-right", 0);
   }
 }
