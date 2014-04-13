@@ -10,24 +10,42 @@
 // .. HEADER
 //
 //****************************************************************************************************
-// .header {
-//   position: relative;
-//   height: 40px;
-//   background-color: #2f3235;
-//   color: #fff;
-//   line-height: 40px;
-//   z-index: 999;
-//   > .ctn > .grid > .grid-i {margin-bottom: 0;}
-// }
+.header {
+  position: relative;
+  height: 40px;
+  background-color: #2f3235;
+  line-height: 40px;
+}
 
-//   .logo {
-//     @include prefixes(transform, translateY(-50%));
-//     position: absolute;
-//     top: 50%;
-//     color: inherit;
-//     text-transform: uppercase;
-//     font-size: 25px;
-//   }
+//
+// .. Menu
+//
+.header_menu {
+
+}
+  .header_menu_i {
+    border-left: 1px solid #414446;
+    &:last-child {border-right: 1px solid #414446;}
+  }
+    .header_menu_i_a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      &.__special {background-color: $minor-color;}
+    }
+
+//
+// .. Logo
+//
+.logo {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  @include prefixes(transform, translateY(-50%));
+}
 
 
 
@@ -36,87 +54,47 @@
 // .. NAVIGATION
 //
 //****************************************************************************************************
-// .nav {
-//   border-bottom: 1px solid #eee;
-//   background-color: #fff;
-//   @include media-query(desktop) {
-//     &.__sticky {
-//       position: fixed !important;
-//       top: 0;
-//       right: 0;
-//       left: 0;
-//       z-index: 1001;
-//       border: none;
-//       box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
-//       opacity: .9;
-//     }
-//   }
-//   &.__main {
-//     height: 70px;
-//     font-size: 15px;
-//     line-height: 70px;
-//   }
-//   &.__profile {
-//     height: 50px;
-//     font-size: 14px;
-//     line-height: 50px;
-//   }
-// }
+.nav {
+  height: 70px;
+  border-bottom: 1px solid $border-color;
+  background-color: #fff;
+  line-height: 70px;
+  @include media-query(desktop) {
+    &.__sticky {
+      position: fixed !important;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1001;
+      border: none;
+      box-shadow: .1em .1em .3em rgba(0, 0, 0, .25);
+      opacity: .95;
+    }
+  }
+}
 
-
-
-//****************************************************************************************************
 //
-// .. MENU
+// .. Menu
 //
-//****************************************************************************************************
 .menu {
 
 }
   .menu_i {
-
+    border-left: 1px solid $muted-color;
+    &:last-child {border-right: 1px solid $muted-color;}
   }
     .menu_i_a {
-      text-transform: uppercase;
+      display: block;
+      color: $base-color;
       text-align: center;
+      text-transform: uppercase;
+      font-size: 15px;
+      @include prefixes(transition, all .33s);
+      &.__current, &:hover {
+        background-color: $major-color;
+        color: #fff;
+      }
     }
-
-// .menu {
-  
-// }
-//   .menu_i {
-//     display: inline-block;
-//     text-align: center;
-//     &:last-child .menu_i_a {border-right: 1px solid #eee;}
-//     &.__search {
-//       .menu_i_a {border-left: 1px solid #414446;}
-//     }
-//     &.__login {
-//       position: relative;
-//       .menu_i_a {
-//         border-right: 1px solid #fc5e7c !important;
-//         border-left: 1px solid #2f3235;
-//         background-color: #fc5e7c;
-//       }
-//       &:hover {
-//         .menu_i_dropdown {display: block;}
-//       }
-//     }
-//   }
-//     .menu_i_a {
-//       @include prefixes(transition, all .33s);
-//       display: block;
-//       border-left: 1px solid #eee;
-//       color: inherit;
-//       text-transform: uppercase;
-//     }
-
-// .nav .menu_i_a {
-//   &:hover, &.__current {
-//     background-color: $major-color;  
-//     color: #fff;
-//   }
-// }
 
 // .menu_i_dropdown {
 //   @include prefixes(box-sizing, border-box);
@@ -144,6 +122,7 @@
 //
 //****************************************************************************************************
 .breadcrumbs {
+  margin-top: -1px;
   height: 65px;
   border-top: 1px solid #807f7f;
   border-bottom: 1px solid #807f7f;
@@ -198,7 +177,7 @@
     &.__gray  {background-color: #f5f5f9;}
   }
   &.__border {
-    &:not(:last-child) {border-bottom: 1px solid #d0d0d4;}
+    &:not(:last-child) {border-bottom: 1px solid $border-color;}
   }
 }
 
@@ -207,8 +186,8 @@
 //
 .section_header {
   position: relative;
-  border-top: 1px solid #d5d5d5;
-  border-bottom: 1px solid #d5d5d5;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   background-color: #fff;
   -webkit-backface-visibility: hidden;
   &::before {
@@ -322,7 +301,7 @@
         margin: 0 3px;
         width: 14px;
         height: 14px;
-        border: 1px solid #c2b1b1;
+        border: 1px solid $border-color;
         border-radius: 50%;
         background-color: #fff;
         &.active {background-color: #c2b1b1;}
@@ -353,10 +332,15 @@
 // .. PROFILE
 //
 //****************************************************************************************************
+.profile-nav {
+  height: 50px;
+  line-height: 50px;
+}
+
 .profile {
   margin-bottom: 1px;
-  border-right: 1px solid #eee;
-  border-left: 1px solid #eee;
+  border-right: 1px solid $muted-color;
+  border-left:  1px solid $muted-color;
 }
   .profile_user { 
     height: 256px;
@@ -440,7 +424,7 @@
   .ui-accordion-header {
     position: relative;
     padding: 15px 0;
-    border-bottom: 1px solid #e7e7e9;
+    border-bottom: 1px solid $border-color;
     &::after {
       position: absolute;
       top: 50%;
@@ -469,7 +453,17 @@
 // .. OWL Carousel (horizontal)
 //
 .carousel {
-
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #fff;
+  }
 }
 .carousel-nav {  
   visibility: hidden;
@@ -512,7 +506,7 @@
   height: 290px !important;
   img {
     margin-bottom: 10px;
-    border: 1px solid #d0d0d4;
+    border: 1px solid $border-color;
     cursor: pointer;
   }  
 }
@@ -591,7 +585,7 @@
 .preferences-i {
   text-align: center; 
   .ico {margin-bottom: 10px;} 
-  &:not(:last-child) {border-right: 1px dotted #ccc;}
+  &:not(:last-child) {border-right: 1px dotted $border-color;}
 }
   .preferences-i_t {
     @extend .progressbar;
@@ -621,7 +615,7 @@
     margin: 0 auto;
     width: 100px;
     height: 100px;
-    border: 1px solid #d0d0d4;
+    border: 1px solid $border-color;
     text-align: center;
     line-height: 96px;
     border-radius: 50%;
@@ -650,13 +644,13 @@
   }
 }
   .reviews-thumbs_photo {
-    border: 1px solid #d5d5d9;
+    border: 1px solid $border-color;
     border-radius: 50%;
     vertical-align: top;
   }
   .reviews-thumbs_data {
     @extend .tx.__xs;
-    color: #888;
+    color: $voice-color;
   }
   .reviews-thumbs_nav {
     @extend .tx.__xs;
@@ -782,20 +776,6 @@
   }
 }
 
-.carousel {
-  position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 1px;
-      background-color: #fff;
-    }
-}
-
 
 
 //****************************************************************************************************
@@ -816,11 +796,11 @@
   @include prefixes(box-sizing, border-box);
   display: inline-block;
   padding: 5px;
-  border: 1px solid #d3d3d7;
+  border: 1px solid $border-color;
   border-radius: 50%;
 }
   .avatar_photo {
-    border: 1px solid #d3d3d7;
+    border: 1px solid $border-color;
     border-radius: 50%;
     vertical-align: top;
   }
@@ -838,7 +818,7 @@
 // .. Progress bar
 .progressbar {
   position: relative;
-  border: 1px solid #d0d0d4;
+  border: 1px solid $border-color;
   border-radius: 10px;
   text-align: center;
   line-height: 20px;
@@ -849,7 +829,7 @@
     left: 0;
     z-index: 1;
     border-radius: 10px 0 0 10px;
-    background-color: #f5f5f9;
+    background-color: #f5f5f5;
   }
 }
   .progressbar_inner {
@@ -868,7 +848,7 @@
 .flag {
   width: 98px;
   height: 98px;
-  border: 1px solid #d0d0d4;
+  border: 1px solid $border-color;
   border-radius: 50%;
   background-image: url(/assets/images/flags.png);
   background-repeat: no-repeat;
@@ -892,8 +872,8 @@
 .footer {
   height: 100px;
   border: {
-    top: 1px solid #d5d5d5;
-    bottom: 1px solid #d5d5d5;
+    top: 1px solid $border-color;
+    bottom: 1px solid $border-color;
   }
   background-color: #465065;
   color: #d0d0d4;
