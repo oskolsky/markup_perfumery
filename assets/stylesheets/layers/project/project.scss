@@ -29,9 +29,9 @@
   }
     .header-menu_i_a {
       display: block;
-      color: #fff;
       text-align: center;
       text-transform: uppercase;
+      color: #fff;
       &.__special {background-color: $minor-color;}
     }
 
@@ -85,7 +85,7 @@
   }
     .menu_i_a {
       display: block;
-      color: $base-color;
+      color: $voice-color;
       text-align: center;
       text-transform: uppercase;
       font-size: 15px;
@@ -131,7 +131,7 @@
   line-height: 65px;
 }
   .breadcrumbs_i {
-    display: inline-block;    
+    display: inline-block;
     font-size: 14px;
     &:not(:last-child) {
       &::after {
@@ -268,7 +268,7 @@
     }
     .section_header_summary {
       @extend .tx.__l;
-      color: #a8a7a7;
+      color: #a7a7a7;
       line-height: inherit;
     }
 
@@ -332,24 +332,46 @@
 // .. PROFILE
 //
 //****************************************************************************************************
-.profile-nav {
-  height: 50px;
-  line-height: 50px;
-}
-
 .profile {
   margin-bottom: 1px;
-  border-right: 1px solid $muted-color;
-  border-left:  1px solid $muted-color;
+  border-right:  1px solid $border-color;
+  border-left:   1px solid $border-color;
 }
-  .profile_user { 
+  .profile_user {
     height: 256px;
-    background-color: red;
+    border-right: 1px solid $border-color;
   }
   .profile_bg {
     height: 256px;
-    background-color: green;
   }
+
+//
+// .. Menu
+//
+.profile-menu {
+  border-bottom: 1px solid $border-color;
+}
+  .profile-menu_i {
+    border-left: 1px solid $border-color;
+    &:last-child {border-right: 1px solid $border-color;}
+  }
+    .profile-menu_i_a {
+      display: block;
+      height: 50px;
+      color: $voice-color;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 50px;
+      &.__special {
+        background-color: #01c5c3;
+        color: #fff;
+      }
+      &.__current, &:hover {
+        height: 47px;
+        border-bottom: 3px solid $minor-color;
+      }
+    }
 
 
 
@@ -359,7 +381,7 @@
 //
 //****************************************************************************************************
 .tabs {
-  &.__content {    
+  &.__content {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -384,7 +406,7 @@
       }
     }
   }
-  &.__dialog {    
+  &.__dialog {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -465,14 +487,14 @@
     background-color: #fff;
   }
 }
-.carousel-nav {  
+.carousel-nav {
   visibility: hidden;
   &.__main {
     .carousel-nav_i {
       position: absolute;
       top: 40%;
       background-color: transparent;
-      color: #b7b7bc;    
+      color: #b7b7bc;
       font-size: 20px;
       &.__prev {left: -25px;}
       &.__next {right: -25px;}
@@ -508,7 +530,7 @@
     margin-bottom: 10px;
     border: 1px solid $border-color;
     cursor: pointer;
-  }  
+  }
 }
 .vertical-carousel-nav {
   color: #fff;
@@ -534,7 +556,7 @@
 //
 //****************************************************************************************************
 .paralax {
-  position: relative;  
+  position: relative;
 }
   .paralax_layer {
     height: 500px;
@@ -558,7 +580,7 @@
 
   }
   .photo-gallery_preview {
-    
+
   }
 
 
@@ -583,8 +605,8 @@
 //
 //****************************************************************************************************
 .preferences-i {
-  text-align: center; 
-  .ico {margin-bottom: 10px;} 
+  text-align: center;
+  .ico {margin-bottom: 10px;}
   &:not(:last-child) {border-right: 1px dotted $border-color;}
 }
   .preferences-i_t {
@@ -674,7 +696,7 @@
 .reviews-i {
   &:not(:last-child) {margin-bottom: 60px;}
   &:hover {
-    .reviews-i_photo, .reviews-i_action {display: block;}    
+    .reviews-i_photo, .reviews-i_action {display: block;}
   }
   header a {color: inherit;}
   p {line-height: 19px;}
@@ -704,7 +726,7 @@
       span {margin-right: 10px;}
       &.__plus {
         a {color: #b8c901;}
-      } 
+      }
       &.__minus {
         a {color: #be0d34;}
       }

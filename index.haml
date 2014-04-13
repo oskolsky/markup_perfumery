@@ -3,14 +3,14 @@
   %head
     %title Landing
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
-  
+
   %body#page.page
     %a{id: "bgndVideo", href: "http://www.youtube.com/watch?v=UnrKi-lwWgA", class: "movie {opacity: 1, isBgndMovie:{width: 900, mute: true}, ID: 'bgndEl', ratio: '16/9', quality: '1180'}"}
 
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
-    
+
     %main#main.main{role: "main"}
 
       %section.section.__border{role: "region", "aria-label" => "Promo slider"}
@@ -44,7 +44,7 @@
                             %a{href: "/encyclopedia_show.html"}
                               %img.b-center{src: "/assets/images/fake/product-main-1.jpg", width: 211, alt: "Marc Jacobs Honey"}
                           %figcaption.tx.__center.__upper
-                            %p.gamma.tx.__700 
+                            %p.gamma.tx.__700
                               %a.a.__base{href: "/encyclopedia_show.html"} Marc Jacobs Honey
                             %p Eau de Parfum Spray
                 .grid-i.__grid-1-4>
@@ -134,7 +134,7 @@
                   %figcaption.tx.__l.__center
                     %p United States
                     %p (<b>1287</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -142,7 +142,7 @@
                   %figcaption.tx.__l.__center
                     %p Belgium
                     %p (<b>15</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -150,7 +150,7 @@
                   %figcaption.tx.__l.__center
                     %p Italy
                     %p (<b>458</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -158,7 +158,7 @@
                   %figcaption.tx.__l.__center
                     %p UK
                     %p (<b>48</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -166,7 +166,7 @@
                   %figcaption.tx.__l.__center
                     %p China
                     %p (<b>1458</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -174,7 +174,7 @@
                   %figcaption.tx.__l.__center
                     %p India
                     %p (<b>458</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}
@@ -182,7 +182,7 @@
                   %figcaption.tx.__l.__center
                     %p Russia
                     %p (<b>588</b>)
-              .grid-i.__grid-1-8> 
+              .grid-i.__grid-1-8>
                 %figure
                   .m-b_1
                     %a{href: "#"}

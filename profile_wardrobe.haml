@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Profile
+    %title Profile Wardrobe
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -17,25 +17,61 @@
             .grid.__no-gutter
               .grid-i.__grid-2-7>
                 .profile_user
-                  / %img.va-t{src: "/assets/images/fake/user-photo-1.png", width: "100%" , alt: "Alexandra Osipenko"}
+                  %img.va-t{src: "/assets/images/fake/user-photo-1.png", width: 273, height: 256, alt: "Alexandra Osipenko"}
               .grid-i.__grid-5-7>
                 .profile_bg
-                  / %img.va-t{src: "/assets/images/fake/user-bg-1.png", width: "100%" , alt: "Alexandra Osipenko"}
-          %nav.nav.__profile
-            %ul.menu.grid.__no-gutter
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} Add friend
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} Message
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} About
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "/profile_wardrobe.html"} Wardrobe
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} Activity
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} Achievements
-              %li.menu_i.grid-i.__grid-1-7>
-                %a.menu_i_a{href: "#"} Comments
-    
+                  %img.va-t{src: "/assets/images/fake/user-bg-1.png", width: 684, height: 256, alt: "Alexandra Osipenko"}
+          %nav
+            %ul.profile-menu.grid.__no-gutter
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a.__special{href: "#"} Add friend
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a.__special{href: "#"} Message
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a{href: "#"} About
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a{href: "/profile_wardrobe.html"} Wardrobe
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a{href: "#"} Activity
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a{href: "#"} Achievements
+              %li.profile-menu_i.grid-i.__grid-1-7>
+                %a.profile-menu_i_a{href: "#"} Comments
+
+      %section.section{role: "region", "aria-label" => "Wardrobe"}
+        .ctn
+          .p-t_3.p-b_3
+            .m-b_3
+              %h2.tx.__upper Alexandra’s Wardrobe
+
+            .tabs.__dialog
+              %ul.grid.__no-gutter.m-b_3
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab1"} был
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab2"} есть
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab3"} хочу
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab4"} попробую
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab5"} куплю
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab6"} продам
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab7"} обменяю
+                %li.grid-i.__grid-1-8>
+                  %a{href: "#tab8"} распив
+              - 1.upto(8) do |i|
+                %div{id: "tab#{i}"}
+                  .grid
+                    - 1.upto(24) do
+                      .grid-i.__grid-1-6>
+                        .tx.__center
+                          %figure
+                            .m-b_1
+                              = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                            %figcaption.tx.__s
+                              %a.a.__base{href: "#"} Mongan Fox
+
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
