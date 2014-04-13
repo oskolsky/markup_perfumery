@@ -193,10 +193,11 @@
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
                           %figure.flavors-i>
                             %a{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}}
-                              .flavors-i_photo
+                              .flavors-i_photo.m-b_2
                                 %i.ico.__26.__plus
-                              %figcaption
-                                %p Add Yours
+                            %figcaption
+                              %p
+                                %a.tx.__base{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}} Add Yours
                     %section.section.__border{role: "region", "aria-label" => "This perfume reminds me"}
                       .p-t_3.p-b_3
                         .m-b_3
