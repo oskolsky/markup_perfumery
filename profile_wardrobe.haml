@@ -1,0 +1,41 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Profile
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+
+      %section.section{role: "region", "aria-label" => "Profile"}
+        .ctn
+          .profile
+            .grid.__no-gutter
+              .grid-i.__grid-2-7>
+                .profile_user
+                  / %img.va-t{src: "/assets/images/fake/user-photo-1.png", width: "100%" , alt: "Alexandra Osipenko"}
+              .grid-i.__grid-5-7>
+                .profile_bg
+                  / %img.va-t{src: "/assets/images/fake/user-bg-1.png", width: "100%" , alt: "Alexandra Osipenko"}
+          %nav.nav.__profile
+            %ul.menu.grid.__no-gutter
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} Add friend
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} Message
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} About
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "/profile_wardrobe.html"} Wardrobe
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} Activity
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} Achievements
+              %li.menu_i.grid-i.__grid-1-7>
+                %a.menu_i_a{href: "#"} Comments
+    
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
