@@ -154,7 +154,7 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Perfume Pyramid: <b>Top notes</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 6}}
                           - 1.upto(20) do
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
@@ -165,7 +165,7 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Perfume Pyramid: <b>Middle notes</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 6}}
                           - 1.upto(5) do
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
@@ -176,7 +176,7 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Perfume Pyramid: <b>Base Notes</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 6}}
                           - 1.upto(4) do
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
@@ -187,7 +187,7 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Notes <b>According to Your Votes</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 6}}
                           - 1.upto(4) do
                             = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
@@ -205,10 +205,10 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper.__700 This perfume reminds me
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
 
                   #review.tabs_page
                     %section.section{role: "region", "aria-label" => "Leave your review"}
@@ -240,10 +240,10 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper More from <b>Marc Jacobs</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
                     %section.section.__border{role: "region", "aria-label" => "Deals"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -251,10 +251,10 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Customers <b>Who Viewed This Item Also Viewed</b>
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
                     %section.section.__border{role: "region", "aria-label" => "Video"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -262,7 +262,7 @@
                             .grid-i.__grid-2-3.va-m>
                               %h4.tx.__upper Video reviews
                             .grid-i.__grid-1-3.va-m>
-                              = Haml::Engine.new(File.read('views/common/_carousel_nav.haml')).render
+                              = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 3}}
                           - 1.upto(20) do
                             = Haml::Engine.new(File.read('views/common/_products_video.haml')).render

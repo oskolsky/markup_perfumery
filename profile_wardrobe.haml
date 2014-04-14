@@ -44,28 +44,65 @@
             .m-b_3
               %h2.tx.__upper Alexandra’s Wardrobe
 
+            .m-b_5
+              .tabs.__dialog
+                .grid
+                  .grid-i.__grid-2-3>
+                    %ul.grid.__no-gutter
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab1"} был
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab2"} есть
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab3"} хочу
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab4"} попробую
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab5"} куплю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab6"} продам
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab7"} обменяю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab8"} распив
+                  .grid-i.__grid-1-3>
+                - 1.upto(8) do |i|
+                  %div{id: "tab#{i}"}
+                    .grid
+                      - 1.upto(4) do
+                        .grid-i.__grid-1-6>
+                          .tx.__center
+                            %figure
+                              .m-b_1
+                                = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                              %figcaption.tx.__s
+                                %a.a.__base{href: "#"} Mongan Fox
+
             .tabs.__dialog
-              %ul.grid.__no-gutter.m-b_3
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab1"} был
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab2"} есть
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab3"} хочу
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab4"} попробую
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab5"} куплю
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab6"} продам
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab7"} обменяю
-                %li.grid-i.__grid-1-8>
-                  %a{href: "#tab8"} распив
+              .grid
+                .grid-i.__grid-2-3>
+                  %ul.grid.__no-gutter
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab1"} был
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab2"} есть
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab3"} хочу
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab4"} попробую
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab5"} куплю
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab6"} продам
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab7"} обменяю
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab8"} распив
+                .grid-i.__grid-1-3>
               - 1.upto(8) do |i|
                 %div{id: "tab#{i}"}
                   .grid
-                    - 1.upto(24) do
+                    - 1.upto(4) do
                       .grid-i.__grid-1-6>
                         .tx.__center
                           %figure

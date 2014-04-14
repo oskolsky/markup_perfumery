@@ -74,8 +74,8 @@
           .p-t_4.p-b_4.p-r
             .carousel{data: {items: 4}}
               - 1.upto(20) do
-                = Haml::Engine.new(File.read('views/common/_products_item_main.haml')).render
-            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+                = Haml::Engine.new(File.read('views/common/_products_item_l.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_l.haml')).render
 
       %section.section.__border.__bg.__white{role: "region", "aria-label" => "Best selling"}
         .section_header.__blue
@@ -90,8 +90,8 @@
           .p-t_4.p-b_4.p-r
             .carousel{data: {items: 4}}
               - 1.upto(20) do
-                = Haml::Engine.new(File.read('views/common/_products_item_main.haml')).render
-            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+                = Haml::Engine.new(File.read('views/common/_products_item_l.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_l.haml')).render
 
       %section.__border{role: "region", "aria-label" => "Promo paralax"}
         .paralax
@@ -111,7 +111,7 @@
             .carousel{data: {items: 4}}
               - 1.upto(20) do
                 = Haml::Engine.new(File.read('views/common/_products_video.haml')).render
-            = Haml::Engine.new(File.read('views/common/_carousel_nav_main.haml')).render
+            = Haml::Engine.new(File.read('views/common/_carousel_nav_l.haml')).render
 
       %section.section.__border.__bg.__gray{role: "region", "aria-label" => "Country"}
         .section_header.__major

@@ -29,9 +29,9 @@
   }
     .header-menu_i_a {
       display: block;
+      color: #fff;
       text-align: center;
       text-transform: uppercase;
-      color: #fff;
       &.__special {background-color: $minor-color;}
     }
 
@@ -489,7 +489,14 @@
 }
 .carousel-nav {
   visibility: hidden;
-  &.__main {
+  &.__s {
+    .carousel-nav_i {
+      background-color: #5f6674;
+      color: #fff;
+      font-size: 10px;
+    }
+  }
+  &.__l {
     .carousel-nav_i {
       position: absolute;
       top: 40%;
@@ -498,13 +505,6 @@
       font-size: 20px;
       &.__prev {left: -25px;}
       &.__next {right: -25px;}
-    }
-  }
-  &.__square {
-    .carousel-nav_i {
-      background-color: #5f6674;
-      color: #fff;
-      font-size: 10px;
     }
   }
 }
@@ -784,16 +784,19 @@
       content: '';
     }
   }
-  &.__main {
+  &.__s {
+
+  }
+  &.__l {
     position: relative;
     &::after {
-      content: '';
-      position: absolute;
-      top: 20px;
-      bottom: 48px;
-      left: 0;
-      width: 1px;
-      background-color: #d5d5d5;
+      // content: '';
+      // position: absolute;
+      // top: 20px;
+      // bottom: 48px;
+      // left: 0;
+      // width: 1px;
+      // background-color: $border-color;
     }
   }
 }
