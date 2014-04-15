@@ -1,8 +1,8 @@
 %h2.tx.__upper.__center.m-b_3 
   Dolce & Gabbana Blue 
   %span.tx.__400 In Closet Other Participants
-.tabs.__dialog
-  %ul.grid.__no-gutter.m-b_3
+.tabs.__s
+  %ul.grid.__no-gutter
     %li.grid-i.__grid-1-8>
       %a{href: "#tab1"} был
     %li.grid-i.__grid-1-8>
@@ -20,13 +20,14 @@
     %li.grid-i.__grid-1-8>
       %a{href: "#tab8"} распив
   - 1.upto(8) do |i|
-    %div{id: "tab#{i}"}
-      .grid
-        - 1.upto(24) do
-          .grid-i.__grid-1-6>
-            .tx.__center
-              %figure
-                .m-b_1
-                  = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
-                %figcaption.tx.__s
-                  %a.a.__base{href: "#"} Mongan Fox
+    .tabs_page{id: "tab#{i}"}
+      .p-t_3.p-b_3
+        .grid
+          - 1.upto(24) do
+            .grid-i.__grid-1-6>
+              .tx.__center
+                %figure
+                  .m-b_1
+                    = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                  %figcaption.tx.__s
+                    %a.a.__base{href: "#"} Mongan Fox

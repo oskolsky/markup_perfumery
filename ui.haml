@@ -1,0 +1,90 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title UI
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    
+    %main#main.main{role: "main"}
+
+      %section.section{role: "region", "aria-label" => "Profile"}
+        .ctn
+          .p-t_4.p-b_4
+
+            .m-b_4
+              %h1.m-b_2 Tabs 1
+              .tabs.__l
+                %ul.grid.__no-gutter
+                  %li.grid-i.__grid-4-18>
+                    %a{href: "#votes"} Votes
+                  %li.grid-i.__grid-4-18>
+                    %a{href: "#review"} Review
+                  %li.grid-i.__grid-4-18>
+                    %a{href: "#deals"} Deals
+                #votes.tabs_page
+                  .p-t_3.p-b_3
+                    %p Votes
+                #review.tabs_page
+                  .p-t_3.p-b_3
+                    %p Review
+                #deals.tabs_page
+                  .p-t_3.p-b_3
+                    %p Deals
+
+            .m-b_4
+              %h1.m-b_2 Tabs 2
+              .tabs.__s
+                %ul.grid.__no-gutter
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab1"} был
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab2"} есть
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab3"} хочу
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab4"} попробую
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab5"} куплю
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab6"} продам
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab7"} обменяю
+                  %li.grid-i.__grid-1-8>
+                    %a{href: "#tab8"} распив
+                - 1.upto(8) do |i|
+                  .tabs_page{id: "tab#{i}"}
+                    .p-t_3.p-b_3
+                      %p
+                        = i
+
+            .m-b_4
+              %h1.m-b_2 Tabs 3
+              .tabs.__s
+                .grid
+                  .grid-i.__grid-2-3.m-b_0>
+                    %ul.grid.__no-gutter
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab1"} был
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab2"} есть
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab3"} хочу
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab4"} попробую
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab5"} куплю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab6"} продам
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab7"} обменяю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab8"} распив
+                  .grid-i.__grid-1-3.m-b_0> 1
+                  .grid-i.__grid-1-1.m-b_0>
+                    - 1.upto(8) do |i|
+                      .tabs_page.__border{id: "tab#{i}"}
+                        .p-t_3.p-b_3
+                          %p
+                            = i

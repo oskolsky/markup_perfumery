@@ -381,7 +381,7 @@
 //
 //****************************************************************************************************
 .tabs {
-  &.__content {
+  &.__l {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -406,7 +406,7 @@
       }
     }
   }
-  &.__dialog {
+  &.__s {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -433,6 +433,11 @@
   .tabs_page {
     margin-top: -1px;
     border-top: 1px solid $border-color;
+    &.__border {
+      padding-right: 20px;
+      padding-left: 20px;
+      border: 1px solid $border-color;
+    }
   }
 
 
