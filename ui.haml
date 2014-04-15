@@ -88,3 +88,27 @@
               .carousel{data: {items: 4}}
                 - 1.upto(20) do
                   = Haml::Engine.new(File.read('views/common/_carousel_item_video.haml')).render
+
+            .m-b_4
+              %h1.m-b_2 Forms
+
+              %form.form
+                .grid
+                  
+                  .grid-i.__grid-1-4.__suffix-3-4
+                    %input.form-el.__tx.__border.__block{type: "text", placeholder: "Input type text"}
+                  
+                  .grid-i.__grid-3-4.__suffix-1-4
+                    %textarea.form-el.__textarea.__border.__block{rows: 5, placeholder: "Textarea"}
+
+                  .grid-i.__grid-1-1
+                    %button.form-el.__btn.__black Button black
+                    %button.form-el.__btn.__purple Button purple
+
+                  .grid-i.__grid-1-4.__suffix-3-4
+                      .form-el.__select.__fake
+                        %p &nbsp;
+                        %select.form-el.__select.__real
+                          %option{selected: "selected"} тип флакона
+                          %option объем
+                          %option название

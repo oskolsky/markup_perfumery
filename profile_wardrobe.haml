@@ -87,6 +87,17 @@
                       %li.grid-i.__grid-1-8>
                         %a{href: "#tab8"} распив
                   .grid-i.__grid-1-3.m-b_0>
+                    %form.form
+                      .grid
+                        .grid-i.__grid-1-2.va-m>
+                          %label.form-el.__label.__block.tx.__right Сортировать:&nbsp;
+                        .grid-i.__grid-1-2.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} тип флакона
+                              %option объем
+                              %option название
                   .grid-i.__grid-1-1.m-b_0>
                     - 1.upto(8) do |i|
                       .tabs_page.__border{id: "tab#{i}"}
@@ -110,6 +121,17 @@
                     %li.grid-i.__grid-1-5>
                       %a{href: "#tab13"} не подошел
                 .grid-i.__grid-1-3.m-b_0>
+                  %form.form
+                    .grid
+                      .grid-i.__grid-1-2.va-m>
+                        %label.form-el.__label.__block.tx.__right Сортировать:&nbsp;
+                      .grid-i.__grid-1-2.va-m>
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} тип флакона
+                            %option объем
+                            %option название
                 .grid-i.__grid-1-1.m-b_0>
                   - 9.upto(13) do |i|
                     .tabs_page.__border{id: "tab#{i}"}
