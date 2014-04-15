@@ -13,14 +13,35 @@
 
       %section.section{role: "region", "aria-label" => "Profile"}
         .ctn
-          .profile
-            .grid.__no-gutter
-              .grid-i.__grid-2-7>
-                .profile_user
-                  %img.va-t{src: "/assets/images/fake/user-photo-1.png", width: 273, height: 256, alt: "Alexandra Osipenko"}
-              .grid-i.__grid-5-7>
-                .profile_bg
-                  %img.va-t{src: "/assets/images/fake/user-bg-1.png", width: 684, height: 256, alt: "Alexandra Osipenko"}
+          .grid
+            .grid-i.__grid-1-1
+              .profile-dashboard
+                .grid.__no-gutter
+                  .grid-i.__grid-2-7>
+                    .profile-dashboard_user{style: "background-image: url(/assets/images/fake/user-photo-1.png)"}
+                      .profile-dashboard_user_caption
+                        %p.profile-dashboard_user_name Alexandra Osipenko
+                        %p.profile-dashboard_user_status Online
+                  .grid-i.__grid-5-7>
+                    .profile-dashboard_stats{style: "background-image: url(/assets/images/fake/user-bg-1.png)"}
+                      %ul.profile-dashboard_list
+                        %li.profile-dashboard_list_i>
+                          %a.profile-dashboard_list_i_a{href: "#"}
+                            %span.profile-dashboard_list_i_label Followers
+                            %span.profile-dashboard_list_i_value 2,2K
+                        %li.profile-dashboard_list_i>
+                          %a.profile-dashboard_list_i_a{href: "#"}
+                            %span.profile-dashboard_list_i_label Following
+                            %span.profile-dashboard_list_i_value 1,9K
+                        %li.profile-dashboard_list_i>
+                          %a.profile-dashboard_list_i_a{href: "#"}
+                            %span.profile-dashboard_list_i_label Articles
+                            %span.profile-dashboard_list_i_value 2,2K
+                        %li.profile-dashboard_list_i>
+                          %a.profile-dashboard_list_i_a{href: "#"}
+                            %span.profile-dashboard_list_i_label Comments
+                            %span.profile-dashboard_list_i_value 0,2K
+
           %nav
             %ul.profile-menu.grid.__no-gutter
               %li.profile-menu_i.grid-i.__grid-1-7>
@@ -30,7 +51,7 @@
               %li.profile-menu_i.grid-i.__grid-1-7>
                 %a.profile-menu_i_a{href: "#"} About
               %li.profile-menu_i.grid-i.__grid-1-7>
-                %a.profile-menu_i_a{href: "/profile_wardrobe.html"} Wardrobe
+                %a.profile-menu_i_a.__current{href: "/profile_wardrobe.html"} Wardrobe
               %li.profile-menu_i.grid-i.__grid-1-7>
                 %a.profile-menu_i_a{href: "#"} Activity
               %li.profile-menu_i.grid-i.__grid-1-7>

@@ -332,18 +332,83 @@
 // .. PROFILE
 //
 //****************************************************************************************************
-.profile {
+//
+// .. Dashboard
+//
+.profile-dashboard {
   margin-bottom: 1px;
   border-right:  1px solid $border-color;
   border-left:   1px solid $border-color;
 }
-  .profile_user {
+  //
+  // .. User
+  //
+  .profile-dashboard_user {
+    position: relative;
     height: 256px;
-    border-right: 1px solid $border-color;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .profile_bg {
+    .profile-dashboard_user_caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 5px 0;
+      background-color: rgba(42, 19, 33, .5);
+      color: #fff;
+      text-align: center;
+      line-height: 25px;
+    }
+      .profile-dashboard_user_name {
+        text-shadow: 0 1px 1px rgba(68, 36, 48, .75);
+        font-size: 25px;
+      }
+      .profile-dashboard_user_status {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+      }
+  //
+  // .. Stats
+  //
+  .profile-dashboard_stats {
+    position: relative;
     height: 256px;
+    border-left: 1px solid #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+    .profile-dashboard_list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 15px 0;
+      background-color: rgba(67, 42, 50, .4);
+      white-space: nowrap;
+      @include prefixes(transform, translate(-50%, -50%));
+    }
+      .profile-dashboard_list_i {
+        display: inline-block;
+        padding: 5px 20px;
+        &:not(:last-child) {border-right: 1px solid #fff;}
+      }
+        .profile-dashboard_list_i_a {
+          color: #fff;
+          line-height: 20px;
+        }
+          .profile-dashboard_list_i_label {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+          }
+          .profile-dashboard_list_i_value {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+          }
 
 //
 // .. Menu
