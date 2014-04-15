@@ -208,7 +208,7 @@
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_carousel_item_product_2.haml')).render
 
                   #review.tabs_page
                     %section.section{role: "region", "aria-label" => "Leave your review"}
@@ -243,7 +243,7 @@
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_carousel_item_product_2.haml')).render
                     %section.section.__border{role: "region", "aria-label" => "Deals"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -254,7 +254,7 @@
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 5}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_item_s.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_carousel_item_product_2.haml')).render
                     %section.section.__border{role: "region", "aria-label" => "Video"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -265,7 +265,7 @@
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
                         .carousel{data: {items: 3}}
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_products_video.haml')).render
+                            = Haml::Engine.new(File.read('views/common/_carousel_item_video.haml')).render
 
             .grid-i.__grid-6-24>
               %aside#sidebar.sidebar{role: "sidebar"}

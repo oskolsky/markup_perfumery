@@ -434,8 +434,6 @@
     margin-top: -1px;
     border-top: 1px solid $border-color;
     &.__border {
-      padding-right: 20px;
-      padding-left: 20px;
       border: 1px solid $border-color;
     }
   }
@@ -552,6 +550,30 @@
     &.__prev {float: left;}
     &.__next {float: right;}
   }
+
+//
+// .. Item
+//
+.carousel-i {
+  padding: 10px;
+  text-align: center;
+  &.__video > .carousel-i_photo {
+    position: relative;
+    &::before {
+      @include prefixes(transform, translate(-50%, -50%));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 83px;
+      height: 83px;
+      background: url(/assets/images/play.png) center no-repeat;
+      content: '';
+    }
+  }
+  &.__product {
+
+  }
+}
 
 
 
@@ -710,11 +732,13 @@
    position: relative;
   }
     .reviews-i_photo {
-      @include prefixes(transform, translateY(-50%));
       position: absolute;
       top: 50%;
       right: 0;
       display: none;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      @include prefixes(transform, translateY(-50%));
     }
   .reviews-i_rating {
     text-align: center;
@@ -765,46 +789,6 @@
       &:hover {color: #903d1e;}
     }
   }
-
-
-
-//****************************************************************************************************
-//
-// .. PRODUCTS ITEM
-//
-//****************************************************************************************************
-.products-i {
-  text-align: center;
-  padding: 10px;
-  &.__video > .products-i_photo {
-    position: relative;
-    &::before {
-      @include prefixes(transform, translate(-50%, -50%));
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 83px;
-      height: 83px;
-      background: url(/assets/images/play.png) center no-repeat;
-      content: '';
-    }
-  }
-  &.__s {
-
-  }
-  &.__l {
-    position: relative;
-    &::after {
-      // content: '';
-      // position: absolute;
-      // top: 20px;
-      // bottom: 48px;
-      // left: 0;
-      // width: 1px;
-      // background-color: $border-color;
-    }
-  }
-}
 
 
 

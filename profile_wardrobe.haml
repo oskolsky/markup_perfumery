@@ -40,38 +40,61 @@
 
       %section.section{role: "region", "aria-label" => "Wardrobe"}
         .ctn
-          .p-t_3.p-b_3
+          .p-t_3.p-b_6
             .m-b_3
               %h2.tx.__upper Alexandra’s Wardrobe
 
             .m-b_5
-                
+              .tabs.__s
+                .grid.m-b_0
+                  .grid-i.__grid-2-3.m-b_0>
+                    %ul.grid.__no-gutter
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab1"} был
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab2"} есть
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab3"} хочу
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab4"} попробую
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab5"} куплю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab6"} продам
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab7"} обменяю
+                      %li.grid-i.__grid-1-8>
+                        %a{href: "#tab8"} распив
+                  .grid-i.__grid-1-3.m-b_0>
+                  .grid-i.__grid-1-1.m-b_0>
+                    - 1.upto(8) do |i|
+                      .tabs_page.__border{id: "tab#{i}"}
+                        .p-t_3.p-b_3
+                          .carousel{data: {items: 5}}
+                            - 1.upto(20) do
+                              = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
 
-              / .tabs.__dialog
-              /   .grid
-              /     .grid-i.__grid-2-3>
-              /       %ul.grid.__no-gutter
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab1"} был
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab2"} есть
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab3"} хочу
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab4"} попробую
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab5"} куплю
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab6"} продам
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab7"} обменяю
-              /         %li.grid-i.__grid-1-8>
-              /           %a{href: "#tab8"} распив
-              /     .grid-i.__grid-1-3>
-              /   - 1.upto(8) do |i|
-              /     %div{id: "tab#{i}"}
-              /       .carousel{data: {items: 5}}
-              /         - 1.upto(20) do
-              /           = Haml::Engine.new(File.read('views/common/_products_item_l.haml')).render
+            .tabs.__s
+              .grid.m-b_0
+                .grid-i.__grid-2-3.m-b_0>
+                  %ul.grid.__no-gutter
+                    %li.grid-i.__grid-1-5>
+                      %a{href: "#tab9"} обожаю
+                    %li.grid-i.__grid-1-5>
+                      %a{href: "#tab10"} люблю
+                    %li.grid-i.__grid-1-5>
+                      %a{href: "#tab11"} нейтрально
+                    %li.grid-i.__grid-1-5>
+                      %a{href: "#tab12"} не нравится
+                    %li.grid-i.__grid-1-5>
+                      %a{href: "#tab13"} не подошел
+                .grid-i.__grid-1-3.m-b_0>
+                .grid-i.__grid-1-1.m-b_0>
+                  - 9.upto(13) do |i|
+                    .tabs_page.__border{id: "tab#{i}"}
+                      .p-t_3.p-b_3
+                        .carousel{data: {items: 5}}
+                          - 1.upto(20) do
+                            = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
