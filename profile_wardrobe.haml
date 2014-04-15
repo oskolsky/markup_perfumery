@@ -101,10 +101,12 @@
                   .grid-i.__grid-1-1.m-b_0>
                     - 1.upto(8) do |i|
                       .tabs_page.__border{id: "tab#{i}"}
-                        .p-t_3.p-b_4
-                          .carousel{data: {items: 5}}
-                            - 1.upto(20) do
-                              = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+                        .section
+                          .p-t_5.p-b_4
+                            = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
+                            .carousel{data: {items: 5}}
+                              - 1.upto(20) do
+                                = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
 
             .tabs.__s
               .grid.m-b_0
@@ -135,9 +137,11 @@
                 .grid-i.__grid-1-1.m-b_0>
                   - 9.upto(13) do |i|
                     .tabs_page.__border{id: "tab#{i}"}
-                      .p-t_3.p-b_3
-                        .carousel{data: {items: 5}}
-                          - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+                      .section
+                        .p-t_5.p-b_4
+                          = Haml::Engine.new(File.read('views/common/_carousel_nav_s.haml')).render
+                          .carousel{data: {items: 5}}
+                            - 1.upto(20) do
+                              = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

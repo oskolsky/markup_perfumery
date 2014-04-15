@@ -499,7 +499,14 @@
     margin-top: -1px;
     border-top: 1px solid $border-color;
     &.__border {
+      position: relative;
       border: 1px solid $border-color;
+      // todo: отрефакторить навигацию каруселей
+      .carousel-nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
     }
   }
 
