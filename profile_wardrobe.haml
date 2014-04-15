@@ -68,15 +68,9 @@
                   .grid-i.__grid-1-3>
                 - 1.upto(8) do |i|
                   %div{id: "tab#{i}"}
-                    .grid
-                      - 1.upto(4) do
-                        .grid-i.__grid-1-6>
-                          .tx.__center
-                            %figure
-                              .m-b_1
-                                = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
-                              %figcaption.tx.__s
-                                %a.a.__base{href: "#"} Mongan Fox
+                    .carousel{data: {items: 5}}
+                      - 1.upto(20) do
+                        = Haml::Engine.new(File.read('views/common/_products_item_l.haml')).render
 
             .tabs.__dialog
               .grid
