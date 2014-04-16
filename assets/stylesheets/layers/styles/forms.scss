@@ -64,8 +64,8 @@ input {
   // .. Text
   //
   &.__tx {
-    padding: 0 17px;
-    height: 36px;
+    padding: 0 10px;
+    height: 38px;
     border: none;
     background-color: #fff;
     font-size: inherit;
@@ -80,7 +80,7 @@ input {
   // .. Textarea
   //
   &.__textarea {
-    padding: 10px 17px;
+    padding: 10px 10px;
     background: #fff;
     font-size: inherit;
     &::-webkit-input-placeholder {color: inherit;}
@@ -94,8 +94,8 @@ input {
   // .. Button
   //
   &.__btn {
-    padding: 0 13px;
-    height: 36px;
+    padding: 0 10px;
+    height: 38px;
     border: none;
     text-transform: uppercase;
     line-height: 30px;
@@ -181,17 +181,17 @@ input {
   // .. Select
   //
   &.__select.__fake {
-    padding: 0 30px 0 17px;
-    height: 36px;
+    padding: 0 28px 0 10px;
+    height: 38px;
     border: none;
     border: 1px solid $border-color;
     background-color: #fff;
     font-size: inherit;
-    line-height: 34px;
+    line-height: 36px;
     &::after {
       right: 0;
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-left: 1px solid $border-color;
       color: #488ec8;
       content: "\f0d7";

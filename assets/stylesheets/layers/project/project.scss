@@ -479,11 +479,11 @@
           @include prefixes(transition, none);
           display: block;
           margin-left: -1px;
-          height: 34px;
+          height: 36px;
           border: 1px solid $border-color;
           color: inherit;
           text-align: center;
-          line-height: 34px;
+          line-height: 36px;
         }
         &.ui-tabs-active {
           a {
@@ -803,7 +803,7 @@
   header a {color: inherit;}
   p {line-height: 19px;}
 }
-  .reviews-i_user {
+  .reviews-i_user, .reviews-i_object {
    position: relative;
   }
     .reviews-i_photo {
@@ -888,7 +888,7 @@
   border: 1px solid $border-color;
   border-radius: 50%;
 }
-  .avatar_photo {
+  .avatar_photo, .object_photo {
     border: 1px solid $border-color;
     border-radius: 50%;
     vertical-align: top;
