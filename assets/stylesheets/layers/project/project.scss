@@ -80,8 +80,8 @@
 
 }
   .menu_i {
-    border-left: 1px solid $muted-color;
-    &:last-child {border-right: 1px solid $muted-color;}
+    border-left: 1px solid #eee;
+    &:last-child {border-right: 1px solid #eee;}
   }
     .menu_i_a {
       display: block;
@@ -268,7 +268,7 @@
     }
     .section_header_summary {
       @extend .tx.__l;
-      color: #a7a7a7;
+      color: $muted-color;
       line-height: inherit;
     }
 
@@ -446,7 +446,7 @@
 //
 //****************************************************************************************************
 .tabs {
-  &.__l {
+  &.__large {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -471,7 +471,7 @@
       }
     }
   }
-  &.__s {
+  &.__small {
     .ui-tabs-nav {
       margin-left: 1px;
       li {
@@ -564,14 +564,14 @@
 }
 .carousel-nav {
   visibility: hidden;
-  &.__s {
+  &.__small {
     .carousel-nav_i {
       background-color: #5f6674;
       color: #fff;
       font-size: 10px;
     }
   }
-  &.__l {
+  &.__large {
     .carousel-nav_i {
       position: absolute;
       top: 40%;
@@ -774,7 +774,7 @@
   }
   .reviews-thumbs_data {
     @extend .tx.__xs;
-    color: $voice-color;
+    color: $muted-color;
   }
   .reviews-thumbs_nav {
     @extend .tx.__xs;

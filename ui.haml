@@ -15,7 +15,7 @@
 
             .m-b_4
               %h1.m-b_2 Tabs 1
-              .tabs.__l
+              .tabs.__large
                 %ul.grid.__no-gutter
                   %li.grid-i.__grid-4-18>
                     %a{href: "#votes"} Votes
@@ -35,7 +35,7 @@
 
             .m-b_4
               %h1.m-b_2 Tabs 2
-              .tabs.__s
+              .tabs.__small
                 %ul.grid.__no-gutter
                   %li.grid-i.__grid-1-8>
                     %a{href: "#tab1"} был
@@ -61,23 +61,25 @@
 
             .m-b_4
               %h1.m-b_2 Tabs 3
-              .tabs.__s
+              .tabs.__small
                 .grid.m-b_0
                   .grid-i.__grid-2-3.m-b_0>
                     %ul.grid.__no-gutter
-                      %li.grid-i.__grid-1-5>
-                        %a{href: "#tab1"} обожаю
-                      %li.grid-i.__grid-1-5>
-                        %a{href: "#tab2"} люблю
-                      %li.grid-i.__grid-1-5>
-                        %a{href: "#tab3"} нейтрально
-                      %li.grid-i.__grid-1-5>
-                        %a{href: "#tab4"} не нравится
-                      %li.grid-i.__grid-1-5>
-                        %a{href: "#tab5"} не подошел
+                      %li.grid-i.__grid-1-7>
+                        %a{href: "#tab9"} обожаю
+                      %li.grid-i.__grid-1-7>
+                        %a{href: "#tab10"} люблю
+                      %li.grid-i.__grid-1-7>
+                        %a{href: "#tab11"} нейтрально
+                      %li.grid-i.__grid-1-7>
+                        %a{href: "#tab12"} нравится
+                      %li.grid-i.__grid-1-7>
+                        %a{href: "#tab13"} не нравится
+                      %li.grid-i.__grid-2-7>
+                        %a{href: "#tab14"} категорически не подошел
                   .grid-i.__grid-1-3.m-b_0>
                   .grid-i.__grid-1-1.m-b_0>
-                    - 1.upto(5) do |i|
+                    - 9.upto(14) do |i|
                       .tabs_page.__border{id: "tab#{i}"}
                         .p-t_3.p-b_3
                           %p

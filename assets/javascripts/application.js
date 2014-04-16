@@ -115,7 +115,7 @@ $(document).on('click touchstart', '[data-dialog="open"]', function() {
           type: 'ajax',
           url: url,
           afterLoadingOnShow: function() {
-            $('.tabs.__s').tabs({active: tab - 1});
+            $('.tabs.__small').tabs({active: tab - 1});
           }
         });
 
