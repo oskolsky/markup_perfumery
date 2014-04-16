@@ -10,5 +10,10 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
+
+      %section.section{role: "region", "aria-label" => "Profile Achievements"}
+        .ctn
+          .p-t_3.p-b_6
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
