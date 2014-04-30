@@ -447,6 +447,15 @@
   dd {padding-left: 1rem;}
 }
 
+//
+// .. Ratings
+//
+.profile-rating {
+  dt, dd {
+    vertical-align: bottom;
+  }
+}
+
 
 
 //****************************************************************************************************
@@ -516,6 +525,9 @@
         top: 20px;
         right: 20px;
       }
+    }
+    &.__margin {
+      padding: 2rem;
     }
   }
 

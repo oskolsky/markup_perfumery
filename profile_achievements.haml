@@ -37,46 +37,106 @@
                                 %option{selected: "selected"} дата
                                 %option имя
                                 %option рейтинг
-                .block.__normal
-                  1
+                .block
+                  .p-t_2.p-b_2
+                    .grid
+                      .grid-i.__grid-1-5>
+                        %figure.carousel-i.__rating
+                          .carousel-i_photo.m-b_1
+                            %a{href: "#"}
+                              %img.va-t{src: "/assets/images/ratings.png", width: 110, height: 110, alt: "Top 10"}
+                          %figcaption
+                            %p
+                              %a.a.__base{href: "/encyclopedia_show.html"} 
+                                %span.tx.__upper Top 10
+                      .grid-i.__grid-1-5>
+                        %figure.carousel-i.__rating
+                          .carousel-i_photo.m-b_1
+                            %a{href: "#"}
+                              %img.va-t{src: "/assets/images/ratings.png", width: 110, height: 110, alt: "Top 10"}
+                          %figcaption
+                            %p
+                              %a.a.__base{href: "/encyclopedia_show.html"} 
+                                %span.tx.__upper Best speaker
+                      .grid-i.__grid-1-5>
+                        %figure.carousel-i.__rating
+                          .carousel-i_photo.m-b_1
+                            %a{href: "#"}
+                              %img.va-t{src: "/assets/images/ratings.png", width: 110, height: 110, alt: "Top 10"}
+                          %figcaption
+                            %p
+                              %a.a.__base{href: "/encyclopedia_show.html"} 
+                                %span.tx.__upper 25 comments
+                      .grid-i.__grid-1-5>
+                        %figure.carousel-i.__rating
+                          .carousel-i_photo.m-b_1
+                            %a{href: "#"}
+                              %img.va-t{src: "/assets/images/ratings.png", width: 110, height: 110, alt: "Top 10"}
+                          %figcaption
+                            %p
+                              %a.a.__base{href: "/encyclopedia_show.html"} 
+                                %span.tx.__upper Most visited
+                      .grid-i.__grid-1-5>
+                        %figure.carousel-i.__rating
+                          .carousel-i_photo.m-b_1
+                            %a{href: "#"}
+                              %img.va-t{src: "/assets/images/ratings.png", width: 110, height: 110, alt: "Top 10"}
+                          %figcaption
+                            %p
+                              %a.a.__base{href: "/encyclopedia_show.html"} 
+                                %span.tx.__upper Best seller
 
               %section.section.__margin{role: "region", "aria-label" => "Feedback ratings"}
                 %h2.tx.__upper.m-b_2
                   Feedback 
                   %span.tx.__400 ratings
-              .tabs.__small
-                .grid.m-b_0
-                  .grid-i.__grid-2-3.m-b_0>
-                    %ul.grid.__no-gutter
-                      %li.grid-i.__grid-1-12>
-                        %a{href: "#tab1"} all
-                      %li.grid-i.__grid-1-12>
-                        %a{href: "#tab2"} positive
-                      %li.grid-i.__grid-1-12>
-                        %a{href: "#tab3"} negative
-                      %li.grid-i.__grid-1-12>
-                        %a{href: "#tab4"} neutral
-                  .grid-i.__grid-1-3.m-b_0>
-                    %form.form
-                      .grid
-                        .grid-i.__grid-1-2.va-m>
-                          %label.form-el.__label.__block.tx.__right sorting by:&nbsp;
-                        .grid-i.__grid-1-2.va-m>
-                          .form-el.__select.__block.__fake
-                            %p &nbsp;
-                            %select.form-el.__select.__real
-                              %option{selected: "selected"} тип флакона
-                              %option объем
-                              %option название
-                  .grid-i.__grid-1-1.m-b_0>
-                    - 1.upto(4) do |i|
-                      .tabs_page.__border{id: "tab#{i}"}
-                        .section
-                          .p-t_5.p-b_4
-                            = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
-                            .carousel{data: {items: 5}}
-                              - 1.upto(20) do
-                                = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+                .tabs.__small
+                  .grid.m-b_0
+                    .grid-i.__grid-2-3.m-b_0>
+                      %ul.grid.__no-gutter
+                        %li.grid-i.__grid-2-8>
+                          %a{href: "#tab1"} all
+                        %li.grid-i.__grid-2-8>
+                          %a{href: "#tab2"} positive
+                        %li.grid-i.__grid-2-8>
+                          %a{href: "#tab3"} negative
+                        %li.grid-i.__grid-2-8>
+                          %a{href: "#tab4"} neutral
+                    .grid-i.__grid-1-3.m-b_0>
+                      %form.form
+                        .grid
+                          .grid-i.__grid-1-2.va-m>
+                            %label.form-el.__label.__block.tx.__right sorting by:&nbsp;
+                          .grid-i.__grid-1-2.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected"} тип флакона
+                                %option объем
+                                %option название
+                    .grid-i.__grid-1-1.m-b_0>
+                      - 1.upto(4) do |i|
+                        .tabs_page.__border.__margin{id: "tab#{i}"}
+                          - 1.upto(6) do
+                            %article.reviews-i
+                              .grid
+                                .grid-i.__grid-3-17>
+                                  .reviews-i_user
+                                    = Haml::Engine.new(File.read('views/common/_avatar.haml')).render
+                                .grid-i.__grid-14-17>
+                                  %header.m-b_2
+                                    .grid
+                                      .grid-i.__grid-3-4.va-m>
+                                        %h3.tx.__upper
+                                          %a{href: "#"} 
+                                            %span.tx.__700 Versace, 
+                                            %span Bright Crystal
+                                      .grid-i.__grid-1-4.va-m>
+                                        .tx.__right
+                                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                                  %p.m-b_1 Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.
+                                  %footer
+                                    %p.tx.__s.__muted.__right 28 February 2014&nbsp;&nbsp;&nbsp;11:20
 
             .grid-i.__grid-7-24>
 
@@ -85,20 +145,98 @@
                   Alexandra’s 
                   %span.tx.__400 Rating
                 .block.__normal
-                  1
+                  .profile-rating
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Buyer
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(254)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Seller
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(128)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Collector
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(152)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Commentator
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(126)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Writer
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(824)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Buyer 
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(600)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Seller 
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(112)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Collector 
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(245)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper Commentator 
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(567)
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__upper writer 
+                        %dd.grid-i.__grid-1-2>
+                          .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          &nbsp;(427)
 
               %section.section.m-b_3{role: "region", "aria-label" => "Currently wearing"}
                 %h2.tx.__upper.m-b_2
                   Presents 
                   %span.tx.__400 recieved
-                .block.__normal
-                  1
+                .block
+                  .p-t_1.p-b_1
+                    .avatars
+                      - 1.upto(9) do
+                        %a.avatar{href: "#"}>
+                          %img.avatar_photo.c-bg.__gray{src: "/assets/images/blank.gif", width: 65, height: 65, alt: "Taylor Swift"}
 
               %section.section{role: "region", "aria-label" => "Currently wearing"}
                 %h2.tx.__upper.m-b_2
                   Presents 
                   %span.tx.__400 Sent
-                .block.__normal
-                  1
+                .block
+                  .p-t_1.p-b_1
+                    .avatars
+                      - 1.upto(9) do
+                        %a.avatar{href: "#"}>
+                          %img.avatar_photo.c-bg.__gray{src: "/assets/images/blank.gif", width: 65, height: 65, alt: "Taylor Swift"}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
