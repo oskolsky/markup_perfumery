@@ -37,35 +37,33 @@
                                 %option имя
                                 %option рейтинг
                 - 1.upto(4) do
-                  .m-b_1
-                    .block.__normal
-                      %article.reviews-i
-                        .grid
-                          .grid-i.__grid-3-17>
-                            .reviews-i_object
-                              %a{href: "/encyclopedia_show.html"}
-                                %img.object_photo{src: "/assets/images/fake/reviews-thumb-#{rand(1..5)}.jpg", width: 86, height: 86, alt: "Taylor Swift"}
-                          .grid-i.__grid-14-17>
-                            %header.m-b_2
-                              .grid
-                                .grid-i.__grid-3-4.va-m>
-                                  %h3.tx.__upper
-                                    %a{href: "#"} 
-                                      %span.tx.__700 Versace, 
-                                      %span Bright Crystal
-                                .grid-i.__grid-1-4.va-m>
-                                  .tx.__right
-                                    .stars.__readonly{data: {score: "#{rand(1..5)}"}}
-                            %p.m-b_1 Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.
-                            %footer
-                              %p.tx.__s.__muted.__right 28 February 2014&nbsp;&nbsp;&nbsp;11:20
+                  .block.__normal.m-b_1
+                    %article.reviews-i
+                      .grid
+                        .grid-i.__grid-3-17>
+                          .reviews-i_object
+                            %a{href: "/encyclopedia_show.html"}
+                              %img.object_photo{src: "/assets/images/fake/reviews-thumb-#{rand(1..5)}.jpg", width: 86, height: 86, alt: "Taylor Swift"}
+                        .grid-i.__grid-14-17>
+                          %header.m-b_2
+                            .grid
+                              .grid-i.__grid-3-4.va-m>
+                                %h3.tx.__upper
+                                  %a{href: "#"} 
+                                    %span.tx.__700 Versace, 
+                                    %span Bright Crystal
+                              .grid-i.__grid-1-4.va-m>
+                                .tx.__right
+                                  .stars.__readonly{data: {score: "#{rand(1..5)}"}}
+                          %p.m-b_1 Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.
+                          %footer
+                            %p.tx.__s.__muted.__right 28 February 2014&nbsp;&nbsp;&nbsp;11:20
 
             .grid-i.__grid-7-24>
               %aside#sidebar.sidebar{role: "sidebar"}
-                .m-b_1
-                  %h2.tx.__upper.p-t_1.p-b_1
-                    Friends
-                    %span.tx.__400 latest comments
+                %h2.tx.__upper.m-t_1.m-b_2
+                  Friends
+                  %span.tx.__400 latest comments
                 .block
                   .p-t_2.p-b_2
                     .reviews-thumbs

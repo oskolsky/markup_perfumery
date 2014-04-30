@@ -12,8 +12,93 @@
     %main#main.main{role: "main"}
       = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
 
-      %section.section{role: "region", "aria-label" => "Profile Achievements"}
-        .ctn
-          .p-t_3.p-b_6
+      .ctn
+        .p-t_2.p-b_6
+          .grid
+
+            .grid-i.__grid-17-24>
+
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                .m-b_1
+                  .grid
+                    .grid-i.__grid-2-3.va-m>
+                      %h2.tx.__upper 
+                        Alexandra’s 
+                        %span.tx.__400 Achievements
+                    .grid-i.__grid-1-3.va-m>
+                      %form.form
+                        .grid
+                          .grid-i.__grid-1-2.va-m>
+                            %label.form-el.__label.__block.tx.__right Сортировать:&nbsp;
+                          .grid-i.__grid-1-2.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected"} дата
+                                %option имя
+                                %option рейтинг
+                .block.__normal
+                  1
+
+              %section.section.__margin{role: "region", "aria-label" => "Feedback ratings"}
+                %h2.tx.__upper.m-b_2
+                  Feedback 
+                  %span.tx.__400 ratings
+              .tabs.__small
+                .grid.m-b_0
+                  .grid-i.__grid-2-3.m-b_0>
+                    %ul.grid.__no-gutter
+                      %li.grid-i.__grid-1-12>
+                        %a{href: "#tab1"} all
+                      %li.grid-i.__grid-1-12>
+                        %a{href: "#tab2"} positive
+                      %li.grid-i.__grid-1-12>
+                        %a{href: "#tab3"} negative
+                      %li.grid-i.__grid-1-12>
+                        %a{href: "#tab4"} neutral
+                  .grid-i.__grid-1-3.m-b_0>
+                    %form.form
+                      .grid
+                        .grid-i.__grid-1-2.va-m>
+                          %label.form-el.__label.__block.tx.__right sorting by:&nbsp;
+                        .grid-i.__grid-1-2.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} тип флакона
+                              %option объем
+                              %option название
+                  .grid-i.__grid-1-1.m-b_0>
+                    - 1.upto(4) do |i|
+                      .tabs_page.__border{id: "tab#{i}"}
+                        .section
+                          .p-t_5.p-b_4
+                            = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
+                            .carousel{data: {items: 5}}
+                              - 1.upto(20) do
+                                = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+
+            .grid-i.__grid-7-24>
+
+              %section.section.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-t_1.m-b_2
+                  Alexandra’s 
+                  %span.tx.__400 Rating
+                .block.__normal
+                  1
+
+              %section.section.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Presents 
+                  %span.tx.__400 recieved
+                .block.__normal
+                  1
+
+              %section.section{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Presents 
+                  %span.tx.__400 Sent
+                .block.__normal
+                  1
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
