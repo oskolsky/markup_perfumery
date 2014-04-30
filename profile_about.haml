@@ -12,8 +12,120 @@
     %main#main.main{role: "main"}
       = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
 
-      %section.section{role: "region", "aria-label" => "Profile About"}
-        .ctn
-          .p-t_3.p-b_6
+      .ctn
+        .p-t_3.p-b_6
+          .grid
+
+            .grid-i.__grid-17-24>
+              
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Currently
+                  %span.tx.__400 wearing
+                .block
+                  .p-t_2.p-b_2
+                    .grid
+                      - 1.upto(4) do
+                        .grid-i.__grid-1-4>
+                          = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "About"}
+                %h2.tx.__upper.m-b_2
+                  About
+                  %span.tx.__400 Alexandra
+                .block.__large
+                  %article.cnt
+                    %p Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive. wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo;.
+              
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "Hobby"}
+                %h2.tx.__upper.m-b_2
+                  Alexandra’s
+                  %span.tx.__400 hobby
+                .block.__large
+                  %article.cnt
+                    %p Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.
+
+              %section.section.__margin{role: "region", "aria-label" => "Groups"}
+                %h2.tx.__upper.m-b_2
+                  Alexandra’s
+                  %span.tx.__400 Groups
+                .block.__small
+                  .grid
+                    - 1.upto(4) do
+                      .grid-i.__grid-1-4>
+                        = Haml::Engine.new(File.read('views/common/_group_item.haml')).render
+
+            .grid-i.__grid-7-24>
+
+              %section.section.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Personal 
+                  %span.tx.__400 information
+                .block.__normal
+                  .profile-contacts
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Date of birth
+                        %dd.grid-i.__grid-1-2>
+                          %p 15 January 1988
+                    %div.m-b_2
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Gender
+                        %dd.grid-i.__grid-1-2>
+                          %p female
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 City
+                        %dd.grid-i.__grid-1-2>
+                          %p Moscow
+                    %div.m-b_2
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Country
+                        %dd.grid-i.__grid-1-2>
+                          %p Russia
+                    %div.m-b_2
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Username
+                        %dd.grid-i.__grid-1-2>
+                          %p alexio
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 E-mail
+                        %dd.grid-i.__grid-1-2>
+                          %p alexio@gmail.com
+                    %div
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Skype 
+                        %dd.grid-i.__grid-1-2>
+                          %p alexio_skype
+
+              %section.section.m-b_3{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Friends 
+                  %span.tx.__400 (321)
+                .block
+                  .p-t_1.p-b_1
+                    .avatars
+                      - 1.upto(9) do
+                        %a.avatar{href: "#"}>
+                          %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
+
+              %section.section{role: "region", "aria-label" => "Currently wearing"}
+                %h2.tx.__upper.m-b_2
+                  Followers 
+                  %span.tx.__400 (321)
+                .block
+                  .p-t_1.p-b_1
+                    .avatars
+                      - 1.upto(9) do
+                        %a.avatar{href: "#"}>
+                          %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
