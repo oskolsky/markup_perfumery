@@ -1,0 +1,43 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Profile Message
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
+
+      .ctn
+        .p-t_2.p-b_6
+
+          %section.section.__margin{role: "region", "aria-label" => "Message"}
+            .m-b_1
+              .grid
+                .grid-i.__grid-2-3.va-m>
+                  %h2.tx.__upper 
+                    Your 
+                    %span.tx.__400 Messages
+                .grid-i.__grid-1-3.va-m>
+                  %form.form
+                    .grid
+                      .grid-i.__grid-1-2.va-m>
+                        %label.form-el.__label.__block.tx.__right Сортировать:&nbsp;
+                      .grid-i.__grid-1-2.va-m>
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} дата
+                            %option имя
+                            %option рейтинг
+
+            .block
+              .grid.__no-gutter
+                .grid-i.__grid-7-24>
+                .grid-i.__grid-17-24>
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
