@@ -151,13 +151,17 @@ $(function() {
   });
 
   //
-  // .. Photo gallery
+  // .. Resize to max height
   //
   $('[data-resize="height"]').each(function() {
     var itemClass = $(this).data('item');
     $(this).find('.' + itemClass).resizeToMaxHeight();
   });
-  
+
+  //
+  // .. Scroll pane init
+  //
+  $('.scroll-pane').jScrollPane();
 
 
 

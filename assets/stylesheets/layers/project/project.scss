@@ -159,15 +159,6 @@
 
 //****************************************************************************************************
 //
-// .. CONTENT AREA
-//
-//****************************************************************************************************
-.content {margin-right: 20px;}
-
-
-
-//****************************************************************************************************
-//
 // .. SECTION BLOCK
 //
 //****************************************************************************************************
@@ -894,10 +885,19 @@
 //
 //****************************************************************************************************
 //
+// .. Sidebar
+//
+.messages-sidebar {
+  
+}
+
+//
 // .. Feed
 //
 .messages-feed {
   padding: 2rem 0 4rem;
+  min-height: 55rem;
+  border-left: 1px solid $border-color;
 }
 
 //
@@ -905,18 +905,15 @@
 //
 .messages-i {  
   &:not(:last-child) {margin-bottom: 3.5rem;}
-  p {line-height: 1.9rem;}
+  p {line-height: 1.9rem;}  
 }
-  .messages-i_body {
-    // padding-top: 1.5rem;
-    // padding-left: 9rem;
-  }
 
 //
 // .. Form
 //
 .messages-form {
   border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
   background-color: #f9f9f9;
   padding: 4rem 0 3rem;
 }
@@ -949,6 +946,56 @@
         &:hover {color: $base-color;}
       }
 
+//
+// .. Search
+//
+.messages-search {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid $border-color;
+  .form-el.__tx {background-color: #f9f9f9;}
+}
+
+//
+// .. User list
+//
+.messages-user-list {
+
+}
+  .messages-user-list_i {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #fff;
+    background-color: #eff2f9;
+    cursor: pointer;
+    @include prefixes(transition, all .33s);
+    &:not(:first-child) {border-top: 1px solid $border-color;}
+    &:hover {
+      background-color: #1c84dc;
+      border-color: #1c84dc;
+      .messages-user-list_i_name, .messages-user-list_i_count {color: #fff;}
+    }
+  }
+    .messages-user-list_i_avatar {
+      border-radius: 50%;
+      vertical-align: top;
+    }
+    .messages-user-list_i_name {color: $link-color;}
+    .messages-user-list_i_count {
+      color: #292b33;
+      font-size: 1.2rem;
+    }
+
+//
+// .. Show more
+//
+.messages-more {
+  display: block;
+  height: 7.5rem;
+  background-color: #f9f9f9;
+  color: #6a6a6a;
+  text-align: center;
+  line-height: 7.5rem;
+}
+
 
 
 //****************************************************************************************************
@@ -966,6 +1013,7 @@
 
 // .. User avatar
 .avatars {
+  max-height: 25.5rem;
   text-align: center;
   .avatar {
     margin: .5rem;

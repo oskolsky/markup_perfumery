@@ -1,0 +1,13 @@
+//
+// .. Scroll pane
+//
+.jspVerticalBar {  
+  right: 1.5rem;
+  width: .4rem;
+  .avatars & {right: .5rem;}
+}
+.jspTrack {background-color: #f5f5f5;}
+.jspDrag {
+  border-radius: .2rem;
+  background-color: #d5d9e3;
+}

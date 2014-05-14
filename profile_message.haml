@@ -15,7 +15,7 @@
       .ctn
         .p-t_2.p-b_6
 
-          %section.section.__margin{role: "region", "aria-label" => "Message"}
+          %section.section{role: "region", "aria-label" => "Message"}
             .m-b_1
               .grid
                 .grid-i.__grid-2-3.va-m>
@@ -35,12 +35,27 @@
                             %option имя
                             %option рейтинг
 
-            .block
+            .block{data: {resize: "height", item: "js-messages-resize"}}
               .grid.__no-gutter
-                .grid-i.__grid-7-24>
-                .grid-i.__grid-17-24>
-                  .messages-feed
-                    - 1.upto(2) do
+                .grid-i.__grid-2-7>
+                  .messages-sidebar
+                    .messages-search
+                      %form.form
+                        %input.form-el.__tx.__border.__block{type: "text", placeholder: "Search"}
+                    .messages-user-list
+                      - 1.upto(10) do
+                        .messages-user-list_i
+                          .grid.__no-gutter
+                            .grid-i.__grid-2-7.va-m>
+                              .tx.__center
+                                %img.messages-user-list_i_avatar{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 34, height: 34, alt: "Taylor Swift"}
+                            .grid-i.__grid-5-7.va-m>
+                              %h3.messages-user-list_i_name Andrej Ivanov
+                              %p.messages-user-list_i_count 3 New Messages
+                    %a.messages-more{href: "#"} Show more
+                .grid-i.__grid-5-7>
+                  .messages-feed.scroll-pane
+                    - 1.upto(10) do
                       %article.messages-i
                         .grid.__no-gutter
                           .grid-i.__grid-3-17>
@@ -94,5 +109,10 @@
                                 %i.fa.fa-paperclip
                         .grid-i.__grid-3-17.va-m>
                           %input.form-el.__btn.__purple.__block{type: "submit", value: "Send"}
+
+      :javascript
+        var sidebarH = $('.messages-sidebar').outerHeight();
+        var formH = $('.messages-form').outerHeight();
+        $('.messages-feed').height(sidebarH - formH - 10);
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
