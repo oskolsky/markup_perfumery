@@ -890,6 +890,69 @@
 
 //****************************************************************************************************
 //
+// .. MESSAGES
+//
+//****************************************************************************************************
+//
+// .. Feed
+//
+.messages-feed {
+  padding: 2rem 0 4rem;
+}
+
+//
+// .. Item
+//
+.messages-i {  
+  &:not(:last-child) {margin-bottom: 3.5rem;}
+  p {line-height: 1.9rem;}
+}
+  .messages-i_body {
+    // padding-top: 1.5rem;
+    // padding-left: 9rem;
+  }
+
+//
+// .. Form
+//
+.messages-form {
+  border-top: 1px solid $border-color;
+  background-color: #f9f9f9;
+  padding: 4rem 0 3rem;
+}
+
+  //
+  // .. Action
+  //
+  .messages-form_action {
+
+  }
+    .messages-form_action_i {
+      position: relative;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 2.1rem;
+        &::after {
+          position: absolute;
+          top: 0;
+          right: -1rem;
+          bottom: 0;
+          width: 1px;
+          background-color: $border-color;
+          content: '';
+        }
+      }
+    }
+      .messages-form_action_i_a {
+        color: $border-color;
+        font-size: 2rem;
+        &:hover {color: $base-color;}
+      }
+
+
+
+//****************************************************************************************************
+//
 // .. ELEMENTS
 //
 //****************************************************************************************************
