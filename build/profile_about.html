@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+  <head>
+    <title>Profile About</title>
+    <meta charset='utf-8'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='telephone=no' name='format-detection'>
+    <meta content='' name='description'>
+    <meta content='' name='keywords'>
+    <link href='/humans.txt' rel='author'>
+    <link href='/favicon.ico' rel='icon'>
+    <link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon'>
+    <link href='/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon' sizes='57x57'>
+    <link href='/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='/apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='/assets/stylesheets/application.css' rel='stylesheet'>
+    <!-- build:javascripts -->
+    <script src='/assets/javascripts/vendor/modernizr-latest.js'></script>
+    <script src='/assets/javascripts/vendor/yepnope.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-2.1.0.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-ui-1.10.4.js'></script>
+    <script src='/assets/javascripts/vendor/underscore.js'></script>
+    <script src='/assets/javascripts/vendor/backbone.js'></script>
+    <script src='/assets/javascripts/vendor/smartresize.js'></script>
+    <script src='/assets/javascripts/vendor/doublehover.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.arcticmodal.js'></script>
+    <script src='/assets/javascripts/vendor/owl.carousel.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.carousel.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.swipe.min.js'></script>
+    <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/accounting.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.parallax-1.1.3.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.mb.YTPlayer.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.mousewheel.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.jscrollpane.min.js'></script>
+    <script src='/assets/javascripts/polyfill/polyfill.js'></script>
+    <script src='/assets/javascripts/config.js'></script>
+    <script src='/assets/javascripts/jquery.extensions.js'></script>
+    <script src='/assets/javascripts/forms.js'></script>
+    <script src='/assets/javascripts/components.js'></script>
+    <script src='/assets/javascripts/application.js'></script>
+    <script src='/assets/javascripts/project.js'></script>
+    <!-- endbuild -->
+  </head>
+  <body class="page" id="page">
+    <style>
+      .alert-no-js {display: none;}
+      .no-js .alert-no-js {display: block;}
+    </style>
+    <div class='alert-no-js c-alert __l c-bg __red' role='alert'>
+      <h1>У вас отключен JavaScript.</h1>
+    </div>
+    <!--[if lt IE 9]>
+      <div role='alert' style='padding: 30px; background-color: #2980b9; text-align: center;'>
+        <h1 style='color: #fff; font-size: 40px; line-height: 1.5;'>
+          Использование устаревшего браузера
+          <br>
+          повышает риск взлома вашего компьютера.
+          <br>
+          <a href='http://browsehappy.com/' style='color: #fff; text-decoration: underline;' target='_blank'>Обновите свой браузер!</a>
+        </h1>
+      </div>
+    <![endif]-->
+    <header class='header' id='header' role='banner'>
+      <div class='ctn'>
+        <a class='logo' href='/'>Logo</a>
+        <ul class='header-menu grid __no-gutter'><li class='header-menu_i grid-i __grid-1-7 __prefix-5-7'>
+            <a class='header-menu_i_a' href='#'>Search</a>
+          </li><li class='header-menu_i grid-i __grid-1-7'>
+            <a class='header-menu_i_a __special' href='#'>Login / Register</a>
+          </li></ul>
+      </div>
+    </header>
+    <!-- %header#header.header{role: "banner"} -->
+    <!-- .ctn -->
+    <!-- %a.logo{href: "/"} Logo -->
+    <!-- %menu.menu.grid.__no-gutter -->
+    <!-- %li.menu_i.__search.grid-i.__grid-1-7.__prefix-5-7> -->
+    <!-- %a.menu_i_a{href: "#"} Search -->
+    <!-- %li.menu_i.__login.grid-i.__grid-1-7> -->
+    <!-- %a.menu_i_a{href: "#"} Login / Register -->
+    <!-- .menu_i_dropdown -->
+    <!-- %form.form -->
+    <!-- .m-b_1 -->
+    <!-- %input.form-el.__tx.__block{type: "text", placeholder: "E-MAIL"} -->
+    <!-- .m-b_2 -->
+    <!-- %input.form-el.__tx.__block{type: "password", placeholder: "PASSWORD"} -->
+    <!-- .m-b_1 -->
+    <!-- %input.form-el.__btn.__black.grid-i.__grid-1-2{type: "submit", value: "Login"} -->
+    <!-- %p.tx.__upper -->
+    <!-- Not a member? -->
+    <!-- %a{href: "#"} Register now -->
+    <nav class='nav' id='nav' role='navigation'>
+      <div class='ctn'>
+        <ul class='menu grid __no-gutter'><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Themes</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Brands</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Top</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Offers</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Noses</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Fragrances</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Social</a>
+          </li></ul>
+      </div>
+    </nav>
+    <main class="main" id="main" role="main">
+      <section aria-label='Profile' class='section' role='region'>
+        <div class='ctn'>
+          <div class='grid'>
+            <div class='grid-i __grid-1-1'>
+              <div class='profile-dashboard'>
+                <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
+                    <div class='profile-dashboard_user' style='background-image: url(/assets/images/fake/user-photo-1.png)'>
+                      <div class='profile-dashboard_user_caption'>
+                        <p class='profile-dashboard_user_name'>Alexandra Osipenko</p>
+                        <p class='profile-dashboard_user_status'>Online</p>
+                      </div>
+                    </div>
+                  </div><div class='grid-i __grid-5-7'>
+                    <div class='profile-dashboard_stats' style='background-image: url(/assets/images/fake/user-bg-1.png)'>
+                      <ul class='profile-dashboard_list'><li class='profile-dashboard_list_i'>
+                          <a class='profile-dashboard_list_i_a' href='#'>
+                            <span class='profile-dashboard_list_i_label'>Followers</span>
+                            <span class='profile-dashboard_list_i_value'>2,2K</span>
+                          </a>
+                        </li><li class='profile-dashboard_list_i'>
+                          <a class='profile-dashboard_list_i_a' href='#'>
+                            <span class='profile-dashboard_list_i_label'>Following</span>
+                            <span class='profile-dashboard_list_i_value'>1,9K</span>
+                          </a>
+                        </li><li class='profile-dashboard_list_i'>
+                          <a class='profile-dashboard_list_i_a' href='#'>
+                            <span class='profile-dashboard_list_i_label'>Articles</span>
+                            <span class='profile-dashboard_list_i_value'>2,2K</span>
+                          </a>
+                        </li><li class='profile-dashboard_list_i'>
+                          <a class='profile-dashboard_list_i_a' href='#'>
+                            <span class='profile-dashboard_list_i_label'>Comments</span>
+                            <span class='profile-dashboard_list_i_value'>0,2K</span>
+                          </a>
+                        </li></ul>
+                    </div>
+                  </div></div>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul class='profile-menu grid __no-gutter'><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a __special' href='#'>Add friend</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a __special' href='/profile_message.html'>Message</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a' href='/profile_about.html'>About</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a' href='/profile_wardrobe.html'>Wardrobe</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a' href='#'>Activity</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a' href='/profile_achievements.html'>Achievements</a>
+              </li><li class='profile-menu_i grid-i __grid-1-7'>
+                <a class='profile-menu_i_a' href='/profile_comments.html'>Comments</a>
+              </li></ul>
+          </nav>
+        </div>
+      </section>
+      <div class="ctn">
+        <div class="p-t_3 p-b_6">
+          <div class="grid"><div class="grid-i __grid-17-24">
+              <section aria-label="Currently wearing" class="section __margin m-b_3" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Currently
+                  <span class="tx __400">wearing</span>
+                </h2>
+                <div class="block">
+                  <div class="p-t_2 p-b_2">
+                    <div class="grid"><div class="grid-i __grid-1-4">
+                        <figure class='carousel-i'>
+                          <div class='carousel-i_photo m-b_1'>
+                            <a href='/encyclopedia_show.html'>
+                              <img alt='Jimmy Choo' class='va-t' height='190' src='/assets/images/fake/product-8.jpg' width='135'>
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p class='carousel-i_name'>
+                              <a class='a __base' href='/encyclopedia_show.html'>
+                                <span class='tx __upper'>Britney Spears,</span>
+                                <b>Fantasy</b>
+                              </a>
+                            </p>
+                            <p class='tx __s'>Spray 100ml</p>
+                          </figcaption>
+                        </figure>
+                      </div><div class="grid-i __grid-1-4">
+                        <figure class='carousel-i'>
+                          <div class='carousel-i_photo m-b_1'>
+                            <a href='/encyclopedia_show.html'>
+                              <img alt='Jimmy Choo' class='va-t' height='190' src='/assets/images/fake/product-9.jpg' width='135'>
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p class='carousel-i_name'>
+                              <a class='a __base' href='/encyclopedia_show.html'>
+                                <span class='tx __upper'>Britney Spears,</span>
+                                <b>Fantasy</b>
+                              </a>
+                            </p>
+                            <p class='tx __s'>Spray 100ml</p>
+                          </figcaption>
+                        </figure>
+                      </div><div class="grid-i __grid-1-4">
+                        <figure class='carousel-i'>
+                          <div class='carousel-i_photo m-b_1'>
+                            <a href='/encyclopedia_show.html'>
+                              <img alt='Jimmy Choo' class='va-t' height='190' src='/assets/images/fake/product-3.jpg' width='135'>
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p class='carousel-i_name'>
+                              <a class='a __base' href='/encyclopedia_show.html'>
+                                <span class='tx __upper'>Britney Spears,</span>
+                                <b>Fantasy</b>
+                              </a>
+                            </p>
+                            <p class='tx __s'>Spray 100ml</p>
+                          </figcaption>
+                        </figure>
+                      </div><div class="grid-i __grid-1-4">
+                        <figure class='carousel-i'>
+                          <div class='carousel-i_photo m-b_1'>
+                            <a href='/encyclopedia_show.html'>
+                              <img alt='Jimmy Choo' class='va-t' height='190' src='/assets/images/fake/product-7.jpg' width='135'>
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p class='carousel-i_name'>
+                              <a class='a __base' href='/encyclopedia_show.html'>
+                                <span class='tx __upper'>Britney Spears,</span>
+                                <b>Fantasy</b>
+                              </a>
+                            </p>
+                            <p class='tx __s'>Spray 100ml</p>
+                          </figcaption>
+                        </figure>
+                      </div></div>
+                  </div>
+                </div>
+              </section>
+              <section aria-label="About" class="section __margin m-b_3" role="region">
+                <h2 class="tx __upper m-b_2">
+                  About
+                  <span class="tx __400">Alexandra</span>
+                </h2>
+                <div class="block __large">
+                  <article class="cnt">
+                    <p>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive. wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo;.</p>
+                  </article>
+                </div>
+              </section>
+              <section aria-label="Hobby" class="section __margin m-b_3" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Alexandra’s
+                  <span class="tx __400">hobby</span>
+                </h2>
+                <div class="block __large">
+                  <article class="cnt">
+                    <p>Well, wish&nbsp;I could just paste Ouch&rsquo;s review here heh. Tested this again because it&nbsp;bothers me&nbsp;I don&rsquo;t like it&nbsp;as&nbsp;I adore most Prada scents. Nope. Eye swelling headache in&nbsp;a&nbsp;spray bottle. This is&nbsp;plastic caramel, there is&nbsp;nothing &laquo;Prada&raquo; about&nbsp;it. Not the dry down, not the start or&nbsp;middle. So&nbsp;linear, weak and straight up&nbsp;offensive.</p>
+                  </article>
+                </div>
+              </section>
+              <section aria-label="Groups" class="section __margin" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Alexandra’s
+                  <span class="tx __400">Groups</span>
+                </h2>
+                <div class="block __small">
+                  <div class="grid"><div class="grid-i __grid-1-4">
+                      <figure class='carousel-i __group'>
+                        <div class='carousel-i_photo m-b_1'>
+                          <a href='#'>
+                            <img alt='De grasse' class='va-t' src='/assets/images/fake/group-2.jpg' width='100%'>
+                          </a>
+                        </div>
+                        <figcaption>
+                          <p>
+                            <a class='a __base' href='/encyclopedia_show.html'>
+                              <span class='tx __upper'>de grasse</span>
+                            </a>
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </div><div class="grid-i __grid-1-4">
+                      <figure class='carousel-i __group'>
+                        <div class='carousel-i_photo m-b_1'>
+                          <a href='#'>
+                            <img alt='De grasse' class='va-t' src='/assets/images/fake/group-4.jpg' width='100%'>
+                          </a>
+                        </div>
+                        <figcaption>
+                          <p>
+                            <a class='a __base' href='/encyclopedia_show.html'>
+                              <span class='tx __upper'>de grasse</span>
+                            </a>
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </div><div class="grid-i __grid-1-4">
+                      <figure class='carousel-i __group'>
+                        <div class='carousel-i_photo m-b_1'>
+                          <a href='#'>
+                            <img alt='De grasse' class='va-t' src='/assets/images/fake/group-2.jpg' width='100%'>
+                          </a>
+                        </div>
+                        <figcaption>
+                          <p>
+                            <a class='a __base' href='/encyclopedia_show.html'>
+                              <span class='tx __upper'>de grasse</span>
+                            </a>
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </div><div class="grid-i __grid-1-4">
+                      <figure class='carousel-i __group'>
+                        <div class='carousel-i_photo m-b_1'>
+                          <a href='#'>
+                            <img alt='De grasse' class='va-t' src='/assets/images/fake/group-2.jpg' width='100%'>
+                          </a>
+                        </div>
+                        <figcaption>
+                          <p>
+                            <a class='a __base' href='/encyclopedia_show.html'>
+                              <span class='tx __upper'>de grasse</span>
+                            </a>
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </div></div>
+                </div>
+              </section>
+            </div><div class="grid-i __grid-7-24">
+              <section aria-label="Currently wearing" class="section m-b_3" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Personal
+                  <span class="tx __400">information</span>
+                </h2>
+                <div class="block __normal">
+                  <div class="profile-contacts">
+                    <div class="m-b_1">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">Date of birth</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>15 January 1988</p>
+                        </dd></dl>
+                    </div>
+                    <div class="m-b_2">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">Gender</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>female</p>
+                        </dd></dl>
+                    </div>
+                    <div class="m-b_1">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">City</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>Moscow</p>
+                        </dd></dl>
+                    </div>
+                    <div class="m-b_2">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">Country</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>Russia</p>
+                        </dd></dl>
+                    </div>
+                    <div class="m-b_2">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">Username</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>alexio</p>
+                        </dd></dl>
+                    </div>
+                    <div class="m-b_1">
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">E-mail</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>alexio@gmail.com</p>
+                        </dd></dl>
+                    </div>
+                    <div>
+                      <dl class="grid"><dt class="grid-i __grid-1-2">
+                          <p class="tx __right __700">Skype</p>
+                        </dt><dd class="grid-i __grid-1-2">
+                          <p>alexio_skype</p>
+                        </dd></dl>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section aria-label="Currently wearing" class="section m-b_3" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Friends
+                  <span class="tx __400">(321)</span>
+                </h2>
+                <div class="block">
+                  <div class="p-t_1 p-b_1">
+                    <div class="avatars scroll-pane"><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-5.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-5.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-8.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-8.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-5.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a></div>
+                  </div>
+                </div>
+              </section>
+              <section aria-label="Currently wearing" class="section" role="region">
+                <h2 class="tx __upper m-b_2">
+                  Followers
+                  <span class="tx __400">(321)</span>
+                </h2>
+                <div class="block">
+                  <div class="p-t_1 p-b_1">
+                    <div class="avatars scroll-pane"><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-8.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-8.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-11.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-24.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-6.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-14.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-24.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-10.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-19.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-23.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-4.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-12.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-3.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-8.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-20.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-18.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-25.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-15.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-2.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-7.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-22.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-13.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-16.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-17.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-9.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-5.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-21.jpg" width="65">
+                      </a><a class="avatar" href="#">
+                        <img alt="Taylor Swift" class="avatar_photo" height="65" src="/assets/images/fake/face-1.jpg" width="65">
+                      </a></div>
+                  </div>
+                </div>
+              </section>
+            </div></div>
+        </div>
+      </div>
+    </main>
+    <footer class='footer' id='footer' role='contentinfo'>
+      <div class='ctn'>
+        <div class='grid __no-gutter'><div class='grid-i __grid-18-24'>
+            <nav>
+              <ul class='footer_nav __devider'>
+                <li class='footer_nav_i'>
+                  <a href='#'>Home</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Tour</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Coverage</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Store</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>About Us</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Blog</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Privacy Policy</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Terms of Service</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Help</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div><div class='grid-i __grid-6-24'>
+            <nav class='tx __right'>
+              <ul class='footer_nav __icon'>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-google-plus'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-twitter'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-instagram'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-facebook'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-pinterest'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-skype'></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div></div>
+      </div>
+    </footer>
+  </body>
+</html>
