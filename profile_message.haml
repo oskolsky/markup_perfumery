@@ -113,6 +113,6 @@
       :javascript
         var sidebarH = $('.messages-sidebar').outerHeight();
         var formH = $('.messages-form').outerHeight();
-        $('.messages-feed').height(sidebarH - formH - 10);
+        $('.messages-feed').height(sidebarH - formH);
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
