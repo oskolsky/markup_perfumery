@@ -1043,13 +1043,13 @@
   padding: 0 3rem;
 }
   .brands-list {
-
+    &.__logos {
+      padding: 0;
+    }
   }
     .brands-list_i {
       padding: 2rem 0;
-      &:not(:last-child) {
-        border-bottom: 1px solid $border-color;
-      }
+      &:not(:last-child) {border-bottom: 1px solid $border-color;}
     }
       .brands-list_i_group {
         font-size: 1.8rem;
@@ -1058,6 +1058,19 @@
       .brands-list_i_names {
         line-height: 2rem;
         a { @extend .a.invert; }
+      }
+      .brands-list_i_logo {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        img {
+          border-radius: 50%;
+          vertical-align: middle;
+        }
       }
 
 //
