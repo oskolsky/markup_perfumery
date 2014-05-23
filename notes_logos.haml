@@ -1,0 +1,101 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Notes
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_breadcrumbs.haml')).render
+
+      %section.section{role: "region", "aria-label" => "Brands"}
+        .ctn
+          .p-t_3.p-b_6
+
+            %h3.tx.__upper.__600.m-b_2 Brands
+
+            .tabs.__small
+              .grid.m-b_0
+                .grid-i.__grid-1-1.m-b_0>
+                  %ul.brands-tabs
+                    %li.brands-tabs_i>
+                      %a{href: "#tab1"} 1
+                    %li.brands-tabs_i>
+                      %a{href: "#tab2"} 5
+                    %li.brands-tabs_i>
+                      %a{href: "#tab3"} A
+                    %li.brands-tabs_i>
+                      %a{href: "#tab4"} B
+                    %li.brands-tabs_i>
+                      %a{href: "#tab5"} C
+                    %li.brands-tabs_i>
+                      %a{href: "#tab6"} D
+                    %li.brands-tabs_i>
+                      %a{href: "#tab7"} E
+                    %li.brands-tabs_i>
+                      %a{href: "#tab8"} F
+                    %li.brands-tabs_i>
+                      %a{href: "#tab9"} G
+                    %li.brands-tabs_i>
+                      %a{href: "#tab10"} H
+                    %li.brands-tabs_i>
+                      %a{href: "#tab11"} I
+                    %li.brands-tabs_i>
+                      %a{href: "#tab12"} J
+                    %li.brands-tabs_i>
+                      %a{href: "#tab13"} K
+                    %li.brands-tabs_i>
+                      %a{href: "#tab14"} L
+                    %li.brands-tabs_i>
+                      %a{href: "#tab15"} M
+                    %li.brands-tabs_i>
+                      %a{href: "#tab16"} N
+                    %li.brands-tabs_i>
+                      %a{href: "#tab17"} O
+                    %li.brands-tabs_i>
+                      %a{href: "#tab18"} P
+                    %li.brands-tabs_i>
+                      %a{href: "#tab19"} R
+                    %li.brands-tabs_i>
+                      %a{href: "#tab20"} S
+                    %li.brands-tabs_i>
+                      %a{href: "#tab21"} T
+                    %li.brands-tabs_i>
+                      %a{href: "#tab22"} U
+                    %li.brands-tabs_i>
+                      %a{href: "#tab23"} V
+                    %li.brands-tabs_i>
+                      %a{href: "#tab24"} W
+                    %li.brands-tabs_i>
+                      %a{href: "#tab25"} X
+                    %li.brands-tabs_i>
+                      %a{href: "#tab26"} Y
+                    %li.brands-tabs_i>
+                      %a{href: "#tab27"} Z
+                    %li.brands-tabs_i>
+                      %a{href: "#tab28"} Показать все
+                .grid-i.__grid-1-1.m-b_0>
+                  - 1.upto(28) do |i|
+                    .tabs_page{id: "tab#{i}"}
+                      .brands-list.__logos
+                        - 1.upto(3) do
+                          .brands-list_i
+                            .grid
+                              .grid-i.__grid-1-15>
+                                .brands-list_i_group A
+                              .grid-i.__grid-14-15>
+                                .grid
+                                  - 1.upto(28) do
+                                    .grid-i.__grid-1-7>
+                                      %figure.flavors-i>
+                                        .flavors-i_photo.m-b_1
+                                          %img{src: "/assets/images/fake/flavor-#{rand(1..11)}.jpg", width: 100, height: 100, alt: "Blueberry"}
+                                        %figcaption
+                                          %p 
+                                            %span> Виноград
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
