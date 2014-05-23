@@ -4582,6 +4582,11 @@ h6 > .a.__inner > span,
   border-color: #5f6674 !important;
   color: #5f6674; }
 
+.a.invert, .brands-list_i_names a, .brands-tags a {
+  color: #5f6674; }
+  .a.invert:hover, .brands-list_i_names a:hover, .brands-tags a:hover {
+    color: #3b86c4; }
+
 a {
   -webkit-transition: color 0.33s;
   -moz-transition: color 0.33s;
@@ -5438,19 +5443,19 @@ a.c-btn:hover {
   .promo_nav_i.__next {
     right: 50px; }
 
-.profile-dashboard {
+.dashboard {
   margin-bottom: 1px;
   border-right: 1px solid #d5d5d5;
   border-left: 1px solid #d5d5d5; }
 
-.profile-dashboard_user {
+.dashboard_user, .dashboard_group {
   position: relative;
   height: 256px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
 
-.profile-dashboard_user_caption {
+.dashboard_user_caption, .dashboard_group_caption {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -5461,16 +5466,19 @@ a.c-btn:hover {
   text-align: center;
   line-height: 25px; }
 
-.profile-dashboard_user_name {
+.dashboard_user_name, .dashboard_group_name {
   text-shadow: 0 1px 1px rgba(68, 36, 48, 0.75);
   font-size: 25px; }
 
-.profile-dashboard_user_status {
+.dashboard_user_status, .dashboard_group_status {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px; }
 
-.profile-dashboard_stats {
+.dashboard_group_caption {
+  padding: 1.5rem 0; }
+
+.dashboard_stats {
   position: relative;
   height: 256px;
   border-left: 1px solid #fff;
@@ -5478,7 +5486,7 @@ a.c-btn:hover {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.profile-dashboard_list {
+.dashboard_list {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5491,35 +5499,35 @@ a.c-btn:hover {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-.profile-dashboard_list_i {
+.dashboard_list_i {
   display: inline-block;
   padding: 5px 20px; }
-  .profile-dashboard_list_i:not(:last-child) {
+  .dashboard_list_i:not(:last-child) {
     border-right: 1px solid #fff; }
 
-.profile-dashboard_list_i_a {
+.dashboard_list_i_a {
   color: #fff;
   line-height: 20px; }
 
-.profile-dashboard_list_i_label {
+.dashboard_list_i_label {
   display: block;
   text-align: center;
   font-size: 15px; }
 
-.profile-dashboard_list_i_value {
+.dashboard_list_i_value {
   display: block;
   text-align: center;
   font-size: 16px; }
 
-.profile-menu {
+.dashboard-menu {
   border-bottom: 1px solid #d5d5d5; }
 
-.profile-menu_i {
+.dashboard-menu_i {
   border-left: 1px solid #d5d5d5; }
-  .profile-menu_i:last-child {
+  .dashboard-menu_i:last-child {
     border-right: 1px solid #d5d5d5; }
 
-.profile-menu_i_a {
+.dashboard-menu_i_a {
   display: block;
   height: 50px;
   color: #465065;
@@ -5527,10 +5535,10 @@ a.c-btn:hover {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 50px; }
-  .profile-menu_i_a.__special {
+  .dashboard-menu_i_a.__special {
     background-color: #01c5c3;
     color: #fff; }
-  .profile-menu_i_a.__current, .profile-menu_i_a:hover {
+  .dashboard-menu_i_a.__current, .dashboard-menu_i_a:hover {
     height: 47px;
     border-bottom: 3px solid #fc5e7c; }
 
@@ -5908,6 +5916,51 @@ a.c-btn:hover {
   color: #6a6a6a;
   text-align: center;
   line-height: 7.5rem; }
+
+.brands-tabs_i {
+  display: inline-block;
+  vertical-align: top; }
+  .brands-tabs_i a {
+    padding: 0 1rem; }
+
+.brands-list {
+  padding: 0 3rem; }
+
+.brands-list_i {
+  padding: 2rem 0; }
+  .brands-list_i:not(:last-child) {
+    border-bottom: 1px solid #d5d5d5; }
+
+.brands-list_i_group {
+  font-size: 1.8rem;
+  line-height: 2rem; }
+
+.brands-list_i_names {
+  line-height: 2rem; }
+
+.brands-tags:not(:last-child) {
+  margin-bottom: 3rem; }
+
+.brands-tags_dt {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem; }
+  .brands-tags_dt::after {
+    color: #3b86c4;
+    content: "\f0da";
+    font-size: 1.2rem;
+    font-family: FontAwesome;
+    margin-left: .5rem; }
+
+.brands-tags_dd {
+  font-size: 1.2rem; }
+
+.brands-month {
+  border: 1px solid #d5d5d5;
+  text-align: center; }
+  .brands-month img {
+    vertical-align: top; }
 
 .hr {
   margin: 0 auto;

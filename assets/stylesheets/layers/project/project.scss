@@ -327,22 +327,23 @@
 //
 // .. Dashboard
 //
-.profile-dashboard {
+.dashboard {
   margin-bottom: 1px;
   border-right:  1px solid $border-color;
   border-left:   1px solid $border-color;
 }
+
   //
   // .. User
   //
-  .profile-dashboard_user {
+  .dashboard_user {
     position: relative;
     height: 256px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
-    .profile-dashboard_user_caption {
+    .dashboard_user_caption {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -353,19 +354,37 @@
       text-align: center;
       line-height: 25px;
     }
-      .profile-dashboard_user_name {
+      .dashboard_user_name {
         text-shadow: 0 1px 1px rgba(68, 36, 48, .75);
         font-size: 25px;
       }
-      .profile-dashboard_user_status {
+      .dashboard_user_status {
         text-transform: uppercase;
         font-weight: 600;
         font-size: 14px;
       }
+
+  //
+  // .. Group
+  //
+  .dashboard_group {
+    @extend .dashboard_user;
+  }
+    .dashboard_group_caption {
+      padding: 1.5rem 0;
+      @extend .dashboard_user_caption;
+    }
+      .dashboard_group_name {
+        @extend .dashboard_user_name;
+      }
+      .dashboard_group_status {
+        @extend .dashboard_user_status;
+      }  
+
   //
   // .. Stats
   //
-  .profile-dashboard_stats {
+  .dashboard_stats {
     position: relative;
     height: 256px;
     border-left: 1px solid #fff;
@@ -373,7 +392,7 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-    .profile-dashboard_list {
+    .dashboard_list {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -382,21 +401,21 @@
       white-space: nowrap;
       @include prefixes(transform, translate(-50%, -50%));
     }
-      .profile-dashboard_list_i {
+      .dashboard_list_i {
         display: inline-block;
         padding: 5px 20px;
         &:not(:last-child) {border-right: 1px solid #fff;}
       }
-        .profile-dashboard_list_i_a {
+        .dashboard_list_i_a {
           color: #fff;
           line-height: 20px;
         }
-          .profile-dashboard_list_i_label {
+          .dashboard_list_i_label {
             display: block;
             text-align: center;
             font-size: 15px;
           }
-          .profile-dashboard_list_i_value {
+          .dashboard_list_i_value {
             display: block;
             text-align: center;
             font-size: 16px;
@@ -405,14 +424,14 @@
 //
 // .. Menu
 //
-.profile-menu {
+.dashboard-menu {
   border-bottom: 1px solid $border-color;
 }
-  .profile-menu_i {
+  .dashboard-menu_i {
     border-left: 1px solid $border-color;
     &:last-child {border-right: 1px solid $border-color;}
   }
-    .profile-menu_i_a {
+    .dashboard-menu_i_a {
       display: block;
       height: 50px;
       color: $voice-color;
@@ -994,6 +1013,84 @@
   color: #6a6a6a;
   text-align: center;
   line-height: 7.5rem;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. BRANDS
+//
+//****************************************************************************************************
+//
+// .. Tabs
+//
+.brands-tabs {
+
+}
+  .brands-tabs_i {
+    display: inline-block;
+    vertical-align: top;
+    a {
+      padding: 0 1rem;
+    }
+  }
+
+//
+// .. List collection
+//
+.brands-list {
+  padding: 0 3rem;
+}
+  .brands-list {
+
+  }
+    .brands-list_i {
+      padding: 2rem 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+      .brands-list_i_group {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      .brands-list_i_names {
+        line-height: 2rem;
+        a { @extend .a.invert; }
+      }
+
+//
+// .. Tags
+//
+.brands-tags {
+  &:not(:last-child) {margin-bottom: 3rem;}
+  a { @extend .a.invert; }
+}
+  .brands-tags_dt {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    &::after {
+      margin-left: .5rem;
+      color: $link-color;
+      content: "\f0da";
+      font-size: 1.2rem;
+      font-family: FontAwesome;
+    }
+  }
+  .brands-tags_dd {
+    font-size: 1.2rem;
+  }
+
+//
+// .. Month
+//
+.brands-month {
+  border: 1px solid $border-color;
+  text-align: center;
+  img {vertical-align: top;}
 }
 
 
