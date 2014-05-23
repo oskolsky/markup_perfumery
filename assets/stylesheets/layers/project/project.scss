@@ -371,15 +371,31 @@
     @extend .dashboard_user;
   }
     .dashboard_group_caption {
-      padding: 1.5rem 0;
+      bottom: 50px;
+      padding: 15px 0;
       @extend .dashboard_user_caption;
     }
-      .dashboard_group_name {
+      .dashboard_group_name {        
         @extend .dashboard_user_name;
       }
       .dashboard_group_status {
         @extend .dashboard_user_status;
       }  
+      .dashboard_group_count {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 50px;
+        background-color: #01c5c3;
+        color: $voice-color;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 50px;
+      }
 
   //
   // .. Stats
@@ -453,8 +469,8 @@
 // .. Contacts
 //
 .profile-contacts {
-  dt {padding-right: 1rem;}
-  dd {padding-left: 1rem;}
+  dt {padding-right: 10px;}
+  dd {padding-left: 10px;}
 }
 
 //
@@ -537,7 +553,7 @@
       }
     }
     &.__margin {
-      padding: 2rem;
+      padding: 20px;
     }
   }
 
@@ -551,7 +567,7 @@
     display: inline-block;
     vertical-align: top;
     a {
-      padding: 0 1rem;
+      padding: 0 10px;
     }
   }
 
@@ -951,8 +967,8 @@
 // .. Feed
 //
 .messages-feed {
-  padding: 2rem 0 4rem;
-  min-height: 55rem;
+  padding: 20px 0 40px;
+  min-height: 550px;
   border-left: 1px solid $border-color;
 }
 
@@ -960,8 +976,8 @@
 // .. Item
 //
 .messages-i {  
-  &:not(:last-child) {margin-bottom: 3.5rem;}
-  p {line-height: 1.9rem;}  
+  &:not(:last-child) {margin-bottom: 35px;}
+  p {line-height: 19px;}  
 }
 
 //
@@ -971,7 +987,7 @@
   border-top: 1px solid $border-color;
   border-left: 1px solid $border-color;
   background-color: #f9f9f9;
-  padding: 4rem 0 3rem;
+  padding: 40px 0 30px;
 }
 
   //
@@ -984,11 +1000,11 @@
       position: relative;
       display: inline-block;
       &:not(:last-child) {
-        margin-right: 2.1rem;
+        margin-right: 21px;
         &::after {
           position: absolute;
           top: 0;
-          right: -1rem;
+          right: -10px;
           bottom: 0;
           width: 1px;
           background-color: $border-color;
@@ -998,7 +1014,7 @@
     }
       .messages-form_action_i_a {
         color: $border-color;
-        font-size: 2rem;
+        font-size: 20px;
         &:hover {color: $base-color;}
       }
 
@@ -1006,7 +1022,7 @@
 // .. Search
 //
 .messages-search {
-  padding: 2rem 1rem;
+  padding: 20px 10px;
   border-bottom: 1px solid $border-color;
   .form-el.__tx {background-color: #f9f9f9;}
 }
@@ -1018,7 +1034,7 @@
 
 }
   .messages-user-list_i {
-    padding: 1.5rem 0;
+    padding: 15px 0;
     border-bottom: 1px solid #fff;
     background-color: #eff2f9;
     cursor: pointer;
@@ -1037,7 +1053,7 @@
     .messages-user-list_i_name {color: $link-color;}
     .messages-user-list_i_count {
       color: #292b33;
-      font-size: 1.2rem;
+      font-size: 12px;
     }
 
 //
@@ -1045,11 +1061,11 @@
 //
 .messages-more {
   display: block;
-  height: 7.5rem;
+  height: 75px;
   background-color: #f9f9f9;
   color: #6a6a6a;
   text-align: center;
-  line-height: 7.5rem;
+  line-height: 75px;
 }
 
 
@@ -1060,18 +1076,18 @@
 //
 //****************************************************************************************************
 .list_collections {
-  padding: 0 3rem;
+  padding: 0 30px;
 }
   .list_collections_i {
-    padding: 2rem 0;
+    padding: 20px 0;
     &:not(:last-child) {border-bottom: 1px solid $border-color;}
   }
     .list_collections_i_group {
-      font-size: 1.8rem;
-      line-height: 2rem;
+      font-size: 18px;
+      line-height: 20px;
     }
     .list_collections_i_names {
-      line-height: 2rem;
+      line-height: 20px;
       a { @extend .a.invert; }
     }
 
@@ -1092,10 +1108,10 @@
 
 // .. User avatar
 .avatars {
-  max-height: 25.5rem;
+  max-height: 255px;
   text-align: center;
   .avatar {
-    margin: .5rem;
+    margin: 5px;
   }
 }
 
@@ -1156,10 +1172,10 @@
     padding: 10px;
   }
   &.__normal {
-    padding: 2rem;
+    padding: 20px;
   }
   &.__large {
-    padding: 5rem;
+    padding: 50px;
   }
 }
 
@@ -1185,24 +1201,24 @@
 // .. Brands tags
 //
 .brands-tags {
-  &:not(:last-child) {margin-bottom: 3rem;}
+  &:not(:last-child) {margin-bottom: 30px;}
   a { @extend .a.invert; }
 }
   .brands-tags_dt {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 15px;
+    line-height: 20px;
     &::after {
-      margin-left: .5rem;
+      margin-left: 5px;
       color: $link-color;
       content: "\f0da";
-      font-size: 1.2rem;
+      font-size: 12px;
       font-family: FontAwesome;
     }
   }
   .brands-tags_dd {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
 
 //

@@ -5476,7 +5476,23 @@ a.c-btn:hover {
   font-size: 14px; }
 
 .dashboard_group_caption {
-  padding: 1.5rem 0; }
+  bottom: 50px;
+  padding: 15px 0; }
+
+.dashboard_group_count {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 50px;
+  background-color: #01c5c3;
+  color: #465065;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 50px; }
 
 .dashboard_stats {
   position: relative;
@@ -5543,9 +5559,9 @@ a.c-btn:hover {
     border-bottom: 3px solid #fc5e7c; }
 
 .profile-contacts dt {
-  padding-right: 1rem; }
+  padding-right: 10px; }
 .profile-contacts dd {
-  padding-left: 1rem; }
+  padding-left: 10px; }
 
 .profile-rating dt, .profile-rating dd {
   vertical-align: bottom; }
@@ -5596,13 +5612,13 @@ a.c-btn:hover {
       top: 20px;
       right: 20px; }
   .tabs_page.__margin {
-    padding: 2rem; }
+    padding: 20px; }
 
 .index-tabs_i {
   display: inline-block;
   vertical-align: top; }
   .index-tabs_i a {
-    padding: 0 1rem; }
+    padding: 0 10px; }
 
 .accordion .ui-accordion-header {
   position: relative;
@@ -5859,30 +5875,30 @@ a.c-btn:hover {
     color: #903d1e; }
 
 .messages-feed {
-  padding: 2rem 0 4rem;
-  min-height: 55rem;
+  padding: 20px 0 40px;
+  min-height: 550px;
   border-left: 1px solid #d5d5d5; }
 
 .messages-i:not(:last-child) {
-  margin-bottom: 3.5rem; }
+  margin-bottom: 35px; }
 .messages-i p {
-  line-height: 1.9rem; }
+  line-height: 19px; }
 
 .messages-form {
   border-top: 1px solid #d5d5d5;
   border-left: 1px solid #d5d5d5;
   background-color: #f9f9f9;
-  padding: 4rem 0 3rem; }
+  padding: 40px 0 30px; }
 
 .messages-form_action_i {
   position: relative;
   display: inline-block; }
   .messages-form_action_i:not(:last-child) {
-    margin-right: 2.1rem; }
+    margin-right: 21px; }
     .messages-form_action_i:not(:last-child)::after {
       position: absolute;
       top: 0;
-      right: -1rem;
+      right: -10px;
       bottom: 0;
       width: 1px;
       background-color: #d5d5d5;
@@ -5890,18 +5906,18 @@ a.c-btn:hover {
 
 .messages-form_action_i_a {
   color: #d5d5d5;
-  font-size: 2rem; }
+  font-size: 20px; }
   .messages-form_action_i_a:hover {
     color: #5f6674; }
 
 .messages-search {
-  padding: 2rem 1rem;
+  padding: 20px 10px;
   border-bottom: 1px solid #d5d5d5; }
   .messages-search .form-el.__tx {
     background-color: #f9f9f9; }
 
 .messages-user-list_i {
-  padding: 1.5rem 0;
+  padding: 15px 0;
   border-bottom: 1px solid #fff;
   background-color: #eff2f9;
   cursor: pointer;
@@ -5927,30 +5943,30 @@ a.c-btn:hover {
 
 .messages-user-list_i_count {
   color: #292b33;
-  font-size: 1.2rem; }
+  font-size: 12px; }
 
 .messages-more {
   display: block;
-  height: 7.5rem;
+  height: 75px;
   background-color: #f9f9f9;
   color: #6a6a6a;
   text-align: center;
-  line-height: 7.5rem; }
+  line-height: 75px; }
 
 .list_collections {
-  padding: 0 3rem; }
+  padding: 0 30px; }
 
 .list_collections_i {
-  padding: 2rem 0; }
+  padding: 20px 0; }
   .list_collections_i:not(:last-child) {
     border-bottom: 1px solid #d5d5d5; }
 
 .list_collections_i_group {
-  font-size: 1.8rem;
-  line-height: 2rem; }
+  font-size: 18px;
+  line-height: 20px; }
 
 .list_collections_i_names {
-  line-height: 2rem; }
+  line-height: 20px; }
 
 .hr {
   margin: 0 auto;
@@ -5959,10 +5975,10 @@ a.c-btn:hover {
   background-color: #d5d5d5; }
 
 .avatars {
-  max-height: 25.5rem;
+  max-height: 255px;
   text-align: center; }
   .avatars .avatar {
-    margin: .5rem; }
+    margin: 5px; }
 
 .avatar {
   -webkit-box-sizing: border-box;
@@ -6012,9 +6028,9 @@ a.c-btn:hover {
   .block.__small {
     padding: 10px; }
   .block.__normal {
-    padding: 2rem; }
+    padding: 20px; }
   .block.__large {
-    padding: 5rem; }
+    padding: 50px; }
 
 .flag {
   width: 98px;
@@ -6041,22 +6057,22 @@ a.c-btn:hover {
     background-position: -686px 0; }
 
 .brands-tags:not(:last-child) {
-  margin-bottom: 3rem; }
+  margin-bottom: 30px; }
 
 .brands-tags_dt {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem; }
+  font-size: 15px;
+  line-height: 20px; }
   .brands-tags_dt::after {
-    margin-left: .5rem;
+    margin-left: 5px;
     color: #3b86c4;
     content: "\f0da";
-    font-size: 1.2rem;
+    font-size: 12px;
     font-family: FontAwesome; }
 
 .brands-tags_dd {
-  font-size: 1.2rem; }
+  font-size: 12px; }
 
 .brands-month {
   border: 1px solid #d5d5d5;
