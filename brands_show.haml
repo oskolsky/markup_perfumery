@@ -1,0 +1,98 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Brands show
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_breadcrumbs.haml')).render
+      .ctn
+
+        .p-t_3
+          .grid
+            .grid-i.__grid-17-24>
+              %section.section.__margin{role: "region", "aria-label" => "Brand promo banner"}
+                %img.va-t{src: "/assets/images/fake/brand-banner.jpg", width: 657, height: 274, alt: "Kenzo"}
+            .grid-i.__grid-7-24>
+              %img.brand-logo{src: "/assets/images/fake/brand-logo.jpg", width: 271, height: 272, alt: "Kenzo"}
+
+        .p-t_3.p-b_6
+          .grid
+
+            .grid-i.__grid-17-24>
+              
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "About"}
+                %h2.tx.__upper.m-b_2 About Kenzo
+                .block.__large
+                  %article.cnt
+                    %p Kenzo (Кензо)&nbsp;&mdash; японский дом моды, основанный в&nbsp;1970 году дизайнером Кензо Такада. Кензо был одним из&nbsp;первых мужчин, обучавшихся в&nbsp;колледже моды Bunka в&nbsp;Токио, а&nbsp;в&nbsp;1964 году он&nbsp;переехал из&nbsp;Токио в&nbsp;Париж.
+                    %p В&nbsp;1970 году Кензо открывает свой первый парижский бутик, Jungle Jap. Величайшее достижение Кензо в&nbsp;том, что он&nbsp;открыл японскую моду всему миру, а&nbsp;его уникальный дизайн представляет собой смешение традиционных японских черт с&nbsp;веяниями природы и&nbsp;чертами других культур.
+                    %p Отдел парфюмерии Kenzo был создан в&nbsp;1987&nbsp;году, хотя его первый аромат, King Kong, гармонировавший с&nbsp;темой &laquo;Jungle Jap&raquo;, появился ещё в&nbsp;1978&nbsp;году, что свидетельствует об&nbsp;интересе дизайнера к&nbsp;ароматам ещё до&nbsp;учреждения парфюмерного отдела. В&nbsp;1988 году Кenzo официально презентовал первый женский аромат&nbsp;&mdash; &laquo;Kenzo for Women&raquo;, позже переименованный на&nbsp;&laquo;&ccedil;a&nbsp;sent beau &raquo;, что в&nbsp;переводе звучит как &laquo;это пахнет красиво&raquo;. Затем компания создала ряд популярных мужских и&nbsp;женских ароматов, в&nbsp;том числе знаменитейшую необычную композицию&nbsp;&mdash; &laquo;Flower&raquo; Kenzo. В&nbsp;1993 году Kenzo Parfums вошёл в&nbsp;состав международной корпорации LVMH, предлагающей предметы роскоши, и&nbsp;в&nbsp;1999 году Кензо Такада официально вышел на&nbsp;пенсию, хотя позже, он&nbsp;вновь заявил о&nbsp;себе как дизайнер мебели и&nbsp;интерьеров.
+                    %p В&nbsp;2012 выпущенна взрывная новинка парфюмерная вода Flower Tag Eau de&nbsp;Parfum. Ароматы Kenzo разрабатывались в&nbsp;сотрудничестве с&nbsp;парфюмерами Софи Лабе, Дафной Бужи, Альбертом Морилласом, Софией Гройсман, Франсуазой Карон, Морисом Руселем, Оливье Креспом, Оливье Польжем, Домиником Ропионом, Антуаном Ли, Кристиной Нажель.                  
+              
+              %section.section.__margin{role: "region", "aria-label" => "Groups"}
+                %h2.tx.__upper.m-b_2 Kenzo
+                .p-t_2.p-b_2
+                  .grid
+                    - 1.upto(8) do
+                      .grid-i.__grid-1-4>
+                        = Haml::Engine.new(File.read('views/common/_carousel_item_product_3.haml')).render
+
+            .grid-i.__grid-7-24>
+
+              %section.section.m-b_3{role: "region", "aria-label" => "Personal information"}
+                %h2.tx.__upper.m-b_2
+                  Personal 
+                  %span.tx.__400 information
+                .block.__normal
+                  .profile-contacts
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Страна
+                        %dd.grid-i.__grid-1-2>
+                          %p Italy 
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Индустрия
+                        %dd.grid-i.__grid-1-2>
+                          %p Fragrances 
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Дизайнер
+                        %dd.grid-i.__grid-1-2>
+                          %p
+                            %a{href: "http://link.ac/kiT0"} http://link.ac/kiT0
+                    %div.m-b_1
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Нишевый
+                        %dd.grid-i.__grid-1-2>
+                          %p
+                            %a{href: "http://link.ac/kiT0"} http://clck.ru/0f
+                    %div
+                      %dl.grid
+                        %dt.grid-i.__grid-1-2>
+                          %p.tx.__right.__700 Лицензия
+                        %dd.grid-i.__grid-1-2>
+                          %p LVMH
+
+              %section.section{role: "region", "aria-label" => "Followers"}
+                %h2.tx.__upper.m-b_2
+                  Followers 
+                  %span.tx.__400 (321)
+                .block
+                  .p-t_1.p-b_1
+                    .avatars.scroll-pane
+                      - 1.upto(100) do
+                        %a.avatar{href: "#"}>
+                          %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
