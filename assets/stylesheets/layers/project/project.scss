@@ -1050,7 +1050,10 @@
       border-radius: 50%;
       vertical-align: top;
     }
-    .messages-user-list_i_name {color: $link-color;}
+    .messages-user-list_i_name {
+      color: $link-color;
+      @extend .gamma;
+    }
     .messages-user-list_i_count {
       color: #292b33;
       font-size: 12px;
@@ -1066,6 +1069,57 @@
   color: #6a6a6a;
   text-align: center;
   line-height: 75px;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. SETTINGS
+//
+//****************************************************************************************************
+//
+// .. Sidebar
+//
+.settings-sidebar {
+
+}
+
+//
+// .. Navigation
+//
+.settings-nav {
+
+}
+  .settings-nav_i {
+    &:first-child {
+      .settings-nav_i_a {border-top: none !important;}
+    }
+  }
+    .settings-nav_i_a {
+      display: block;
+      padding: 2rem;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid #fff;
+      background-color: #eff2f9;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      @include prefixes(transition, all .33s);
+      &.__current, &:hover {
+        border-color: #1c84dc;
+        background-color: #1c84dc;
+        color: #fff;
+      }
+    }
+
+//
+// .. Form
+//
+.settings-form {
+  padding-right: 20px;
+  padding-left: 20px;
+  @extend .messages-feed;  
 }
 
 

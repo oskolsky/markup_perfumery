@@ -1,0 +1,130 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Profile settings - Personal
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
+
+      .ctn
+        .p-t_3.p-b_6
+
+          %section.section{role: "region", "aria-label" => "Message"}
+            
+            %h2.tx.__upper.m-b_2 Account Settings
+
+            .block
+              .grid.__no-gutter
+
+                .grid-i.__grid-2-7>
+                  %aside.settings-sidebar
+                    %nav
+                      %ul.settings-nav
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_personal.html"} Personal
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_picture.html"} Profile picture
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_interests.html"} Occupation and interests
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a.__current{href: "/profile_settings_location.html"} Language and location
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_email.html"} Email settings
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_connections.html"} Connections
+
+                .grid-i.__grid-5-7>
+                  %form.form.settings-form
+                    %h3.tx.__upper.__600.m-b_2 Language and location
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Language*
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected", value: "en"} English
+                              %option{value: "nl"} Dutch
+                              %option{value: "de"} German
+                              %option{value: "pt"} Portuguese (NOT SUPPORTED YET)                    
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Timezone*
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{title: "Africa/Abidjan", value: "Africa/Abidjan"} Africa/Abidjan
+                              %option{title: "Africa/Accra", value: "Africa/Accra"} Africa/Accra
+                              %option{title: "Africa/Addis_Ababa", value: "Africa/Addis_Ababa"} Africa/Addis_Ababa
+                              %option{title: "Africa/Algiers", value: "Africa/Algiers"} Africa/Algiers
+                              %option{title: "Africa/Asmara", value: "Africa/Asmara"} Africa/Asmara
+                              %option{title: "Africa/Bamako", value: "Africa/Bamako"} Africa/Bamako
+                              %option{title: "Africa/Bangui", value: "Africa/Bangui"} Africa/Bangui
+                              %option{title: "Africa/Banjul", value: "Africa/Banjul"} Africa/Banjul
+                              %option{title: "Africa/Bissau", value: "Africa/Bissau"} Africa/Bissau
+                              %option{title: "Africa/Blantyre", value: "Africa/Blantyre"} Africa/Blantyre
+                              %option{title: "Africa/Brazzaville", value: "Africa/Brazzaville"} Africa/Brazzaville
+                              %option{title: "Africa/Bujumbura", value: "Africa/Bujumbura"} Africa/Bujumbura                          
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Country*
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected", value: ""} (Country)
+                              %option{value: "AF"} Afghanistan
+                              %option{value: "AX"} Aland Islands
+                              %option{value: "AL"} Albania
+                              %option{value: "DZ"} Algeria
+                              %option{value: "AS"} American Samoa
+                              %option{value: "AD"} Andorra
+                              %option{value: "AO"} Angola
+                              %option{value: "AI"} Anguilla
+                              %option{value: "AQ"} Antarctica
+                              %option{value: "AG"} Antigua and Barbuda
+                              %option{value: "AR"} Argentina
+                              %option{value: "AM"} Armenia
+                              %option{value: "AW"} Aruba
+                              %option{value: "AP"} Asia/Pacific Region
+                              %option{value: "AU"} Australia
+                              %option{value: "AT"} Austria
+                              %option{value: "AZ"} Azerbaijan
+                              %option{value: "BS"} Bahamas
+                              %option{value: "BH"} Bahrain
+                              %option{value: "BD"} Bangladesh
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Location*
+                        .grid-i.__grid-2-4.va-m>
+                          %input.form-el.__tx.__border.__block{type: "text"}
+                    %div.m-b_3
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Use 24-hour format
+                        .grid-i.__grid-2-4.va-m>
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox"}
+                    %div
+                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
+
+      :javascript
+        var sidebarH = $('.settings-sidebar').outerHeight();
+        $('.settings-form').height(sidebarH);
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

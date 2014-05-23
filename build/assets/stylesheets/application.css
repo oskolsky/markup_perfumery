@@ -4384,7 +4384,7 @@ body {
 img {
   font-style: italic; }
 
-h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .delta, .form-el.__legend, .epsilon, .zeta {
+h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .messages-user-list_i_name, .delta, .form-el.__legend, .epsilon, .zeta {
   color: #465065;
   font-family: "Open Sans", Helvetica, Arial, sans-serif; }
   h1.format-money > i,
@@ -4396,8 +4396,9 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .delta, .f
   h6 .format-money > i, .alpha.format-money > i,
   .alpha .format-money > i, .beta.format-money > i, .format-money.section_header_title > i,
   .beta .format-money > i,
-  .section_header_title .format-money > i, .gamma.format-money > i,
-  .gamma .format-money > i, .delta.format-money > i, .format-money.form-el.__legend > i,
+  .section_header_title .format-money > i, .gamma.format-money > i, .format-money.messages-user-list_i_name > i,
+  .gamma .format-money > i,
+  .messages-user-list_i_name .format-money > i, .delta.format-money > i, .format-money.form-el.__legend > i,
   .delta .format-money > i,
   .form-el.__legend .format-money > i, .epsilon.format-money > i,
   .epsilon .format-money > i, .zeta.format-money > i,
@@ -4414,7 +4415,7 @@ h2, .beta, .section_header_title {
   font-size: 16px;
   line-height: 18px; }
 
-h3, .gamma {
+h3, .gamma, .messages-user-list_i_name {
   font-weight: 400;
   font-size: 15px;
   line-height: 19px; }
@@ -4565,8 +4566,9 @@ h6 > .a.__inner > span,
 .alpha > a,
 .alpha > .a.__inner > span, .beta > a, .section_header_title > a,
 .beta > .a.__inner > span,
-.section_header_title > .a.__inner > span, .gamma > a,
-.gamma > .a.__inner > span, .delta > a, .form-el.__legend > a,
+.section_header_title > .a.__inner > span, .gamma > a, .messages-user-list_i_name > a,
+.gamma > .a.__inner > span,
+.messages-user-list_i_name > .a.__inner > span, .delta > a, .form-el.__legend > a,
 .delta > .a.__inner > span,
 .form-el.__legend > .a.__inner > span, .epsilon > a,
 .epsilon > .a.__inner > span, .zeta > a,
@@ -5874,7 +5876,7 @@ a.c-btn:hover {
   .reviews-i_action_i.__report:hover {
     color: #903d1e; }
 
-.messages-feed {
+.messages-feed, .settings-form {
   padding: 20px 0 40px;
   min-height: 550px;
   border-left: 1px solid #d5d5d5; }
@@ -5952,6 +5954,32 @@ a.c-btn:hover {
   color: #6a6a6a;
   text-align: center;
   line-height: 75px; }
+
+.settings-nav_i:first-child .settings-nav_i_a {
+  border-top: none !important; }
+
+.settings-nav_i_a {
+  display: block;
+  padding: 2rem;
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #fff;
+  background-color: #eff2f9;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  -webkit-transition: all 0.33s;
+  -moz-transition: all 0.33s;
+  -ms-transition: all 0.33s;
+  -o-transition: all 0.33s;
+  transition: all 0.33s; }
+  .settings-nav_i_a.__current, .settings-nav_i_a:hover {
+    border-color: #1c84dc;
+    background-color: #1c84dc;
+    color: #fff; }
+
+.settings-form {
+  padding-right: 20px;
+  padding-left: 20px; }
 
 .list_collections {
   padding: 0 30px; }

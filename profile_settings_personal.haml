@@ -1,0 +1,177 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Profile settings - Personal
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      = Haml::Engine.new(File.read('views/common/_profile_dashboard.haml')).render
+
+      .ctn
+        .p-t_3.p-b_6
+
+          %section.section{role: "region", "aria-label" => "Message"}
+            
+            %h2.tx.__upper.m-b_2 Account Settings
+
+            .block
+              .grid.__no-gutter
+
+                .grid-i.__grid-2-7>
+                  %aside.settings-sidebar
+                    %nav
+                      %ul.settings-nav
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a.__current{href: "/profile_settings_personal.html"} Personal
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_picture.html"} Profile picture
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_interests.html"} Occupation and interests
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_location.html"} Language and location
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_email.html"} Email settings
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
+                        %li.settings-nav_i
+                          %a.settings-nav_i_a{href: "/profile_settings_connections.html"} Connections
+
+                .grid-i.__grid-5-7>
+                  %form.form.settings-form
+                    %h3.tx.__upper.__600.m-b_2 Personal
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Display name
+                        .grid-i.__grid-2-4.va-m>
+                          %input.form-el.__tx.__border.__block{type: "text"}
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label First Name
+                        .grid-i.__grid-2-4.va-m>
+                          %input.form-el.__tx.__border.__block{type: "text"}
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Last Name
+                        .grid-i.__grid-2-4.va-m>
+                          %input.form-el.__tx.__border.__block{type: "text"}
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Gender
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} Male
+                              %option Famale
+                    %div.m-b_3
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Birthday
+                        .grid-i.__grid-2-4.va-m>
+                          .grid
+                            .grid-i.__grid-1-3>
+                              .form-el.__select.__block.__fake
+                                %p &nbsp;
+                                %select.form-el.__select.__real
+                                  %option{selected: "selected", value: "0"} --
+                                  %option{value: "1"} 1
+                                  %option{value: "2"} 2
+                                  %option{value: "3"} 3
+                                  %option{value: "4"} 4
+                                  %option{value: "5"} 5
+                                  %option{value: "6"} 6
+                                  %option{value: "7"} 7
+                                  %option{value: "8"} 8
+                                  %option{value: "9"} 9
+                                  %option{value: "10"} 10
+                                  %option{value: "11"} 11
+                                  %option{value: "12"} 12
+                                  %option{value: "13"} 13
+                                  %option{value: "14"} 14
+                                  %option{value: "15"} 15
+                                  %option{value: "16"} 16
+                                  %option{value: "17"} 17
+                                  %option{value: "18"} 18
+                                  %option{value: "19"} 19
+                                  %option{value: "20"} 20
+                                  %option{value: "21"} 21
+                                  %option{value: "22"} 22
+                                  %option{value: "23"} 23
+                                  %option{value: "24"} 24
+                                  %option{value: "25"} 25
+                                  %option{value: "26"} 26
+                                  %option{value: "27"} 27
+                                  %option{value: "28"} 28
+                                  %option{value: "29"} 29
+                                  %option{value: "30"} 30
+                                  %option{value: "31"} 31
+                            .grid-i.__grid-1-3>
+                              .form-el.__select.__block.__fake
+                                %p &nbsp;
+                                %select.form-el.__select.__real
+                                  %option{selected: "selected", value: "0"} --
+                                  %option{value: "1"} January
+                                  %option{value: "2"} February
+                                  %option{value: "3"} March
+                                  %option{value: "4"} April
+                                  %option{value: "5"} May
+                                  %option{value: "6"} June
+                                  %option{value: "7"} July
+                                  %option{value: "8"} August
+                                  %option{value: "9"} September
+                                  %option{value: "10"} October
+                                  %option{value: "11"} November
+                                  %option{value: "12"} December
+                            .grid-i.__grid-1-3>
+                              .form-el.__select.__block.__fake
+                                %p &nbsp;
+                                %select.form-el.__select.__real
+                                  %option{selected: "selected", value: "0"} --
+                                  %option{value: "1986"} 1986
+                                  %option{value: "1987"} 1987
+                                  %option{value: "1988"} 1988
+                                  %option{value: "1989"} 1989
+                                  %option{value: "1990"} 1990
+                                  %option{value: "1991"} 1991
+                                  %option{value: "1992"} 1992
+                                  %option{value: "1993"} 1993
+                                  %option{value: "1994"} 1994
+                                  %option{value: "1995"} 1995
+                                  %option{value: "1996"} 1996
+                                  %option{value: "1997"} 1997
+                                  %option{value: "1998"} 1998
+                                  %option{value: "1999"} 1999
+                                  %option{value: "2000"} 2000
+                                  %option{value: "2001"} 2001
+                                  %option{value: "2002"} 2002
+                                  %option{value: "2003"} 2003
+                                  %option{value: "2004"} 2004
+                                  %option{value: "2005"} 2005
+                                  %option{value: "2006"} 2006
+                                  %option{value: "2007"} 2007
+                                  %option{value: "2008"} 2008
+                                  %option{value: "2009"} 2009
+                                  %option{value: "2010"} 2010
+                                  %option{value: "2011"} 2011
+                                  %option{value: "2012"} 2012
+                                  %option{value: "2013"} 2013
+
+                    %div
+                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
+
+      :javascript
+        var sidebarH = $('.settings-sidebar').outerHeight();
+        $('.settings-form').height(sidebarH);
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
