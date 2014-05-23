@@ -21,78 +21,79 @@
             .tabs.__small
               .grid.m-b_0
                 .grid-i.__grid-1-1.m-b_0>
-                  %ul.brands-tabs
-                    %li.brands-tabs_i>
+                  %ul.index-tabs
+                    %li.index-tabs_i>
                       %a{href: "#tab1"} 1
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab2"} 5
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab3"} A
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab4"} B
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab5"} C
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab6"} D
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab7"} E
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab8"} F
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab9"} G
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab10"} H
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab11"} I
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab12"} J
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab13"} K
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab14"} L
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab15"} M
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab16"} N
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab17"} O
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab18"} P
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab19"} R
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab20"} S
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab21"} T
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab22"} U
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab23"} V
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab24"} W
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab25"} X
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab26"} Y
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab27"} Z
-                    %li.brands-tabs_i>
+                    %li.index-tabs_i>
                       %a{href: "#tab28"} Показать все
                 .grid-i.__grid-1-1.m-b_0>
                   - 1.upto(28) do |i|
                     .tabs_page{id: "tab#{i}"}
-                      .brands-list.__logos
+                      .list_collections
                         - 1.upto(3) do
-                          .brands-list_i
+                          .list_collections_i
                             .grid
                               .grid-i.__grid-1-15>
-                                .brands-list_i_group A
+                                .list_collections_i_group A
                               .grid-i.__grid-14-15>
                                 .grid
                                   - 1.upto(28) do
                                     .grid-i.__grid-1-7>
-                                      .brands-list_i_logo
-                                        %a{href: "/brand_show.html"}
-                                          %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
+                                      %figure.brands-i>
+                                        .brands-i_photo
+                                          %a{href: "/brand_show.html"}
+                                            %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

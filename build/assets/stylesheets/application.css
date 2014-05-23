@@ -4582,9 +4582,9 @@ h6 > .a.__inner > span,
   border-color: #5f6674 !important;
   color: #5f6674; }
 
-.a.invert, .brands-list_i_names a, .brands-tags a {
+.a.invert, .list_collections_i_names a, .brands-tags a {
   color: #5f6674; }
-  .a.invert:hover, .brands-list_i_names a:hover, .brands-tags a:hover {
+  .a.invert:hover, .list_collections_i_names a:hover, .brands-tags a:hover {
     color: #3b86c4; }
 
 a {
@@ -5598,6 +5598,12 @@ a.c-btn:hover {
   .tabs_page.__margin {
     padding: 2rem; }
 
+.index-tabs_i {
+  display: inline-block;
+  vertical-align: top; }
+  .index-tabs_i a {
+    padding: 0 1rem; }
+
 .accordion .ui-accordion-header {
   position: relative;
   padding: 15px 0;
@@ -5747,6 +5753,20 @@ a.c-btn:hover {
   .flavors-i_photo img {
     border-radius: 50%; }
   .flavors-i_photo .ico {
+    vertical-align: middle; }
+
+.brands-i {
+  text-align: center; }
+
+.brands-i_photo {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d5d5d5;
+  border-radius: 50%;
+  line-height: 100px; }
+  .brands-i_photo img {
+    border-radius: 50%;
     vertical-align: middle; }
 
 .reviews-thumbs:not(:last-child) {
@@ -5917,65 +5937,20 @@ a.c-btn:hover {
   text-align: center;
   line-height: 7.5rem; }
 
-.brands-tabs_i {
-  display: inline-block;
-  vertical-align: top; }
-  .brands-tabs_i a {
-    padding: 0 1rem; }
-
-.brands-list {
+.list_collections {
   padding: 0 3rem; }
 
-.brands-list.__logos {
-  padding: 0; }
-
-.brands-list_i {
+.list_collections_i {
   padding: 2rem 0; }
-  .brands-list_i:not(:last-child) {
+  .list_collections_i:not(:last-child) {
     border-bottom: 1px solid #d5d5d5; }
 
-.brands-list_i_group {
+.list_collections_i_group {
   font-size: 1.8rem;
   line-height: 2rem; }
 
-.brands-list_i_names {
+.list_collections_i_names {
   line-height: 2rem; }
-
-.brands-list_i_logo {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #d5d5d5;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 100px; }
-  .brands-list_i_logo img {
-    border-radius: 50%;
-    vertical-align: middle; }
-
-.brands-tags:not(:last-child) {
-  margin-bottom: 3rem; }
-
-.brands-tags_dt {
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem; }
-  .brands-tags_dt::after {
-    margin-left: .5rem;
-    color: #3b86c4;
-    content: "\f0da";
-    font-size: 1.2rem;
-    font-family: FontAwesome; }
-
-.brands-tags_dd {
-  font-size: 1.2rem; }
-
-.brands-month {
-  border: 1px solid #d5d5d5;
-  text-align: center; }
-  .brands-month img {
-    vertical-align: top; }
 
 .hr {
   margin: 0 auto;
@@ -6064,6 +6039,30 @@ a.c-btn:hover {
     background-position: -588px 0; }
   .flag.__ireland {
     background-position: -686px 0; }
+
+.brands-tags:not(:last-child) {
+  margin-bottom: 3rem; }
+
+.brands-tags_dt {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem; }
+  .brands-tags_dt::after {
+    margin-left: .5rem;
+    color: #3b86c4;
+    content: "\f0da";
+    font-size: 1.2rem;
+    font-family: FontAwesome; }
+
+.brands-tags_dd {
+  font-size: 1.2rem; }
+
+.brands-month {
+  border: 1px solid #d5d5d5;
+  text-align: center; }
+  .brands-month img {
+    vertical-align: top; }
 
 .footer {
   height: 100px;

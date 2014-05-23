@@ -541,6 +541,21 @@
     }
   }
 
+//
+// .. Index tabs
+//
+.index-tabs {
+
+}
+  .index-tabs_i {
+    display: inline-block;
+    vertical-align: top;
+    a {
+      padding: 0 1rem;
+    }
+  }
+
+
 
 
 //****************************************************************************************************
@@ -776,6 +791,28 @@
     border-radius: 50%;
     img {border-radius: 50%;}
     .ico {vertical-align: middle;}
+  }
+
+
+//****************************************************************************************************
+//
+// .. BRANDS ITEM
+//
+//****************************************************************************************************
+.brands-i {
+  text-align: center;
+}
+  .brands-i_photo {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid $border-color;
+    border-radius: 50%;    
+    line-height: 100px;
+    img {
+      border-radius: 50%;
+      vertical-align: middle;
+    }
   }
 
 
@@ -1019,92 +1056,24 @@
 
 //****************************************************************************************************
 //
-// .. BRANDS
+// .. COLLECTIONS
 //
 //****************************************************************************************************
-//
-// .. Tabs
-//
-.brands-tabs {
-
-}
-  .brands-tabs_i {
-    display: inline-block;
-    vertical-align: top;
-    a {
-      padding: 0 1rem;
-    }
-  }
-
-//
-// .. List collection
-//
-.brands-list {
+.list_collections {
   padding: 0 3rem;
 }
-  .brands-list {
-    &.__logos {
-      padding: 0;
-    }
+  .list_collections_i {
+    padding: 2rem 0;
+    &:not(:last-child) {border-bottom: 1px solid $border-color;}
   }
-    .brands-list_i {
-      padding: 2rem 0;
-      &:not(:last-child) {border-bottom: 1px solid $border-color;}
+    .list_collections_i_group {
+      font-size: 1.8rem;
+      line-height: 2rem;
     }
-      .brands-list_i_group {
-        font-size: 1.8rem;
-        line-height: 2rem;
-      }
-      .brands-list_i_names {
-        line-height: 2rem;
-        a { @extend .a.invert; }
-      }
-      .brands-list_i_logo {
-        margin: 0 auto;
-        width: 100px;
-        height: 100px;
-        border: 1px solid $border-color;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 100px;
-        img {
-          border-radius: 50%;
-          vertical-align: middle;
-        }
-      }
-
-//
-// .. Tags
-//
-.brands-tags {
-  &:not(:last-child) {margin-bottom: 3rem;}
-  a { @extend .a.invert; }
-}
-  .brands-tags_dt {
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    &::after {
-      margin-left: .5rem;
-      color: $link-color;
-      content: "\f0da";
-      font-size: 1.2rem;
-      font-family: FontAwesome;
+    .list_collections_i_names {
+      line-height: 2rem;
+      a { @extend .a.invert; }
     }
-  }
-  .brands-tags_dd {
-    font-size: 1.2rem;
-  }
-
-//
-// .. Month
-//
-.brands-month {
-  border: 1px solid $border-color;
-  text-align: center;
-  img {vertical-align: top;}
-}
 
 
 
@@ -1210,6 +1179,39 @@
   &.__india   {background-position: -490px 0;}
   &.__russia  {background-position: -588px 0;}
   &.__ireland {background-position: -686px 0;}
+}
+
+//
+// .. Brands tags
+//
+.brands-tags {
+  &:not(:last-child) {margin-bottom: 3rem;}
+  a { @extend .a.invert; }
+}
+  .brands-tags_dt {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    &::after {
+      margin-left: .5rem;
+      color: $link-color;
+      content: "\f0da";
+      font-size: 1.2rem;
+      font-family: FontAwesome;
+    }
+  }
+  .brands-tags_dd {
+    font-size: 1.2rem;
+  }
+
+//
+// .. Brands month
+//
+.brands-month {
+  border: 1px solid $border-color;
+  text-align: center;
+  img {vertical-align: top;}
 }
 
 
