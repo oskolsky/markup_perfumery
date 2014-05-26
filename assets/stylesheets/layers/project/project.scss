@@ -345,6 +345,9 @@
   margin-bottom: 1px;
   border-right:  1px solid $border-color;
   border-left:   1px solid $border-color;
+  &:hover {
+    .dashboard_edit {color: #fff;}  
+  }
 }
 
   //
@@ -356,7 +359,6 @@
     right: 20px;
     color: #959595;
     font-size: 28px;
-    &:hover {color: #fff;}
   }
 
   //
