@@ -58,7 +58,11 @@ input {
   //
   // .. Legend
   //
-  &.__legend {@extend .delta;}
+  &.__legend {
+    text-transform: uppercase;
+    font-weight: 600;
+    @extend .gamma;
+  }
   
   //
   // .. Text
@@ -117,7 +121,8 @@ input {
   &.__checkbox.__fake {
     width: 1.7rem;
     height: 1.7rem;
-    border: 1px solid #ececec;
+    // border: 1px solid #ececec;
+    border: 1px solid $border-color;
     border-radius: .1rem;
     background: #fff;
     &[data-checked="true"]::after {

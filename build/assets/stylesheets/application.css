@@ -4384,7 +4384,7 @@ body {
 img {
   font-style: italic; }
 
-h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .messages-user-list_i_name, .delta, .form-el.__legend, .epsilon, .zeta {
+h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .form-el.__legend, .messages-user-list_i_name, .delta, .epsilon, .zeta {
   color: #465065;
   font-family: "Open Sans", Helvetica, Arial, sans-serif; }
   h1.format-money > i,
@@ -4396,11 +4396,11 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .section_header_title, .gamma, .messages-
   h6 .format-money > i, .alpha.format-money > i,
   .alpha .format-money > i, .beta.format-money > i, .format-money.section_header_title > i,
   .beta .format-money > i,
-  .section_header_title .format-money > i, .gamma.format-money > i, .format-money.messages-user-list_i_name > i,
+  .section_header_title .format-money > i, .gamma.format-money > i, .format-money.form-el.__legend > i, .format-money.messages-user-list_i_name > i,
   .gamma .format-money > i,
-  .messages-user-list_i_name .format-money > i, .delta.format-money > i, .format-money.form-el.__legend > i,
-  .delta .format-money > i,
-  .form-el.__legend .format-money > i, .epsilon.format-money > i,
+  .form-el.__legend .format-money > i,
+  .messages-user-list_i_name .format-money > i, .delta.format-money > i,
+  .delta .format-money > i, .epsilon.format-money > i,
   .epsilon .format-money > i, .zeta.format-money > i,
   .zeta .format-money > i {
     font-size: 85%; }
@@ -4415,12 +4415,12 @@ h2, .beta, .section_header_title {
   font-size: 16px;
   line-height: 18px; }
 
-h3, .gamma, .messages-user-list_i_name {
+h3, .gamma, .form-el.__legend, .messages-user-list_i_name {
   font-weight: 400;
   font-size: 15px;
   line-height: 19px; }
 
-h4, .delta, .form-el.__legend {
+h4, .delta {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px; }
@@ -4566,11 +4566,11 @@ h6 > .a.__inner > span,
 .alpha > a,
 .alpha > .a.__inner > span, .beta > a, .section_header_title > a,
 .beta > .a.__inner > span,
-.section_header_title > .a.__inner > span, .gamma > a, .messages-user-list_i_name > a,
+.section_header_title > .a.__inner > span, .gamma > a, .form-el.__legend > a, .messages-user-list_i_name > a,
 .gamma > .a.__inner > span,
-.messages-user-list_i_name > .a.__inner > span, .delta > a, .form-el.__legend > a,
-.delta > .a.__inner > span,
-.form-el.__legend > .a.__inner > span, .epsilon > a,
+.form-el.__legend > .a.__inner > span,
+.messages-user-list_i_name > .a.__inner > span, .delta > a,
+.delta > .a.__inner > span, .epsilon > a,
 .epsilon > .a.__inner > span, .zeta > a,
 .zeta > .a.__inner > span {
   text-decoration: none; }
@@ -4661,6 +4661,9 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     .form-el.__label span:last-child {
       display: inline-block;
       margin-left: 2.5rem; }
+  .form-el.__legend {
+    text-transform: uppercase;
+    font-weight: 600; }
   .form-el.__tx {
     padding: 0 10px;
     height: 38px;
@@ -4706,7 +4709,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   .form-el.__checkbox.__fake {
     width: 1.7rem;
     height: 1.7rem;
-    border: 1px solid #ececec;
+    border: 1px solid #d5d5d5;
     border-radius: .1rem;
     background: #fff; }
     .form-el.__checkbox.__fake[data-checked="true"]::after {

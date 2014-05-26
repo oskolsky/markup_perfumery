@@ -40,15 +40,95 @@
                           %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
                         %li.settings-nav_i
                           %a.settings-nav_i_a.__current{href: "/profile_settings_privacy.html"} Privacy
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_connections.html"} Connections
 
                 .grid-i.__grid-5-7>
                   %form.form.settings-form
                     %h3.tx.__upper.__600.m-b_2 Privacy
-
-      :javascript
-        var sidebarH = $('.settings-sidebar').outerHeight();
-        $('.settings-form').height(sidebarH);
+                    %div.m-b_3
+                      %p You can set below which parts of&nbsp;your profile are visible and to&nbsp;whom.
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Visible name
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected", value: "0"} Full name
+                              %option{value: "1"} First name only
+                              %option{value: "2"} Display name
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Can send you messages and buddy invites
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label FitProfile
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Activity Calendar
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Nutrition
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_1
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Progress graphs and challenges
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_3
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %label.form-el.__label Buddies
+                        .grid-i.__grid-2-4.va-m>
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real{disabled: "disabled"}
+                              %option{selected: "selected", value: "0"} Everybody
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__major PRO
+                    %div.m-b_3
+                      %label.form-el.__label 
+                        %span.form-el.__checkbox.__fake
+                          %input.form-el.__checkbox.__real{type: "checkbox"}
+                        %span Enable advanced security
+                    %div
+                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

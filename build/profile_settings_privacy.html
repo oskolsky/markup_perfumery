@@ -203,25 +203,130 @@
                         <li class="settings-nav_i">
                           <a class="settings-nav_i_a __current" href="/profile_settings_privacy.html">Privacy</a>
                         </li>
-                        <li class="settings-nav_i">
-                          <a class="settings-nav_i_a" href="/profile_settings_connections.html">Connections</a>
-                        </li>
                       </ul>
                     </nav>
                   </aside>
                 </div><div class="grid-i __grid-5-7">
                   <form class="form settings-form">
                     <h3 class="tx __upper __600 m-b_2">Privacy</h3>
+                    <div class="m-b_3">
+                      <p>You can set below which parts of&nbsp;your profile are visible and to&nbsp;whom.</p>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Visible name</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real">
+                              <option selected="selected" value="0">Full name</option>
+                              <option value="1">First name only</option>
+                              <option value="2">Display name</option>
+                            </select>
+                          </div>
+                        </div></div>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Can send you messages and buddy invites</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">FitProfile</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Activity Calendar</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Nutrition</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_1">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Progress graphs and challenges</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_3">
+                      <div class="grid"><div class="grid-i __grid-1-4 va-m">
+                          <label class="form-el __label">Buddies</label>
+                        </div><div class="grid-i __grid-2-4 va-m">
+                          <div class="form-el __select __block __fake">
+                            <p>&nbsp;</p>
+                            <select class="form-el __select __real" disabled="disabled">
+                              <option selected="selected" value="0">Everybody</option>
+                            </select>
+                          </div>
+                        </div><div class="grid-i __grid-1-4 va-m">
+                          <p class="tx __major">PRO</p>
+                        </div></div>
+                    </div>
+                    <div class="m-b_3">
+                      <label class="form-el __label">
+                        <span class="form-el __checkbox __fake">
+                          <input class="form-el __checkbox __real" type="checkbox">
+                        </span>
+                        <span>Enable advanced security</span>
+                      </label>
+                    </div>
+                    <div>
+                      <input class="form-el __btn __purple grid-i __grid-1-4" type="submit" value="Save">
+                    </div>
                   </form>
                 </div></div>
             </div>
           </section>
         </div>
       </div>
-      <script>
-        var sidebarH = $('.settings-sidebar').outerHeight();
-        $('.settings-form').height(sidebarH);
-      </script>
     </main>
     <footer class='footer' id='footer' role='contentinfo'>
       <div class='ctn'>

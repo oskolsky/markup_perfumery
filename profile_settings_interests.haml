@@ -40,8 +40,6 @@
                           %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
                         %li.settings-nav_i
                           %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_connections.html"} Connections
 
                 .grid-i.__grid-5-7>
                   %form.form.settings-form
@@ -60,9 +58,5 @@
                           %textarea.form-el.__textarea.__border.__block{rows: 10}
                     %div
                       %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
-
-      :javascript
-        var sidebarH = $('.settings-sidebar').outerHeight();
-        $('.settings-form').height(sidebarH);
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

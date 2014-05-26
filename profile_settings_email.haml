@@ -40,15 +40,175 @@
                           %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
                         %li.settings-nav_i
                           %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_connections.html"} Connections
 
                 .grid-i.__grid-5-7>
                   %form.form.settings-form
                     %h3.tx.__upper.__600.m-b_2 Email settings
-
-      :javascript
-        var sidebarH = $('.settings-sidebar').outerHeight();
-        $('.settings-form').height(sidebarH);
+                    %div.m-b_3
+                      %p Please indicate below when you would like to&nbsp;receive email notifications.
+                    %fieldset.m-b_3
+                      %legend.form-el.__legend.m-b_2 FitProfile
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Receiving a like or a thumbs up
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Messages on my profile
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Comments on my blogs
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span New followers
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Private messages
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Challenge or Badge achievement
+                      %div
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Comments after my comment on a blog
+                    %fieldset.m-b_3
+                      %legend.form-el.__legend.m-b_2 Groups and Challenges
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Comments on my group or challenge messages
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Group or challenge invitations
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Comments after my comment on a group message
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span New message in one of my groups or challenges
+                      %div.m-b_2
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span One of my challenges has ended
+                      %div
+                        %label.form-el.__label 
+                          %span.form-el.__checkbox.__fake
+                            %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                          %span Newsletter
+                    %fieldset.m-b_3
+                      %legend.form-el.__legend.m-b_2 E-mail coaching
+                      %div.m-b_3
+                        %p You can indicate below how often you want to&nbsp;track certain values, like your weight. In&nbsp;case you didn&rsquo;t update a&nbsp;value within the indicated time, you will receive an&nbsp;e-mail reminder.
+                        %p 
+                          %i If&nbsp;you do&nbsp;not want to&nbsp;receive coaching emails, set all fields to&nbsp;&laquo;Never&raquo;
+                      %div.m-b_1
+                        .grid
+                          .grid-i.__grid-1-4.va-m>
+                            %label.form-el.__label Fittest
+                          .grid-i.__grid-2-4.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected", value: "0"} Never
+                                %option{value: "86400"} Daily
+                                %option{value: "302400"} Twice a week
+                                %option{value: "604800"} Weekly
+                                %option{value: "1209600"} Every two weeks
+                                %option{value: "2629800"} Monthly
+                                %option{value: "3628800"} Every six weeks
+                                %option{value: "5259600"} Every two months
+                                %option{value: "7889400"} Quarterly
+                      %div.m-b_1
+                        .grid
+                          .grid-i.__grid-1-4.va-m>
+                            %label.form-el.__label Weight
+                          .grid-i.__grid-2-4.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected", value: "0"} Never
+                                %option{value: "86400"} Daily
+                                %option{value: "302400"} Twice a week
+                                %option{value: "604800"} Weekly
+                                %option{value: "1209600"} Every two weeks
+                                %option{value: "2629800"} Monthly
+                                %option{value: "3628800"} Every six weeks
+                                %option{value: "5259600"} Every two months
+                                %option{value: "7889400"} Quarterly
+                      %div.m-b_1
+                        .grid
+                          .grid-i.__grid-1-4.va-m>
+                            %label.form-el.__label Fat percentage
+                          .grid-i.__grid-2-4.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected", value: "0"} Never
+                                %option{value: "86400"} Daily
+                                %option{value: "302400"} Twice a week
+                                %option{value: "604800"} Weekly
+                                %option{value: "1209600"} Every two weeks
+                                %option{value: "2629800"} Monthly
+                                %option{value: "3628800"} Every six weeks
+                                %option{value: "5259600"} Every two months
+                                %option{value: "7889400"} Quarterly
+                      %div
+                        .grid
+                          .grid-i.__grid-1-4.va-m>
+                            %label.form-el.__label Waist size
+                          .grid-i.__grid-2-4.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected", value: "0"} Never
+                                %option{value: "86400"} Daily
+                                %option{value: "302400"} Twice a week
+                                %option{value: "604800"} Weekly
+                                %option{value: "1209600"} Every two weeks
+                                %option{value: "2629800"} Monthly
+                                %option{value: "3628800"} Every six weeks
+                                %option{value: "5259600"} Every two months
+                                %option{value: "7889400"} Quarterly
+                    %fieldset.m-b_3
+                      %legend.form-el.__legend.m-b_2 Challenges update e-mail
+                      %div
+                        .grid
+                          .grid-i.__grid-1-4.va-m>
+                            %label.form-el.__label Challenges
+                          .grid-i.__grid-2-4.va-m>
+                            .form-el.__select.__block.__fake
+                              %p &nbsp;
+                              %select.form-el.__select.__real
+                                %option{selected: "selected", value: "0"} Never
+                                %option{value: "86400"} Daily
+                                %option{value: "302400"} Twice a week
+                                %option{value: "604800"} Weekly
+                                %option{value: "1209600"} Every two weeks
+                                %option{value: "2629800"} Monthly
+                                %option{value: "3628800"} Every six weeks
+                                %option{value: "5259600"} Every two months
+                                %option{value: "7889400"} Quarterly
+                    %div
+                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}                        
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
