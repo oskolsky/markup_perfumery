@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Profile settings - Personal
+    %title Profile settings - Connections
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -29,7 +29,7 @@
                         %li.settings-nav_i
                           %a.settings-nav_i_a{href: "/profile_settings_personal.html"} Personal
                         %li.settings-nav_i
-                          %a.settings-nav_i_a.__current{href: "/profile_settings_picture.html"} Profile picture
+                          %a.settings-nav_i_a{href: "/profile_settings_picture.html"} Profile picture
                         %li.settings-nav_i
                           %a.settings-nav_i_a{href: "/profile_settings_interests.html"} Occupation and interests
                         %li.settings-nav_i
@@ -41,19 +41,40 @@
                         %li.settings-nav_i
                           %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
                         %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_сonnections.html"} Connections
+                          %a.settings-nav_i_a.__current{href: "/profile_settings_сonnections.html"} Connections
 
                 .grid-i.__grid-5-7>
                   %form.form.settings-form
-                    %h3.tx.__upper.__600.m-b_2 Profile picture
+                    %h3.tx.__upper.__600.m-b_3 Connections
                     %div.m-b_3
-                      %a{href: "#"}
-                        %img{src: "/assets/images/fake/user-photo-1.png", width: 274, height: 256, alt: ""}
-                    %h3.tx.__upper.__600.m-b_2 Upload a cover photo                    
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %p 
+                            %i.fa.fa-facebook-square.social-connections-ico
+                            Facebook
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__600.__major Connected!
+                        .grid-i.__grid-2-4.va-m>
+                          %button.form-el.__btn.__black Remove connection
                     %div.m-b_3
-                      %a{href: "#"}
-                        %img{src: "/assets/images/fake/user-bg-1.png", width: "100%", alt: ""}
-                    %div
-                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %p
+                            %i.fa.fa-twitter-square.social-connections-ico
+                            Twitter
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__600 Not connected yet
+                        .grid-i.__grid-2-4.va-m>
+                          %button.form-el.__btn.__purple Connection
+                    %div.m-b_3
+                      .grid
+                        .grid-i.__grid-1-4.va-m>
+                          %p
+                            %i.fa.fa-tumblr-square.social-connections-ico
+                            Tumblr
+                        .grid-i.__grid-1-4.va-m>
+                          %p.tx.__600 Not connected yet
+                        .grid-i.__grid-2-4.va-m>
+                          %button.form-el.__btn.__purple Connection
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

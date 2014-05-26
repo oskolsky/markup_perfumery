@@ -92,8 +92,10 @@
                                   - 1.upto(28) do
                                     .grid-i.__grid-1-7>
                                       %figure.brands-i>
-                                        .brands-i_photo
+                                        .brands-i_photo.m-b_1
                                           %a{href: "/brand_show.html"}
                                             %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
+                                        %figcaption
+                                          %p Brand name
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

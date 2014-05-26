@@ -5283,6 +5283,9 @@ a.c-btn:hover {
       box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.25);
       opacity: .95; } }
 
+.menu {
+  position: relative; }
+
 .menu_i {
   border-left: 1px solid #eee; }
   .menu_i:last-child {
@@ -5302,6 +5305,16 @@ a.c-btn:hover {
   .menu_i_a.__current, .menu_i_a:hover {
     background-color: #c390cf;
     color: #fff; }
+
+.menu_dropdown {
+  position: absolute;
+  top: 100%;
+  right: 2px;
+  left: 1px;
+  background-color: #c390cf;
+  color: #fff; }
+  .menu_dropdown:hover {
+    color: inherit; }
 
 .breadcrumbs {
   margin-top: -1px;
@@ -5449,9 +5462,19 @@ a.c-btn:hover {
     right: 50px; }
 
 .dashboard {
+  position: relative;
   margin-bottom: 1px;
   border-right: 1px solid #d5d5d5;
   border-left: 1px solid #d5d5d5; }
+
+.dashboard_edit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #959595;
+  font-size: 28px; }
+  .dashboard_edit:hover {
+    color: #fff; }
 
 .dashboard_user, .dashboard_group {
   position: relative;
@@ -6113,6 +6136,12 @@ a.c-btn:hover {
 
 .brand-logo {
   border: 1px solid #d5d5d5; }
+
+.social-connections-ico {
+  width: 60px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 4rem; }
 
 .footer {
   height: 100px;
