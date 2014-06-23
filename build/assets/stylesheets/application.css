@@ -6022,6 +6022,65 @@ a.c-btn:hover {
 .list_collections_i_names {
   line-height: 20px; }
 
+.offers {
+  text-align: center;
+  padding: 3rem; }
+
+.offers_i {
+  position: relative;
+  padding: 2rem 2rem 6rem;
+  border: 1px solid transparent; }
+  .offers_i:hover {
+    border-color: #d5d5d5; }
+    .offers_i:hover .offers_i_more, .offers_i:hover .offers_i_like {
+      display: block; }
+
+.offers_i_photo {
+  margin-bottom: 1rem;
+  vertical-align: top; }
+
+.offers_i_name {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 2rem; }
+  .offers_i_name a {
+    color: #5f6674; }
+
+.offers_i_category {
+  font-size: 1.2rem;
+  line-height: 2rem; }
+
+.offers_i_price {
+  font-size: 1.4rem;
+  line-height: 2rem; }
+
+.offers_i_more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  height: 5rem;
+  background-color: #01c5c3;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 5rem; }
+
+.offers_i_like {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: #c390cf;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.8rem; }
+
 .hr {
   margin: 0 auto;
   width: 100%;
