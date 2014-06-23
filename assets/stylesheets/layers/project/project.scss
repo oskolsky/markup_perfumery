@@ -1240,7 +1240,7 @@
     }
 
 .offers-info {
-  
+
 }
   .offers-info_like {
     display: block !important;
@@ -1255,6 +1255,20 @@
     font-size: 2.4rem;
     line-height: 2rem;
   }
+
+.offers-add {
+  display: block;
+  height: 3.2rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  line-height: 3.2rem;
+  .fa {
+    margin-right: .5rem;
+    vertical-align: middle;
+    font-size: 1.6rem;
+  }
+}
 
 
 

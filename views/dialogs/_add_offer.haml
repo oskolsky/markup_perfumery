@@ -1,0 +1,81 @@
+%h2.tx.__upper.__center.m-b_3 Добавить ваше предложение 
+%hr.hr.m-b_3
+%form.form
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Выберете раздел:
+      .grid-i.__grid-13-16.va-m>
+        .form-el.__select.__block.__fake
+          %p &nbsp;
+          %select.form-el.__select.__real
+            %option{selected: "selected"} Раздел
+            %option Куплю
+            %option Продам
+            %option Обменяю
+            %option Распив
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Выберете бранд:
+      .grid-i.__grid-13-16.va-m>
+        .form-el.__select.__block.__fake
+          %p &nbsp;
+          %select.form-el.__select.__real
+            %option{selected: "selected"} Название бренда
+            %option Abercrombie & Fitch
+            %option AJMAL
+            %option Andrea Maack
+            %option Antonia's Flowers
+            %option Atelier Cologne
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Выберете марку:
+      .grid-i.__grid-13-16.va-m>
+        .form-el.__select.__block.__fake
+          %p &nbsp;
+          %select.form-el.__select.__real
+            %option{selected: "selected"} Название марки
+            %option Abercrombie & Fitch
+            %option AJMAL
+            %option Andrea Maack
+            %option Antonia's Flowers
+            %option Atelier Cologne
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Название лота:
+      .grid-i.__grid-13-16.va-m>
+        %input.form-el.__tx.__border.__block{type: "text"}
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16>
+        %lable.form-el.__label Описание:
+      .grid-i.__grid-13-16>
+        %textarea.form-el.__textarea.__border.__block{rows: 4}
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Изображение:
+      .grid-i.__grid-13-16.va-m>
+        %input.form-el.__tx.__border.__block{type: "text"}
+  %div.m-b_2
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Объем:
+      .grid-i.__grid-3-16.va-m>
+        %input.form-el.__tx.__border.__block{type: "text"}
+      .grid-i.__grid-3-16.va-m> мл.
+  %div.m-b_3
+    .grid
+      .grid-i.__grid-3-16.va-m>
+        %lable.form-el.__label Цена:
+      .grid-i.__grid-3-16.va-m>
+        %input.form-el.__tx.__border.__block{type: "text"}
+      .grid-i.__grid-3-16.va-m> руб.
+%hr.hr.m-b_3
+  .grid
+    .grid-i.__grid-3-16.va-m>        
+    .grid-i.__grid-3-16.va-m>
+      %button.form-el.__btn.__green.__block{type: "submit"} Дальше

@@ -10,7 +10,24 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      = Haml::Engine.new(File.read('views/common/_breadcrumbs.haml')).render
+
+      %nav.breadcrumbs
+        .ctn
+          .grid
+            .grid-i.__grid-9-12.va-m>
+              %ul
+                %li.breadcrumbs_i 
+                  %a.breadcrumbs_i_a{href: "/"} Home
+                %li.breadcrumbs_i 
+                  %a.breadcrumbs_i_a{href: "/"} Fragrance
+                %li.breadcrumbs_i 
+                  %a.breadcrumbs_i_a{href: "/"} Marc Jacobs
+                %li.breadcrumbs_i 
+                  %a.breadcrumbs_i_a{href: "/"} Marc Jacobs Honey
+            .grid-i.__grid-3-12.va-m>
+              %a.offers-add{href: "/dialogs/add_offer.html", data: {dialog: "open", url: "/data/dialogs/add_offer.html"}} 
+                %i.fa.fa-plus
+                добавить предложение
 
       %section.section{role: "region", "aria-label" => "Offers"}
         .ctn

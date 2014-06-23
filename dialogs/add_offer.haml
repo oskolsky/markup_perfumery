@@ -1,0 +1,19 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Add offer
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      %section.section{role: "region", "aria-label" => "Add Offer"}
+        .ctn
+          .p-t_6.p-b_6
+            .grid-i.__grid-17-24.b-center
+              = Haml::Engine.new(File.read('views/dialogs/_add_offer.haml')).render
+            
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
