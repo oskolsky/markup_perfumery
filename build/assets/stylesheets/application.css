@@ -4706,6 +4706,9 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     .form-el.__btn.__purple {
       background-color: #7978b4;
       color: #fff; }
+    .form-el.__btn.__green {
+      background-color: #01c5c3;
+      color: #fff; }
   .form-el.__checkbox.__fake {
     width: 1.7rem;
     height: 1.7rem;
@@ -5840,7 +5843,7 @@ a.c-btn:hover {
   content: '|'; }
 
 .reviews-i:not(:last-child) {
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
 .reviews-i:hover .reviews-i_photo, .reviews-i:hover .reviews-i_action {
   display: block; }
 .reviews-i header a {
@@ -6032,7 +6035,7 @@ a.c-btn:hover {
   border: 1px solid transparent; }
   .offers_i:hover {
     border-color: #d5d5d5; }
-    .offers_i:hover .offers_i_more, .offers_i:hover .offers_i_like {
+    .offers_i:hover .offers_i_more, .offers_i:hover .offers_i_like, .offers_i:hover .offers-info_like {
       display: block; }
 
 .offers_i_photo {
@@ -6067,7 +6070,7 @@ a.c-btn:hover {
   font-size: 1.6rem;
   line-height: 5rem; }
 
-.offers_i_like {
+.offers_i_like, .offers-info_like {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -6080,6 +6083,18 @@ a.c-btn:hover {
   text-align: center;
   font-size: 1.4rem;
   line-height: 2.8rem; }
+
+.offers-info_like {
+  display: block !important; }
+
+.offers-info_name {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  line-height: 2rem; }
+
+.offers-price {
+  font-size: 2.4rem;
+  line-height: 2rem; }
 
 .hr {
   margin: 0 auto;

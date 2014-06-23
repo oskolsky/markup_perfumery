@@ -28,7 +28,7 @@ accounting.settings = {
   currency: {
     decimal: '.',
     thousand: ' ',
-    precision: 2
+    precision: 0
   },
   number: {
     decimal : '.',
@@ -76,7 +76,7 @@ function formatMoney() {
       formatMoney = accounting.formatMoney(money);
     
     if ($(this).hasClass('__rub')) {
-      $(this).text(formatMoney).append('&nbsp;<i class="fa fa-ruble"></i>');
+      $(this).text(formatMoney).append('&nbsp;руб.');
     } else {
       $(this).text(formatMoney);
     }

@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Offers/ Fragrance
+    %title Offers / Fragrance
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -10,10 +10,9 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-
       = Haml::Engine.new(File.read('views/common/_breadcrumbs.haml')).render
 
-      %section.section{role: "region", "aria-label" => "Wardrobe"}
+      %section.section{role: "region", "aria-label" => "Offers"}
         .ctn
           .p-t_3.p-b_6
             

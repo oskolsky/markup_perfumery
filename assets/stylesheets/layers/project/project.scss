@@ -908,7 +908,7 @@
 // .. Item
 //
 .reviews-i {
-  &:not(:last-child) {margin-bottom: 60px;}
+  &:not(:last-child) {margin-bottom: 40px;}
   &:hover {
     .reviews-i_photo, .reviews-i_action {display: block;}
   }
@@ -1238,6 +1238,23 @@
       font-size: 1.4rem;
       line-height: 2.8rem;
     }
+
+.offers-info {
+  
+}
+  .offers-info_like {
+    display: block !important;
+    @extend .offers_i_like;
+  }
+  .offers-info_name {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+  .offers-price {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
 
 
 
