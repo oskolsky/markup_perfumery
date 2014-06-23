@@ -21,46 +21,45 @@
               Ваши 
               %span.tx.__400 предложения
 
-            .m-b_5
-              .tabs.__small
-                .grid.m-b_0
-                  .grid-i.__grid-2-3.m-b_0>
-                    %ul.grid.__no-gutter
-                      %li.grid-i.__grid-1-8>
-                        %a{href: "#tab1"} куплю
-                      %li.grid-i.__grid-1-8>
-                        %a{href: "#tab2"} продам
-                      %li.grid-i.__grid-1-8>
-                        %a{href: "#tab3"} обменяю
-                      %li.grid-i.__grid-1-8>
-                        %a{href: "#tab4"} распив
-                  .grid-i.__grid-1-3.m-b_0>
-                    %form.form
-                      .grid
-                        .grid-i.__grid-1-2.va-m>
-                          %label.form-el.__label.__block.tx.__right Sorting by:&nbsp;
-                        .grid-i.__grid-1-2.va-m>
-                          .form-el.__select.__block.__fake
-                            %p &nbsp;
-                            %select.form-el.__select.__real
-                              %option{selected: "selected"} тип флакона
-                              %option объем
-                              %option название
-                  .grid-i.__grid-1-1.m-b_0>
-                    - 1.upto(4) do |i|
-                      .tabs_page.__border{id: "tab#{i}"}
-                        .section
-                          .offers
-                            .grid
-                              - 1.upto(20) do
-                                .grid-i.__grid-1-5>
-                                  .offers_i
-                                    %img.offers_i_photo.c-bg.__gray{src: "/assets/images/blank.gif", width: 130, height: 180, alt: "Eau de Parfume"}
-                                    %p.offers_i_name Eau de Parfume
-                                    %p.offers_i_category Туалетная вода
-                                    %p.offers_i_price 2290 руб.
-                                    %a.offers_i_more{href: "/offers_show.html"} Подробнее
-                                    %a.offers_i_like{href: "#"}
-                                      %i.fa.fa-heart
+            .tabs.__small
+              .grid.m-b_0
+                .grid-i.__grid-2-3.m-b_0>
+                  %ul.grid.__no-gutter
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab1"} куплю
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab2"} продам
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab3"} обменяю
+                    %li.grid-i.__grid-1-8>
+                      %a{href: "#tab4"} распив
+                .grid-i.__grid-1-3.m-b_0>
+                  %form.form
+                    .grid
+                      .grid-i.__grid-1-2.va-m>
+                        %label.form-el.__label.__block.tx.__right Sorting by:&nbsp;
+                      .grid-i.__grid-1-2.va-m>
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} тип флакона
+                            %option объем
+                            %option название
+                .grid-i.__grid-1-1.m-b_0>
+                  - 1.upto(4) do |i|
+                    .tabs_page.__border{id: "tab#{i}"}
+                      .section
+                        .offers
+                          .grid
+                            - 1.upto(20) do
+                              .grid-i.__grid-1-5>
+                                .offers_i
+                                  %img.offers_i_photo.c-bg.__gray{src: "/assets/images/blank.gif", width: 130, height: 180, alt: "Eau de Parfume"}
+                                  %p.offers_i_name Eau de Parfume
+                                  %p.offers_i_category Туалетная вода
+                                  %p.offers_i_price 2290 руб.
+                                  %a.offers_i_more{href: "/offers_show.html"} Подробнее
+                                  %a.offers_i_like{href: "#"}
+                                    %i.fa.fa-heart
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
