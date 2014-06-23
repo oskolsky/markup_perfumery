@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Demo
+    %title Demo / Fragrance
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
     :css
       .demo {margin-left: 6rem;}
@@ -24,17 +24,14 @@
         .ctn.p-t_8.p-b_8
           %article
             %header.m-b_4
-              %h3
-                %a.a.__inner{href: "/index.html"}
-                  %span Demo
-
+              %h1
+                %a.a.__inner{href: "/"}
+                  %i.fa.fa-flask.va-t
+                  %span Fragrance Demo
             .grid
               .grid-i.__grid-1-3>
                 %nav.demo
                   %ol
-                    
-                    %li.m-b_2
-                      %a{href: "/ui.html"} UI
                     
                     %li.m-b_2 
                       %a{href: "/"} Landing
