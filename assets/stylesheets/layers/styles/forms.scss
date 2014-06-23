@@ -167,23 +167,22 @@ input {
   // .. File
   //
   &.__file.__fake {
-    padding: 0 .75rem;
-    height: 3rem;
-    border: 1px solid #ccc;
-    border-radius: .3rem;
+    padding: 0 65px 0 10px;
+    height: 38px;
     background: #fff;
-    line-height: 2.8rem;
+    line-height: 3.6rem;
     cursor: pointer;
+    font-size: inherit;
     &::after {
-      right: .75rem;
-      color: #ccc;
-      content: "\f07c";
-      font: {
-        size: 1.4rem;
-        family: FontAwesome;
-      }
+      right: 0;
+      padding: 0 2rem;
+      background-color: #bec0c4;
+      color: #fff;
+      content: "обзор";
     }
     > p {margin-right: 2.4rem;}
+
+    &.__border {border: 1px solid $border-color;}
   }
 
   //

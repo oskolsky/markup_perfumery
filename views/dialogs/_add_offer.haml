@@ -59,7 +59,9 @@
       .grid-i.__grid-3-16.va-m>
         %lable.form-el.__label Изображение:
       .grid-i.__grid-13-16.va-m>
-        %input.form-el.__tx.__border.__block{type: "text"}
+        .form-el.__file.__fake.__border.__block{data: {placeholder: "Выберите файл..."}}
+          %p &nbsp;
+          %input.form-el.__file.__real{type: "file"}
   %div.m-b_2
     .grid
       .grid-i.__grid-3-16.va-m>
