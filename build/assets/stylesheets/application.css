@@ -5248,6 +5248,7 @@ a.c-btn:hover {
   line-height: 40px; }
 
 .header-menu_i {
+  position: relative;
   border-left: 1px solid #414446; }
   .header-menu_i:last-child {
     border-right: 1px solid #414446; }
@@ -5320,6 +5321,28 @@ a.c-btn:hover {
   color: #fff; }
   .menu_dropdown:hover {
     color: inherit; }
+
+.menu_i_dropdown {
+  position: absolute;
+  top: 100%;
+  right: -1px;
+  display: none;
+  padding: 30px 20px;
+  width: 275px;
+  background-color: #fc5e7c;
+  text-align: center;
+  z-index: 999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .menu_i_dropdown p {
+    color: #fff;
+    line-height: 10px; }
+    .menu_i_dropdown p a {
+      color: #33383e;
+      text-decoration: underline; }
 
 .breadcrumbs {
   margin-top: -1px;

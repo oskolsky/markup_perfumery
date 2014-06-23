@@ -70,30 +70,44 @@
         <a class='logo' href='/'>Logo</a>
         <ul class='header-menu grid __no-gutter'><li class='header-menu_i grid-i __grid-1-7 __prefix-5-7'>
             <a class='header-menu_i_a' href='#'>Search</a>
-          </li><li class='header-menu_i grid-i __grid-1-7'>
+          </li><li class='header-menu_i js-login grid-i __grid-1-7'>
             <a class='header-menu_i_a __special' href='#'>Login / Register</a>
+            <div class='menu_i_dropdown __login'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Login'>
+                </div>
+                <p class='tx __upper'>
+                  Not a member?
+                  <a class='js-toggle' href='#'>Register now</a>
+                </p>
+              </form>
+            </div>
+            <div class='menu_i_dropdown __register'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Register'>
+                </div>
+                <p class='tx __upper'>
+                  <a class='js-toggle' href='#'>Login</a>
+                </p>
+              </form>
+            </div>
           </li></ul>
       </div>
     </header>
-    <!-- %header#header.header{role: "banner"} -->
-    <!-- .ctn -->
-    <!-- %a.logo{href: "/"} Logo -->
-    <!-- %menu.menu.grid.__no-gutter -->
-    <!-- %li.menu_i.__search.grid-i.__grid-1-7.__prefix-5-7> -->
-    <!-- %a.menu_i_a{href: "#"} Search -->
-    <!-- %li.menu_i.__login.grid-i.__grid-1-7> -->
-    <!-- %a.menu_i_a{href: "#"} Login / Register -->
-    <!-- .menu_i_dropdown -->
-    <!-- %form.form -->
-    <!-- .m-b_1 -->
-    <!-- %input.form-el.__tx.__block{type: "text", placeholder: "E-MAIL"} -->
-    <!-- .m-b_2 -->
-    <!-- %input.form-el.__tx.__block{type: "password", placeholder: "PASSWORD"} -->
-    <!-- .m-b_1 -->
-    <!-- %input.form-el.__btn.__black.grid-i.__grid-1-2{type: "submit", value: "Login"} -->
-    <!-- %p.tx.__upper -->
-    <!-- Not a member? -->
-    <!-- %a{href: "#"} Register now -->
     <nav class='nav' id='nav' role='navigation'>
       <div class='ctn'>
         <ul class='menu grid __no-gutter'><li class='menu_i grid-i __grid-1-7'>
@@ -133,7 +147,7 @@
             <!-- Z -->
             <!-- Показать все -->
           </li><li class='menu_i grid-i __grid-1-7'>
-            <a class='menu_i_a' href='/brands.html'>Brands</a>
+            <a class='menu_i_a' href='/brands_logos.html'>Brands</a>
           </li><li class='menu_i grid-i __grid-1-7'>
             <a class='menu_i_a' href='/notes_logos.html'>Notes</a>
           </li><li class='menu_i grid-i __grid-1-7'>
@@ -141,7 +155,7 @@
           </li><li class='menu_i grid-i __grid-1-7'>
             <a class='menu_i_a' href='#'>Top</a>
           </li><li class='menu_i grid-i __grid-1-7'>
-            <a class='menu_i_a' href='#'>Offers</a>
+            <a class='menu_i_a' href='/offers.html'>Offers</a>
           </li><li class='menu_i grid-i __grid-1-7'>
             <a class='menu_i_a' href='#'>Social</a>
           </li></ul>
@@ -186,6 +200,104 @@
                       </div>
                     </div><div class='grid-i __grid-5-7'>
                       <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-4.jpg)'>
+                        <ul class='dashboard_list'><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>2186</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>304</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>793</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>1132</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>647</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
+                            </a>
+                          </li></ul>
+                      </div>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="m-b_4">
+        <section aria-label='Profile' class='section' role='region'>
+          <div class='ctn'>
+            <div class='grid'>
+              <div class='grid-i __grid-1-1'>
+                <div class='dashboard'>
+                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
+                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-6.jpg)'>
+                        <div class='dashboard_group_caption'>
+                          <p class='dashboard_group_name'>Восточные</p>
+                        </div>
+                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
+                      </div>
+                    </div><div class='grid-i __grid-5-7'>
+                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-6.jpg)'>
+                        <ul class='dashboard_list'><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>2186</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>304</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>793</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>1132</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>647</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
+                            </a>
+                          </li></ul>
+                      </div>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="m-b_4">
+        <section aria-label='Profile' class='section' role='region'>
+          <div class='ctn'>
+            <div class='grid'>
+              <div class='grid-i __grid-1-1'>
+                <div class='dashboard'>
+                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
+                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-7.jpg)'>
+                        <div class='dashboard_group_caption'>
+                          <p class='dashboard_group_name'>Восточные</p>
+                        </div>
+                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
+                      </div>
+                    </div><div class='grid-i __grid-5-7'>
+                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-7.jpg)'>
                         <ul class='dashboard_list'><li class='dashboard_list_i'>
                             <a class='dashboard_list_i_a' href='#'>
                               <span class='dashboard_list_i_value'>2186</span>
@@ -276,6 +388,104 @@
               <div class='grid-i __grid-1-1'>
                 <div class='dashboard'>
                   <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
+                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-3.jpg)'>
+                        <div class='dashboard_group_caption'>
+                          <p class='dashboard_group_name'>Восточные</p>
+                        </div>
+                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
+                      </div>
+                    </div><div class='grid-i __grid-5-7'>
+                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-3.jpg)'>
+                        <ul class='dashboard_list'><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>2186</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>304</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>793</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>1132</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>647</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
+                            </a>
+                          </li></ul>
+                      </div>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="m-b_4">
+        <section aria-label='Profile' class='section' role='region'>
+          <div class='ctn'>
+            <div class='grid'>
+              <div class='grid-i __grid-1-1'>
+                <div class='dashboard'>
+                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
+                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-1.jpg)'>
+                        <div class='dashboard_group_caption'>
+                          <p class='dashboard_group_name'>Восточные</p>
+                        </div>
+                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
+                      </div>
+                    </div><div class='grid-i __grid-5-7'>
+                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-1.jpg)'>
+                        <ul class='dashboard_list'><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>2186</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>304</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>793</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>1132</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
+                            </a>
+                          </li><li class='dashboard_list_i'>
+                            <a class='dashboard_list_i_a' href='#'>
+                              <span class='dashboard_list_i_value'>647</span>
+                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
+                            </a>
+                          </li></ul>
+                      </div>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="m-b_4">
+        <section aria-label='Profile' class='section' role='region'>
+          <div class='ctn'>
+            <div class='grid'>
+              <div class='grid-i __grid-1-1'>
+                <div class='dashboard'>
+                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
                       <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-6.jpg)'>
                         <div class='dashboard_group_caption'>
                           <p class='dashboard_group_name'>Восточные</p>
@@ -284,202 +494,6 @@
                       </div>
                     </div><div class='grid-i __grid-5-7'>
                       <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-6.jpg)'>
-                        <ul class='dashboard_list'><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>2186</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>304</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>793</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>1132</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>647</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
-                            </a>
-                          </li></ul>
-                      </div>
-                    </div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="m-b_4">
-        <section aria-label='Profile' class='section' role='region'>
-          <div class='ctn'>
-            <div class='grid'>
-              <div class='grid-i __grid-1-1'>
-                <div class='dashboard'>
-                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
-                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-4.jpg)'>
-                        <div class='dashboard_group_caption'>
-                          <p class='dashboard_group_name'>Восточные</p>
-                        </div>
-                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
-                      </div>
-                    </div><div class='grid-i __grid-5-7'>
-                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-4.jpg)'>
-                        <ul class='dashboard_list'><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>2186</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>304</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>793</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>1132</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>647</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
-                            </a>
-                          </li></ul>
-                      </div>
-                    </div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="m-b_4">
-        <section aria-label='Profile' class='section' role='region'>
-          <div class='ctn'>
-            <div class='grid'>
-              <div class='grid-i __grid-1-1'>
-                <div class='dashboard'>
-                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
-                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-6.jpg)'>
-                        <div class='dashboard_group_caption'>
-                          <p class='dashboard_group_name'>Восточные</p>
-                        </div>
-                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
-                      </div>
-                    </div><div class='grid-i __grid-5-7'>
-                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-6.jpg)'>
-                        <ul class='dashboard_list'><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>2186</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>304</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>793</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>1132</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>647</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
-                            </a>
-                          </li></ul>
-                      </div>
-                    </div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="m-b_4">
-        <section aria-label='Profile' class='section' role='region'>
-          <div class='ctn'>
-            <div class='grid'>
-              <div class='grid-i __grid-1-1'>
-                <div class='dashboard'>
-                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
-                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-5.jpg)'>
-                        <div class='dashboard_group_caption'>
-                          <p class='dashboard_group_name'>Восточные</p>
-                        </div>
-                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
-                      </div>
-                    </div><div class='grid-i __grid-5-7'>
-                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-5.jpg)'>
-                        <ul class='dashboard_list'><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>2186</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>цветочные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>304</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>фужерные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>793</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>гурманские</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>1132</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>древесные</span>
-                            </a>
-                          </li><li class='dashboard_list_i'>
-                            <a class='dashboard_list_i_a' href='#'>
-                              <span class='dashboard_list_i_value'>647</span>
-                              <span class='dashboard_list_i_label'>Восточные<br>пряные</span>
-                            </a>
-                          </li></ul>
-                      </div>
-                    </div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="m-b_4">
-        <section aria-label='Profile' class='section' role='region'>
-          <div class='ctn'>
-            <div class='grid'>
-              <div class='grid-i __grid-1-1'>
-                <div class='dashboard'>
-                  <div class='grid __no-gutter'><div class='grid-i __grid-2-7'>
-                      <div class='dashboard_group' style='background-image: url(/assets/images/fake/group-photo-2.jpg)'>
-                        <div class='dashboard_group_caption'>
-                          <p class='dashboard_group_name'>Восточные</p>
-                        </div>
-                        <div class='dashboard_group_count'>1016 восточных Ароматов</div>
-                      </div>
-                    </div><div class='grid-i __grid-5-7'>
-                      <div class='dashboard_stats' style='background-image: url(/assets/images/fake/group-bg-2.jpg)'>
                         <ul class='dashboard_list'><li class='dashboard_list_i'>
                             <a class='dashboard_list_i_a' href='#'>
                               <span class='dashboard_list_i_value'>2186</span>

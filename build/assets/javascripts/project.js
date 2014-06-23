@@ -6,6 +6,34 @@
 $(function() {
 
   //
+  // .. Register / login
+  //
+  $('.js-login').on('touchstart click', function() {
+    var $login = $('.menu_i_dropdown.__login');
+    
+    $login.is(':hidden') ? $login.show() : $login.hide();
+    return false;
+  });
+
+  $('.js-toggle').on('touchstart click', function() {
+    var 
+        $login    = $('.menu_i_dropdown.__login'),
+        $register = $('.menu_i_dropdown.__register');
+
+    if ($register.is(':hidden')) {
+      $login.hide();
+      $register.show();
+
+    } else {
+      $login.show();
+      $register.hide();
+    }
+    
+    
+    return false;
+  });
+
+  //
   // .. YTPlayer init
   //
   $(".movie").mb_YTPlayer();
@@ -170,7 +198,9 @@ $(function() {
   // .. SCROLL
   //
   //****************************************************************************************************
-  $(window).scroll(function() {});
+  $(window).scroll(function() {
+    $('.menu_i_dropdown').hide();
+  });
 
 
 
