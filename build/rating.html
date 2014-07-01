@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+  <head>
+    <title>Rating / Fragrance</title>
+    <meta charset='utf-8'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='telephone=no' name='format-detection'>
+    <meta content='' name='description'>
+    <meta content='' name='keywords'>
+    <link href='/humans.txt' rel='author'>
+    <link href='/favicon.ico' rel='icon'>
+    <link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon'>
+    <link href='/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon' sizes='57x57'>
+    <link href='/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='/apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='/assets/stylesheets/application.css' rel='stylesheet'>
+    <!-- build:javascripts -->
+    <script src='/assets/javascripts/vendor/modernizr-latest.js'></script>
+    <script src='/assets/javascripts/vendor/yepnope.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-2.1.0.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-ui-1.10.4.js'></script>
+    <script src='/assets/javascripts/vendor/underscore.js'></script>
+    <script src='/assets/javascripts/vendor/backbone.js'></script>
+    <script src='/assets/javascripts/vendor/smartresize.js'></script>
+    <script src='/assets/javascripts/vendor/doublehover.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.arcticmodal.js'></script>
+    <script src='/assets/javascripts/vendor/owl.carousel.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.carousel.min.js'></script>
+    <script src='/assets/javascripts/vendor/cycle2/jquery.cycle2.swipe.min.js'></script>
+    <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/accounting.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.raty.min.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.parallax-1.1.3.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.mb.YTPlayer.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.mousewheel.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.jscrollpane.min.js'></script>
+    <script src='/assets/javascripts/polyfill/polyfill.js'></script>
+    <script src='/assets/javascripts/config.js'></script>
+    <script src='/assets/javascripts/jquery.extensions.js'></script>
+    <script src='/assets/javascripts/forms.js'></script>
+    <script src='/assets/javascripts/components.js'></script>
+    <script src='/assets/javascripts/application.js'></script>
+    <script src='/assets/javascripts/project.js'></script>
+    <!-- endbuild -->
+  </head>
+  <body class="page" id="page">
+    <style>
+      .alert-no-js {display: none;}
+      .no-js .alert-no-js {display: block;}
+    </style>
+    <div class='alert-no-js c-alert __l c-bg __red' role='alert'>
+      <h1>У вас отключен JavaScript.</h1>
+    </div>
+    <!--[if lt IE 9]>
+      <div role='alert' style='padding: 30px; background-color: #2980b9; text-align: center;'>
+        <h1 style='color: #fff; font-size: 40px; line-height: 1.5;'>
+          Использование устаревшего браузера
+          <br>
+          повышает риск взлома вашего компьютера.
+          <br>
+          <a href='http://browsehappy.com/' style='color: #fff; text-decoration: underline;' target='_blank'>Обновите свой браузер!</a>
+        </h1>
+      </div>
+    <![endif]-->
+    <header class='header' id='header' role='banner'>
+      <div class='ctn'>
+        <a class='logo' href='/'>Logo</a>
+        <ul class='header-menu grid __no-gutter'><li class='header-menu_i grid-i __grid-1-7 __prefix-5-7'>
+            <a class='header-menu_i_a' href='#'>Search</a>
+          </li><li class='header-menu_i js-login grid-i __grid-1-7'>
+            <a class='header-menu_i_a __special' href='#'>Login / Register</a>
+            <div class='menu_i_dropdown __login'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Login'>
+                </div>
+                <p class='tx __upper'>
+                  Not a member?
+                  <a class='js-toggle' href='#'>Register now</a>
+                </p>
+              </form>
+            </div>
+            <div class='menu_i_dropdown __register'>
+              <form class='form'>
+                <div class='m-b_1'>
+                  <input class='form-el __tx __block' placeholder='E-MAIL' type='text'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __tx __block' placeholder='PASSWORD' type='password'>
+                </div>
+                <div class='m-b_2'>
+                  <input class='form-el __btn __black grid-i __grid-1-2' type='submit' value='Register'>
+                </div>
+                <p class='tx __upper'>
+                  <a class='js-toggle' href='#'>Login</a>
+                </p>
+              </form>
+            </div>
+          </li></ul>
+      </div>
+    </header>
+    <nav class='nav' id='nav' role='navigation'>
+      <div class='ctn'>
+        <ul class='menu grid __no-gutter'><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Fragrances</a>
+            <!-- %div.menu_dropdown -->
+            <!-- .grid -->
+            <!-- .grid-i.grid-1-7.va-m.c-bg.__green> -->
+            <!-- %p.tx.__l.__600 По алфавиту: -->
+            <!-- .grid-i.grid-6-7.va-m.c-bg.__green> 1 -->
+            <!-- %ul -->
+            <!-- 1 -->
+            <!-- 5 -->
+            <!-- A -->
+            <!-- B -->
+            <!-- C -->
+            <!-- D -->
+            <!-- E -->
+            <!-- F -->
+            <!-- G -->
+            <!-- H -->
+            <!-- I -->
+            <!-- J -->
+            <!-- K -->
+            <!-- L -->
+            <!-- M -->
+            <!-- N -->
+            <!-- O -->
+            <!-- P -->
+            <!-- R -->
+            <!-- S -->
+            <!-- T -->
+            <!-- U -->
+            <!-- V -->
+            <!-- W -->
+            <!-- X -->
+            <!-- Y -->
+            <!-- Z -->
+            <!-- Показать все -->
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='/brands_logos.html'>Brands</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='/notes_logos.html'>Notes</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='/groups.html'>Group</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Top</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='/offers.html'>Offers</a>
+          </li><li class='menu_i grid-i __grid-1-7'>
+            <a class='menu_i_a' href='#'>Social</a>
+          </li></ul>
+      </div>
+    </nav>
+    <main class="main" id="main" role="main">
+      <nav class='breadcrumbs'>
+        <div class='ctn'>
+          <ul>
+            <li class='breadcrumbs_i'>
+              <a class='breadcrumbs_i_a' href='/'>Home</a>
+            </li>
+            <li class='breadcrumbs_i'>
+              <a class='breadcrumbs_i_a' href='/'>Fragrance</a>
+            </li>
+            <li class='breadcrumbs_i'>
+              <a class='breadcrumbs_i_a' href='/'>Marc Jacobs</a>
+            </li>
+            <li class='breadcrumbs_i'>
+              <a class='breadcrumbs_i_a' href='/'>Marc Jacobs Honey</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="ctn">
+        <div class="p-t_3 p-b_6">
+          <section aria-label="Message" class="section" role="region">
+            <h2 class="tx __upper m-b_2">
+              Народный
+              <span class="tx __400">Рейтинг</span>
+            </h2>
+            <div class="block">
+              <div class="grid __no-gutter"><div class="grid-i __grid-2-7">
+                  <aside class="settings-sidebar">
+                    <nav>
+                      <ul class="settings-nav">
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a __current" href="#">Ароматы</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Brands</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Ноты</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Люди</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Запахи</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">TOP 100</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Самые популярные</a>
+                        </li>
+                        <li class="settings-nav_i">
+                          <a class="settings-nav_i_a" href="#">Антирейтинг</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </aside>
+                </div><div class="grid-i __grid-5-7">
+                  <div class="block __normal">
+                    <div class="grid"><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-3.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-9.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-2.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-5.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-9.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-4.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-7.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-7.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-8.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-5.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-6.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-8.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-10.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-5.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-4.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-5.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-3.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-2.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-6.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-10.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-4.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-6.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-6.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-6.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-10.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-1.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-7.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div><div class="grid-i __grid-1-5"><figure class="brands-i">
+                          <div class="brands-i_photo m-b_1">
+                            <a href="/brand_show.html">
+                              <img alt="" height="74" src="/assets/images/fake/brand-3.jpg" width="74">
+                            </a>
+                          </div>
+                          <figcaption>
+                            <p>Brand name</p>
+                          </figcaption>
+                        </figure></div></div>
+                  </div>
+                </div></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class='footer' id='footer' role='contentinfo'>
+      <div class='ctn'>
+        <div class='grid __no-gutter'><div class='grid-i __grid-18-24'>
+            <nav>
+              <ul class='footer_nav __devider'>
+                <li class='footer_nav_i'>
+                  <a href='#'>Home</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Tour</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Coverage</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Store</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>About Us</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Blog</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Privacy Policy</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Terms of Service</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Help</a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div><div class='grid-i __grid-6-24'>
+            <nav class='tx __right'>
+              <ul class='footer_nav __icon'>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-google-plus'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-twitter'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-instagram'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-facebook'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-pinterest'></i>
+                  </a>
+                </li>
+                <li class='footer_nav_i'>
+                  <a href='#'>
+                    <i class='fa fa-skype'></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div></div>
+      </div>
+    </footer>
+  </body>
+</html>
