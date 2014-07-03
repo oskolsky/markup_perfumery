@@ -170,7 +170,52 @@
 // .. SIDEBAR AREA
 //
 //****************************************************************************************************
-.sidebar {}
+.sidebar {
+
+  @include prefixes(box-sizing, border-box);
+
+  &.__nav {
+    border: 1px solid $border-color;
+    background-color: #f4f4f5;
+    margin-right: -1px;
+  }
+
+}
+
+//
+// .. Sidebra nav
+//
+.sidebar-nav {
+  border-bottom: 1px solid $border-color;
+}
+  .sidebar-nav_i {
+    &:first-child {
+      .sidebar-nav_i_a {border-top: none !important;}
+    }
+  }
+    .sidebar-nav_i_a {
+      display: block;
+      padding: 1.5rem 3rem;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid #f9f9f9;
+      background-color: #eff2f9;
+      font-weight: 700;
+      font-size: 1.6rem;
+      @include prefixes(transition, all .33s);
+      span {
+        display: block;
+        margin-top: .5rem;
+        color: $muted-color;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+      &.__current, &:hover {
+        border-color: #1c84dc;
+        background-color: #1c84dc;
+        color: #fff;
+        span {color: inherit;}
+      }
+    }
 
 
 
@@ -180,6 +225,9 @@
 //
 //****************************************************************************************************
 .section {
+
+  @include prefixes(box-sizing, border-box);
+
   &.__bg {
     &.__white {background-color: #fff;}
     &.__gray  {background-color: #f5f5f9;}
@@ -188,6 +236,14 @@
     &:not(:last-child) {border-bottom: 1px solid $border-color;}
   }
   &.__margin {margin-right: 20px;}
+
+  //
+  // .. Rating
+  //
+  &.__rating {    
+    padding: 3rem;
+    border: 1px solid $border-color;    
+  }
 }
 
 //
@@ -1174,7 +1230,7 @@
     }
     .list_collections_i_names {
       line-height: 20px;
-      a { @extend .a.invert; }
+      a { @extend .a.__invert; }
     }
 
 
@@ -1345,7 +1401,6 @@
 
 // .. Block
 .block {
-  // padding: 0 10px;
   border: 1px solid $border-color;
   background-color: #fff;
   &.__default {
@@ -1385,7 +1440,7 @@
 //
 .brands-tags {
   &:not(:last-child) {margin-bottom: 30px;}
-  a { @extend .a.invert; }
+  a { @extend .a.__invert; }
 }
   .brands-tags_dt {
     margin-bottom: 10px;

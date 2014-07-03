@@ -15,46 +15,77 @@
       .ctn
         .p-t_3.p-b_6
 
-          %section.section{role: "region", "aria-label" => "Message"}
-            
-            %h2.tx.__upper.m-b_2 
-              Народный 
-              %span.tx.__400 Рейтинг
+          %section.section.m-b_1{role: "region", "aria-label" => "Content title"}
+            .grid
+              .grid-i.__grid-2-3.va-m>
+                %h2.tx.__upper 
+                  Народный 
+                  %span.tx.__400 Рейтинг
+              .grid-i.__grid-1-3.va-m>
+                %form.form
+                  .grid
+                    .grid-i.__grid-1-2.va-m>
+                      %label.form-el.__label.__block.tx.__right Sorting by:&nbsp;
+                    .grid-i.__grid-1-2.va-m>
+                      .form-el.__select.__block.__fake
+                        %p &nbsp;
+                        %select.form-el.__select.__real
+                          %option{selected: "selected"} дата
+                          %option имя
+                          %option рейтинг
 
-            .block
-              .grid.__no-gutter
+          .grid.__no-gutter
+            .grid-i.__grid-2-7>
+              
+              %aside.sidebar.__nav{data: {resize: "height"}}
+                %nav
+                  %ul.sidebar-nav
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a.__current{href: "#"} 
+                        Ароматы
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Brands
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Ноты
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Люди
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Запахи
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        TOP 100
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Самые популярные
+                        %span 3 New Messages
+                    %li.sidebar-nav_i
+                      %a.sidebar-nav_i_a{href: "#"} 
+                        Антирейтинг
+                        %span 3 New Messages
 
-                .grid-i.__grid-2-7>
-                  %aside.settings-sidebar
-                    %nav
-                      %ul.settings-nav
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a.__current{href: "#"} Ароматы
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Brands
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Ноты
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Люди
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Запахи
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} TOP 100
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Самые популярные
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "#"} Антирейтинг
+            .grid-i.__grid-5-7>
 
-                .grid-i.__grid-5-7>
-                  .block.__normal
-                    .grid
-                      - 1.upto(28) do
-                        .grid-i.__grid-1-5>
-                          %figure.brands-i>
-                            .brands-i_photo.m-b_1
-                              %a{href: "/brand_show.html"}
-                                %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
-                            %figcaption
-                              %p Brand name
+              %section.section.__rating{role: "region", "aria-label" => "Rating", data: {resize: "height"}}
+                .grid
+                  - 1.upto(30) do |i|
+                    .grid-i.__grid-1-5>
+                      %figure.brands-i>
+                        .brands-i_photo.m-b_1
+                          %a.double-hover{href: "/brands_show.html##{i}"}
+                            %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
+                        %figcaption
+                          %p.m-b_1
+                            %a.a.__invert.double-hover{href: "/brands_show.html##{i}"} Brand name
+                          .stars.__readonly.va-m{data: {score: "#{rand(1..5)}"}}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

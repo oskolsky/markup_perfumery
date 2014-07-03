@@ -179,14 +179,6 @@ $(function() {
   });
 
   //
-  // .. Resize to max height
-  //
-  $('[data-resize="height"]').each(function() {
-    var itemClass = $(this).data('item');
-    $(this).find('.' + itemClass).resizeToMaxHeight();
-  });
-
-  //
   // .. Scroll pane init
   //
   $('.scroll-pane').jScrollPane();
@@ -220,4 +212,17 @@ $(function() {
 // .. LOAD
 //
 //****************************************************************************************************
-$(window).load(function() {});
+$(window).load(function() {
+
+  //
+  // .. Resize to max height
+  //
+  $('[data-resize="height"]').resizeToMaxHeight();
+
+
+  // $('[data-resize="height"]').each(function() {
+  //   var parentClass = $(this).data('item');
+  //   $(this).find('.' + itemClass).resizeToMaxHeight();
+  // });
+
+});
