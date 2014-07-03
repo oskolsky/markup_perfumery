@@ -15,104 +15,102 @@
       .ctn
         .p-t_2.p-b_6
 
-          %section.section{role: "region", "aria-label" => "Message"}
-            .m-b_1
-              .grid
-                .grid-i.__grid-2-3.va-m>
-                  %h2.tx.__upper 
-                    Your 
-                    %span.tx.__400 Messages
-                .grid-i.__grid-1-3.va-m>
-                  %form.form
-                    .grid
-                      .grid-i.__grid-1-2.va-m>
-                        %label.form-el.__label.__block.tx.__right Sorting by:&nbsp;
-                      .grid-i.__grid-1-2.va-m>
-                        .form-el.__select.__block.__fake
-                          %p &nbsp;
-                          %select.form-el.__select.__real
-                            %option{selected: "selected"} дата
-                            %option имя
-                            %option рейтинг
+          %section.section.m-b_1{role: "region", "aria-label" => "Content sorting"}
+            .grid
+              .grid-i.__grid-2-3.va-m>
+                %h2.tx.__upper 
+                  Your 
+                  %span.tx.__400 Messages
+              .grid-i.__grid-1-3.va-m>
+                %form.form
+                  .grid
+                    .grid-i.__grid-1-2.va-m>
+                      %label.form-el.__label.__block.tx.__right Sorting by:&nbsp;
+                    .grid-i.__grid-1-2.va-m>
+                      .form-el.__select.__block.__fake
+                        %p &nbsp;
+                        %select.form-el.__select.__real
+                          %option{selected: "selected"} дата
+                          %option имя
+                          %option рейтинг
 
-            .block
-              .grid.__no-gutter
-                .grid-i.__grid-2-7>
-                  .messages-sidebar
-                    .messages-search
-                      %form.form
-                        %input.form-el.__tx.__border.__block{type: "text", placeholder: "Search"}
-                    .messages-user-list
-                      - 1.upto(10) do
-                        .messages-user-list_i
-                          .grid.__no-gutter
-                            .grid-i.__grid-2-7.va-m>
-                              .tx.__center
-                                %img.messages-user-list_i_avatar{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 34, height: 34, alt: "Taylor Swift"}
-                            .grid-i.__grid-5-7.va-m>
-                              %p.messages-user-list_i_name Andrej Ivanov
-                              %p.messages-user-list_i_count 3 New Messages
-                    %a.messages-more{href: "#"} Show more
-                .grid-i.__grid-5-7>
-                  .messages-feed.scroll-pane
-                    - 1.upto(10) do
-                      %article.messages-i
-                        .grid.__no-gutter
-                          .grid-i.__grid-3-17>
-                            .tx.__center
-                              %a.avatar{href: "#"}
-                                %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
-                          .grid-i.__grid-13-17>
-                            .cf.m-b_1
-                              .f-l
-                                %p.tx.__600
-                                  %a{href: "#"} Alexandra Klimov
-                              .f-r
-                                %p.tx.__muted 25/03/2014 15:20
-                            %hr.hr.m-b_1
-                            %p I&rsquo;m really excited to&nbsp;share with you some concept app&nbsp;UI components based on&nbsp;iOS 7&nbsp;visual guidelines. Be&nbsp;sure to&nbsp;check out the full preview and don&rsquo;t forget to&nbsp;download the file. This is&nbsp;an&nbsp;incrediable opportunity for you and your friends. Don&rsquo;t forget to&nbsp;share it&nbsp;with your friends.
-                      %article.messages-i
-                        .grid.__no-gutter
-                          .grid-i.__grid-3-17>
-                            .tx.__center
-                              %a.avatar{href: "#"}
-                                %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
-                          .grid-i.__grid-13-17>
-                            .cf.m-b_1
-                              .f-l
-                                %p.tx.__600
-                                  %a{href: "#"} Alexandra Osipenko
-                              .f-r
-                                %p.tx.__muted 25/03/2014 15:20
-                            %hr.hr.m-b_1
-                            %p Very nice work on&nbsp;this UI. Very modern color scheme and good work on&nbsp;hierarchy, looks really easy-to-use and intuitive.
-                  .messages-form
+          .grid.__no-gutter
+            .grid-i.__grid-2-7>
+
+              %aside.sidebar.__nav{data: {resize: "height"}}
+                .messages-sidebar
+                  .messages-search
                     %form.form
-                      .grid.__no-gutter.m-b_1
-                        .grid-i.__grid-3-17.va-m>
+                      %input.form-el.__tx.__border.__block{type: "text", placeholder: "Search"}
+                  %ul.messages-user-list
+                    - 1.upto(10) do
+                      %li.messages-user-list_i
+                        .grid.__no-gutter
+                          .grid-i.__grid-2-7.va-m>
+                            .tx.__center
+                              %img.messages-user-list_i_avatar{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 34, height: 34, alt: "Taylor Swift"}
+                          .grid-i.__grid-5-7.va-m>
+                            %p.messages-user-list_i_name Andrej Ivanov
+                            %p.messages-user-list_i_count 3 New Messages
+                  %a.messages-more{href: "#"} Show more
+
+            .grid-i.__grid-5-7>
+
+              %section.section.__messages{role: "region", "aria-label" => "Message", data: {resize: "height"}}
+                .messages-feed
+                  - 1.upto(10) do
+                    %article.messages-i
+                      .grid.__no-gutter
+                        .grid-i.__grid-3-17>
                           .tx.__center
                             %a.avatar{href: "#"}
                               %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
-                        .grid-i.__grid-13-17.va-m>
-                          %textarea.form-el.__textarea.__border.__block{rows: 5, placeholder: "Write your answer..."}
+                        .grid-i.__grid-13-17>
+                          .cf.m-b_1
+                            .f-l
+                              %p.tx.__600
+                                %a{href: "#"} Alexandra Klimov
+                            .f-r
+                              %p.tx.__muted 25/03/2014 15:20
+                          %hr.hr.m-b_1
+                          %p I&rsquo;m really excited to&nbsp;share with you some concept app&nbsp;UI components based on&nbsp;iOS 7&nbsp;visual guidelines. Be&nbsp;sure to&nbsp;check out the full preview and don&rsquo;t forget to&nbsp;download the file. This is&nbsp;an&nbsp;incrediable opportunity for you and your friends. Don&rsquo;t forget to&nbsp;share it&nbsp;with your friends.
+                    %article.messages-i
                       .grid.__no-gutter
-                        .grid-i.__grid-10-17.__prefix-3-17.va-m>
-                          %ul.messages-form_action
-                            %li.messages-form_action_i>
-                              %a.messages-form_action_i_a{href: "#"}
-                                %i.fa.fa-camera
-                            %li.messages-form_action_i>
-                              %a.messages-form_action_i_a{href: "#"}
-                                %i.fa.fa-link
-                            %li.messages-form_action_i>
-                              %a.messages-form_action_i_a{href: "#"}
-                                %i.fa.fa-paperclip
-                        .grid-i.__grid-3-17.va-m>
-                          %input.form-el.__btn.__purple.__block{type: "submit", value: "Send"}
-
-      :javascript
-        var sidebarH = $('.messages-sidebar').outerHeight();
-        var formH = $('.messages-form').outerHeight();
-        $('.messages-feed').height(sidebarH - formH);
+                        .grid-i.__grid-3-17>
+                          .tx.__center
+                            %a.avatar{href: "#"}
+                              %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
+                        .grid-i.__grid-13-17>
+                          .cf.m-b_1
+                            .f-l
+                              %p.tx.__600
+                                %a{href: "#"} Alexandra Osipenko
+                            .f-r
+                              %p.tx.__muted 25/03/2014 15:20
+                          %hr.hr.m-b_1
+                          %p Very nice work on&nbsp;this UI. Very modern color scheme and good work on&nbsp;hierarchy, looks really easy-to-use and intuitive.
+                .messages-form
+                  %form.form
+                    .grid.__no-gutter.m-b_1
+                      .grid-i.__grid-3-17.va-m>
+                        .tx.__center
+                          %a.avatar{href: "#"}
+                            %img.avatar_photo{src: "/assets/images/fake/face-#{rand(1..25)}.jpg", width: 65, height: 65, alt: "Taylor Swift"}
+                      .grid-i.__grid-13-17.va-m>
+                        %textarea.form-el.__textarea.__border.__block{rows: 5, placeholder: "Write your answer..."}
+                    .grid.__no-gutter
+                      .grid-i.__grid-10-17.__prefix-3-17.va-m>
+                        %ul.messages-form_action
+                          %li.messages-form_action_i>
+                            %a.messages-form_action_i_a{href: "#"}
+                              %i.fa.fa-camera
+                          %li.messages-form_action_i>
+                            %a.messages-form_action_i_a{href: "#"}
+                              %i.fa.fa-link
+                          %li.messages-form_action_i>
+                            %a.messages-form_action_i_a{href: "#"}
+                              %i.fa.fa-paperclip
+                      .grid-i.__grid-3-17.va-m>
+                        %input.form-el.__btn.__purple.__block{type: "submit", value: "Send"}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

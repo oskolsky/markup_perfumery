@@ -5425,6 +5425,9 @@ a.c-btn:hover {
   .section.__rating {
     padding: 3rem;
     border: 1px solid #d5d5d5; }
+  .section.__messages {
+    padding: 3rem 0;
+    border: 1px solid #d5d5d5; }
 
 .section_header {
   position: relative;
@@ -5982,10 +5985,8 @@ a.c-btn:hover {
   .reviews-i_action_i.__report:hover {
     color: #903d1e; }
 
-.messages-feed, .settings-form {
-  padding: 20px 0 40px;
-  min-height: 550px;
-  border-left: 1px solid #d5d5d5; }
+.messages-feed {
+  margin-bottom: 3rem; }
 
 .messages-i:not(:last-child) {
   margin-bottom: 35px; }
@@ -5994,7 +5995,6 @@ a.c-btn:hover {
 
 .messages-form {
   border-top: 1px solid #d5d5d5;
-  border-left: 1px solid #d5d5d5;
   background-color: #f9f9f9;
   padding: 40px 0 30px; }
 
@@ -6020,9 +6020,13 @@ a.c-btn:hover {
 
 .messages-search {
   padding: 20px 10px;
-  border-bottom: 1px solid #d5d5d5; }
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #fff; }
   .messages-search .form-el.__tx {
     background-color: #f9f9f9; }
+
+.messages-user-list {
+  border-bottom: 1px solid #d5d5d5; }
 
 .messages-user-list_i {
   padding: 15px 0;
@@ -6056,6 +6060,7 @@ a.c-btn:hover {
 .messages-more {
   display: block;
   height: 75px;
+  border-bottom: 1px solid #d5d5d5;
   background-color: #f9f9f9;
   color: #6a6a6a;
   text-align: center;
