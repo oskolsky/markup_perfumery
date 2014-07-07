@@ -89,13 +89,14 @@
                                 .list_collections_i_group A
                               .grid-i.__grid-14-15>
                                 .grid
-                                  - 1.upto(28) do
+                                  - 1.upto(28) do |i|
                                     .grid-i.__grid-1-7>
                                       %figure.brands-i>
                                         .brands-i_photo.m-b_1
-                                          %a{href: "/brand_show.html"}
+                                          %a.double-hover{href: "/brands_show.html##{i}"}
                                             %img{src: "/assets/images/fake/brand-#{rand(1..10)}.jpg", width: 74, height: 74, alt: ""}
                                         %figcaption
-                                          %p Brand name
+                                          %p 
+                                            %a.a.__invert.double-hover{href: "/brands_show.html##{i}"} Brand name
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

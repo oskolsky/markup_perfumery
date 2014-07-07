@@ -15,50 +15,32 @@
       .ctn
         .p-t_3.p-b_6
 
-          %section.section{role: "region", "aria-label" => "Message"}
-            
-            %h2.tx.__upper.m-b_2 Account Settings
+          %h2.tx.__upper.m-b_2 Account Settings
 
-            .block
-              .grid.__no-gutter
+          .grid.__no-gutter
+            .grid-i.__grid-2-7>
 
-                .grid-i.__grid-2-7>
-                  %aside.settings-sidebar
-                    %nav
-                      %ul.settings-nav
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_personal.html"} Personal
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_picture.html"} Profile picture
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a.__current{href: "/profile_settings_interests.html"} Occupation and interests
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_location.html"} Language and location
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_email.html"} Email settings
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_password.html"} Email and password
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_privacy.html"} Privacy
-                        %li.settings-nav_i
-                          %a.settings-nav_i_a{href: "/profile_settings_сonnections.html"} Connections
+              %aside.sidebar.__nav{data: {resize: "height"}}
+                = Haml::Engine.new(File.read('views/layouts/_nav_settings.haml')).render
 
-                .grid-i.__grid-5-7>
-                  %form.form.settings-form
-                    %h3.tx.__upper.__600.m-b_2 Occupation and interests
-                    %div.m-b_1
-                      .grid
-                        .grid-i.__grid-1-4.va-m>
-                          %label.form-el.__label Occupation:
-                        .grid-i.__grid-3-4.va-m>
-                          %input.form-el.__tx.__border.__block{type: "text"}
-                    %div.m-b_3
-                      .grid
-                        .grid-i.__grid-1-4.va-m>
-                          %label.form-el.__label Interests:
-                        .grid-i.__grid-3-4.va-m>
-                          %textarea.form-el.__textarea.__border.__block{rows: 10}
-                    %div
-                      %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
+            .grid-i.__grid-5-7>
+              %section.section.__settings{role: "region", "aria-label" => "Profile settings", data: {resize: "height"}}
+
+                %form.form
+                  %h3.tx.__upper.__600.m-b_2 Occupation and interests
+                  %div.m-b_1
+                    .grid
+                      .grid-i.__grid-1-4.va-m>
+                        %label.form-el.__label Occupation:
+                      .grid-i.__grid-3-4.va-m>
+                        %input.form-el.__tx.__border.__block{type: "text"}
+                  %div.m-b_3
+                    .grid
+                      .grid-i.__grid-1-4.va-m>
+                        %label.form-el.__label Interests:
+                      .grid-i.__grid-3-4.va-m>
+                        %textarea.form-el.__textarea.__border.__block{rows: 10}
+                  %div
+                    %input.form-el.__btn.__purple.grid-i.__grid-1-4{type: "submit", value: "Save"}
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
