@@ -1,4 +1,4 @@
-@charset "IBM866";
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600&subset=latin,cyrillic);
 @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 @import url(vendor/jquery.arcticmodal-0.3.css);
@@ -4373,7 +4373,7 @@ html {
 
 body {
   min-width: 1000px;
-  background: white;
+  background: #fff;
   color: #5f6674;
   font-weight: 400;
   font-family: "Open Sans", Helvetica, Arial, sans-serif; }
@@ -4657,7 +4657,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     .form-el.__label .form-el.__checkbox.__fake,
     .form-el.__label .form-el.__radio.__fake {
       position: absolute;
-      top: -.2rem;
+      top: -.1rem;
       left: 0; }
     .form-el.__label span:last-child {
       display: inline-block;
@@ -4711,30 +4711,38 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
       background-color: #01c5c3;
       color: #fff; }
   .form-el.__checkbox.__fake {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border: 1px solid #d5d5d5;
     border-radius: .1rem;
     background: #fff; }
     .form-el.__checkbox.__fake[data-checked="true"]::after {
       color: #3b86c4;
-      line-height: 1.7rem;
+      line-height: 1.6rem;
       content: "\f00c";
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-family: FontAwesome; }
   .form-el.__radio.__fake {
     width: 1.6rem;
     height: 1.6rem;
-    border: 1px solid #ccc;
+    border: 1px solid #d5d5d5;
     border-radius: 50%;
     background: #fff; }
     .form-el.__radio.__fake[data-checked="true"]::after {
-      line-height: 1.4rem;
-      content: "\f111";
-      text-align: center;
-      font-size: .8rem;
-      font-family: FontAwesome; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: .8rem;
+      height: .8rem;
+      content: "";
+      border-radius: 50%;
+      background-color: #3b86c4;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
   .form-el.__file.__fake {
     padding: 0 65px 0 10px;
     height: 38px;
@@ -4986,9 +4994,9 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .c-bg.__dark {
   background-color: #597ea2; }
 .c-bg.__white {
-  background-color: white; }
+  background-color: #fff; }
 .c-bg.__black {
-  background-color: black; }
+  background-color: #000; }
 
 .c-badge {
   padding: .1rem .6rem;
@@ -5173,9 +5181,9 @@ a.c-btn:hover {
 .c-color.__dark {
   color: #2c3e50; }
 .c-color.__white {
-  color: white; }
+  color: #fff; }
 .c-color.__black {
-  color: black; }
+  color: #000; }
 
 .c-navigation {
   text-align: center;
@@ -5678,11 +5686,6 @@ a.c-btn:hover {
     height: 47px;
     border-bottom: 3px solid #fc5e7c; }
 
-.profile-contacts dt {
-  padding-right: 10px; }
-.profile-contacts dd {
-  padding-left: 10px; }
-
 .profile-rating dt, .profile-rating dd {
   vertical-align: bottom; }
 
@@ -5701,7 +5704,7 @@ a.c-btn:hover {
     background-color: #f5f5f9; }
   .tabs.__large .ui-tabs-nav li.ui-tabs-active a {
     border-bottom: 1px solid transparent;
-    background-color: white; }
+    background-color: #fff; }
 .tabs.__small .ui-tabs-nav {
   margin-left: 1px; }
   .tabs.__small .ui-tabs-nav li a {
@@ -6173,6 +6176,13 @@ a.c-btn:hover {
     vertical-align: middle;
     font-size: 1.6rem; }
 
+.search-form_row {
+  padding: 2rem 2.5rem; }
+  .search-form_row:not(:last-child) {
+    border-bottom: 1px solid #d5d5d5; }
+  .search-form_row:hover {
+    background-color: #d5d5d5; }
+
 .hr {
   margin: 0 auto;
   width: 100%;
@@ -6294,6 +6304,11 @@ a.c-btn:hover {
   text-align: center;
   font-size: 4rem; }
 
+.aside-block dt {
+  padding-right: 5px; }
+.aside-block dd {
+  padding-left: 10px; }
+
 .footer {
   height: 100px;
   border-top: 1px solid #d5d5d5;
@@ -6329,3 +6344,5 @@ a.c-btn:hover {
 .jspDrag {
   border-radius: .2rem;
   background-color: #d5d9e3; }
+
+/*# sourceMappingURL=application.scss.map */

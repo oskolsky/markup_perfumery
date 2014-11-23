@@ -583,14 +583,6 @@
     }
 
 //
-// .. Contacts
-//
-.profile-contacts {
-  dt {padding-right: 10px;}
-  dd {padding-left: 10px;}
-}
-
-//
 // .. Ratings
 //
 .profile-rating {
@@ -1311,6 +1303,27 @@
 
 //****************************************************************************************************
 //
+// .. SEARCH FORM
+//
+//****************************************************************************************************
+.search-form {
+
+}
+
+  .search-form_row {
+    padding: 2rem 2.5rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
 // .. ELEMENTS
 //
 //****************************************************************************************************
@@ -1460,6 +1473,14 @@
   vertical-align: middle;
   text-align: center;
   font-size: 4rem;
+}
+
+//
+// .. Aside block
+//
+.aside-block {
+  dt {padding-right: 5px;}
+  dd {padding-left: 10px;}
 }
 
 
