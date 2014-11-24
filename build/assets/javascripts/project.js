@@ -183,6 +183,40 @@ $(function() {
   //
   $('.scroll-pane').jScrollPane();
 
+  //
+  // .. Switcher
+  //
+  $('.ui-switcher').find('.ui-switcher_i').on('click touchstart', function() {
+    var $el  = $(this).find('.ico');
+    var item = $(this).data('item');
+    var checked = $(this).attr('data-checked');
+
+    if (checked == 'false') {
+      $el.removeClass('__' + item + '-muted');
+      $el.addClass('__' + item);
+      $(this).attr({'data-checked': 'true'});
+    } else {
+      $el.removeClass('__' + item);
+      $el.addClass('__' + item + '-muted');
+      $(this).attr({'data-checked': 'false'});
+    }
+
+    return false;
+  });
+
+  //
+  // .. Checkbox pseudo links
+  //
+  $('.ui-checkbox-pseudo').on('click touchstart', function() {
+    var checked = $(this).attr('data-checked');
+    if (checked == 'false') { 
+      $(this).attr({'data-checked': 'true'});
+    } else {
+      $(this).attr({'data-checked': 'false'});
+    }
+    return false;
+  });
+
 
 
   //****************************************************************************************************

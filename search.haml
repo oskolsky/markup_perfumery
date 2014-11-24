@@ -52,7 +52,23 @@
                               %option выберите группу ароматов
 
                     .search-form_row
-                      %label.form-el.__label Вехи:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label Вехи:
+                        .grid-i.__grid-12-17.va-m>
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} все
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 60-е
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 70-е
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 80-е
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 90-е
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 00-е
+                          &nbsp;&nbsp;&nbsp;
+                          %a.a.__base.__pseudo.ui-checkbox-pseudo{href: "#", data: {checked: "false"}} 10-е
 
                     .search-form_row
                       .grid
@@ -105,19 +121,135 @@
                             %span не важно
 
                     .search-form_row
-                      %label.form-el.__label Сезонность:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label Сезонность:
+                        .grid-i.__grid-12-17.va-m>
+                          .ui-switcher
+                            %li.ui-switcher_i{data: {item: "winter", checked: "false"}}>
+                              %i.ico.__seasonality.__winter-muted>
+                              %span зима
+                            %li.ui-switcher_i{data: {item: "spring", checked: "false"}}>
+                              %i.ico.__seasonality.__spring-muted>
+                              %span весна
+                            %li.ui-switcher_i{data: {item: "summer", checked: "false"}}>
+                              %i.ico.__seasonality.__summer-muted>
+                              %span лето
+                            %li.ui-switcher_i{data: {item: "autumn", checked: "false"}}>
+                              %i.ico.__seasonality.__autumn-muted>
+                              %span осень
 
                     .search-form_row
-                      %label.form-el.__label Время дня:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label 
+                            %span> Время дня
+                            %span.ui-info{data: {info: "Очень слабый (нет шлейфа или близко к коже), Слабый (в интимной зоне) или при приближении),  Умеренный (на расстоянии вытянутой руки), Продолжительный (2 метра), Очень сильный (заполняет помещение)"}}> ?
+                            = ":"
+                        .grid-i.__grid-12-17.va-m>
+                          .ui-switcher
+                            %li.ui-switcher_i{data: {item: "morning", checked: "false"}}>
+                              %i.ico.__time-of-day.__morning-muted>
+                              %span утро
+                            %li.ui-switcher_i{data: {item: "daytime", checked: "false"}}>
+                              %i.ico.__time-of-day.__daytime-muted>
+                              %span день
+                            %li.ui-switcher_i{data: {item: "evening", checked: "false"}}>
+                              %i.ico.__time-of-day.__evening-muted>
+                              %span вечер
+                            %li.ui-switcher_i{data: {item: "night", checked: "false"}}>
+                              %i.ico.__time-of-day.__night-muted>
+                              %span ночь
 
                     .search-form_row
-                      %label.form-el.__label По шлейфу:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label 
+                            %span По шлейфу
+                            %span.ui-info{data: {info: "Очень слабый (нет шлейфа или близко к коже), Слабый (в интимной зоне) или при приближении),  Умеренный (на расстоянии вытянутой руки), Продолжительный (2 метра), Очень сильный (заполняет помещение)"}}> ?
+                            = ":"
+                        .grid-i.__grid-12-17.va-m>
+                          .ui-switcher
+                            %li.ui-switcher_i{data: {item: "no", checked: "false"}}>
+                              %i.ico.__plume.__no-muted>
+                              %span нет
+                            %li.ui-switcher_i{data: {item: "very-weak", checked: "false"}}>
+                              %i.ico.__plume.__very-weak-muted>
+                              %span
+                                очень
+                                %br
+                                слабый
+                            %li.ui-switcher_i{data: {item: "weak", checked: "false"}}>
+                              %i.ico.__plume.__weak-muted>
+                              %span слабый
+                            %li.ui-switcher_i{data: {item: "average", checked: "false"}}>
+                              %i.ico.__plume.__average-muted>
+                              %span средний
+                            %li.ui-switcher_i{data: {item: "strong", checked: "false"}}>
+                              %i.ico.__plume.__strong-muted>
+                              %span сильный
+                            %li.ui-switcher_i{data: {item: "very-strong", checked: "false"}}>
+                              %i.ico.__plume.__very-strong-muted>
+                              %span 
+                                очень
+                                %br
+                                сильный
 
                     .search-form_row
-                      %label.form-el.__label Стойкость на коже:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label 
+                            %span Стойкость на коже
+                            %span.ui-info{data: {info: "Очень слабый (нет шлейфа или близко к коже), Слабый (в интимной зоне) или при приближении),  Умеренный (на расстоянии вытянутой руки), Продолжительный (2 метра), Очень сильный (заполняет помещение)"}}> ?
+                            = ":"                          
+                        .grid-i.__grid-12-17.va-m>
+                          .ui-switcher
+                            %li.ui-switcher_i{data: {item: "1", checked: "false"}}>
+                              %i.ico.__time.__1-muted>
+                              %span до 30 м.
+                            %li.ui-switcher_i{data: {item: "2", checked: "false"}}>
+                              %i.ico.__time.__2-muted>
+                              %span до 60 м.
+                            %li.ui-switcher_i{data: {item: "3", checked: "false"}}>
+                              %i.ico.__time.__3-muted>
+                              %span 2 часа
+                            %li.ui-switcher_i{data: {item: "4", checked: "false"}}>
+                              %i.ico.__time.__4-muted>
+                              %span до 6 ч.
+                            %li.ui-switcher_i{data: {item: "5", checked: "false"}}>
+                              %i.ico.__time.__5-muted>
+                              %span до 12 ч.
+                            %li.ui-switcher_i{data: {item: "6", checked: "false"}}>
+                              %i.ico.__time.__6-muted>
+                              %span 24 ч.
 
                     .search-form_row
-                      %label.form-el.__label Стойкость на одежде:
+                      .grid
+                        .grid-i.__grid-5-17.va-m>
+                          %label.form-el.__label 
+                            %span Стойкость на одежде:
+                            %span.ui-info{data: {info: "Очень слабый (нет шлейфа или близко к коже), Слабый (в интимной зоне) или при приближении),  Умеренный (на расстоянии вытянутой руки), Продолжительный (2 метра), Очень сильный (заполняет помещение)"}}> ?
+                            = ":"
+                        .grid-i.__grid-12-17.va-m>
+                          .ui-switcher
+                            %li.ui-switcher_i{data: {item: "1", checked: "false"}}>
+                              %i.ico.__time.__1-muted>
+                              %span до 30 м.
+                            %li.ui-switcher_i{data: {item: "2", checked: "false"}}>
+                              %i.ico.__time.__2-muted>
+                              %span до 60 м.
+                            %li.ui-switcher_i{data: {item: "3", checked: "false"}}>
+                              %i.ico.__time.__3-muted>
+                              %span 2 часа
+                            %li.ui-switcher_i{data: {item: "4", checked: "false"}}>
+                              %i.ico.__time.__4-muted>
+                              %span до 6 ч.
+                            %li.ui-switcher_i{data: {item: "5", checked: "false"}}>
+                              %i.ico.__time.__5-muted>
+                              %span до 12 ч.
+                            %li.ui-switcher_i{data: {item: "6", checked: "false"}}>
+                              %i.ico.__time.__6-muted>
+                              %span 24 ч.
 
                     .search-form_row
                       .grid
@@ -129,10 +261,34 @@
                             %select.form-el.__select.__real
                               %option выберите ноты
 
+                    .search-form_row
+                      .grid
+                        .grid-i.__grid-1-2.va-m>
+                          %button.form-el.__btn.__purple.grid-i.__grid-2-3{type: "button"} Показать
+                        .grid-i.__grid-1-2.va-m>
+                          %p.tx.__right найдено 1846 вариантов
+
+              %section.section.__margin.m-b_3{role: "region", "aria-label" => "Search result"}
+                %h2.tx.__upper.m-b_2 Search result
+
+                .grid
+                  - 1.upto(9) do |i|
+                    .grid-i.__grid-1-5>
+                      %figure.carousel-i
+                        .carousel-i_photo.m-b_1
+                          %a{:href => "/encyclopedia_show.html"}
+                            %img.va-t{:alt => "Jimmy Choo", :height => "190", :src => "/assets/images/fake/product-#{i}.jpg", :width => "135"}/
+                        %figcaption
+                          %p.carousel-i_name
+                            %a.a.__base{:href => "/encyclopedia_show.html"}
+                              %span.tx.__upper Britney Spears
+
+
+
             .grid-i.__grid-7-24>
 
               %section.section.m-b_3{role: "region", "aria-label" => "About"}
-                %h2.tx.__upper.m-b_2 About 
+                %h2.tx.__upper.m-b_2 About
                 .block.__normal
                   .aside-block
                     %div.m-b_1

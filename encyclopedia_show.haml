@@ -80,27 +80,37 @@
                             %p.preferences-i_t Seasonality
                             %i.ico.__52.__autumn
                             %figcaption
-                              %p Autumn
+                              .ui-dropdown
+                                .ui-dropdown_toggle Autumn
+                                = Haml::Engine.new(File.read('views/common/_dropdown_body_vote_progress.haml')).render
                           %figure.preferences-i.grid-i.__grid-1-5>
                             %p.preferences-i_t Day Time
                             %i.ico.__52.__night
                             %figcaption
-                              %p Night
+                              .ui-dropdown
+                                .ui-dropdown_toggle Night
+                                = Haml::Engine.new(File.read('views/common/_dropdown_body_vote_progress.haml')).render
                           %figure.preferences-i.grid-i.__grid-1-5>
                             %p.preferences-i_t Feelings
                             %i.ico.__52.__love
                             %figcaption
-                              %p Love
+                              .ui-dropdown
+                                .ui-dropdown_toggle Love
+                                = Haml::Engine.new(File.read('views/common/_dropdown_body_vote_progress.haml')).render
                           %figure.preferences-i.grid-i.__grid-1-5>
                             %p.preferences-i_t Longevity
                             %i.ico.__52.__hours
                             %figcaption
-                              %p 3-4 hours
+                              .ui-dropdown
+                                .ui-dropdown_toggle 3-4 hours
+                                = Haml::Engine.new(File.read('views/common/_dropdown_body_vote_progress.haml')).render                                
                           %figure.preferences-i.grid-i.__grid-1-5>
                             %p.preferences-i_t Sillage
                             %i.ico.__52.__meters
                             %figcaption
-                              %p 1-2 meters
+                              .ui-dropdown
+                                .ui-dropdown_toggle 1-2 meters
+                                = Haml::Engine.new(File.read('views/common/_dropdown_body_vote_progress.haml')).render                                
                     %section.section.__border{role: "region", "aria-label" => "Personal preferences"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -154,9 +164,10 @@
                               %h4.tx.__upper Perfume Pyramid: <b>Top notes</b>
                             .grid-i.__grid-1-3.va-m>
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
-                        .carousel{data: {items: 6}}
+                        .grid
                           - 1.upto(20) do
-                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                            .grid-i.__grid-1-5>
+                              = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
                     %section.section{role: "region", "aria-label" => "Perfume Pyramid: Middle notes"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -165,9 +176,10 @@
                               %h4.tx.__upper Perfume Pyramid: <b>Middle notes</b>
                             .grid-i.__grid-1-3.va-m>
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
-                        .carousel{data: {items: 6}}
+                        .grid
                           - 1.upto(5) do
-                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                            .grid-i.__grid-1-5>
+                              = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
                     %section.section{role: "region", "aria-label" => "Perfume Pyramid: Base notes"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -176,9 +188,10 @@
                               %h4.tx.__upper Perfume Pyramid: <b>Base Notes</b>
                             .grid-i.__grid-1-3.va-m>
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
-                        .carousel{data: {items: 6}}
+                        .grid
                           - 1.upto(4) do
-                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                            .grid-i.__grid-1-5>
+                              = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
                     %section.section.__border{role: "region", "aria-label" => "Notes According to Your Votes"}
                       .p-t_3.p-b_3
                         .m-b_3
@@ -187,16 +200,18 @@
                               %h4.tx.__upper Notes <b>According to Your Votes</b>
                             .grid-i.__grid-1-3.va-m>
                               = Haml::Engine.new(File.read('views/common/_carousel_nav_small.haml')).render
-                        .carousel{data: {items: 6}}
+                        .grid
                           - 1.upto(4) do
-                            = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
-                          %figure.flavors-i>
-                            %a{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}}
-                              .flavors-i_photo.m-b_2
-                                %i.ico.__26.__plus
-                            %figcaption
-                              %p
-                                %a.tx.__base{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}} Add Yours
+                            .grid-i.__grid-1-5>
+                              = Haml::Engine.new(File.read('views/common/_flavors_item.haml')).render
+                          .grid-i.__grid-1-5>
+                            %figure.flavors-i>
+                              %a{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}}
+                                .flavors-i_photo.m-b_2
+                                  %i.ico.__26.__plus
+                              %figcaption
+                                %p
+                                  %a.tx.__base{href: "/dialogs/add-note.html#tab1", data: {dialog: "open", url: "/data/dialogs/add-note.html", tab: 1}} Add Yours
                     %section.section.__border{role: "region", "aria-label" => "This perfume reminds me"}
                       .p-t_3.p-b_3
                         .m-b_3

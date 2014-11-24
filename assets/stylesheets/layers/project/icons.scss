@@ -23,4 +23,68 @@
     &.__hours  {background-position: -156px 0;}
     &.__meters {background-position: -208px 0;}
   }
+
+  &.__time-of-day {
+    @include size(36, 36);
+    background-image: url(/assets/images/icons/ico-time-of-day.png);
+    &.__morning {background-position: 0 -36px;}
+    &.__daytime {background-position: -36px -36px;}
+    &.__evening {background-position: -72px -36px;}
+    &.__night   {background-position: -108px -36px;}
+
+    &.__morning-muted {background-position: 0 0;}
+    &.__daytime-muted {background-position: -36px 0;}
+    &.__evening-muted {background-position: -72px 0;}
+    &.__night-muted   {background-position: -108px 0;}
+  }
+
+  &.__seasonality {
+    @include size(36, 36);
+    background-image: url(/assets/images/icons/ico-seasonality.png);
+    &.__winter {background-position: 0 -36px;}
+    &.__spring {background-position: -36px -36px;}
+    &.__summer {background-position: -72px -36px;}
+    &.__autumn {background-position: -108px -36px;}
+
+    &.__winter-muted {background-position: 0 0;}
+    &.__spring-muted {background-position: -36px 0;}
+    &.__summer-muted {background-position: -72px 0;}
+    &.__autumn-muted   {background-position: -108px 0;}
+  }  
+
+  &.__plume {
+    @include size(36, 36);
+    background-image: url(/assets/images/icons/ico-plume.png);
+    &.__no          {background-position: 0 -36px;}
+    &.__very-weak   {background-position: -36px -36px;}
+    &.__weak        {background-position: -72px -36px;}
+    &.__average     {background-position: -108px -36px;}
+    &.__strong      {background-position: -144px -36px;}
+    &.__very-strong {background-position: -180px -36px;}
+
+    &.__no-muted          {background-position: 0 0;}
+    &.__very-weak-muted   {background-position: -36px 0;}
+    &.__weak-muted        {background-position: -72px 0;}
+    &.__average-muted     {background-position: -108px 0;}
+    &.__strong-muted      {background-position: -144px 0;}
+    &.__very-strong-muted {background-position: -180px 0;}
+  }  
+
+  &.__time {
+    @include size(36, 36);
+    background-image: url(/assets/images/icons/ico-time.png);
+    &.__1 {background-position: 0 -36px;}
+    &.__2 {background-position: -36px -36px;}
+    &.__3 {background-position: -72px -36px;}
+    &.__4 {background-position: -108px -36px;}
+    &.__5 {background-position: -144px -36px;}
+    &.__6 {background-position: -180px -36px;}
+
+    &.__1-muted {background-position: 0 0;}
+    &.__2-muted {background-position: -36px 0;}
+    &.__3-muted {background-position: -72px 0;}
+    &.__4-muted {background-position: -108px 0;}
+    &.__5-muted {background-position: -144px 0;}
+    &.__6-muted {background-position: -180px 0;}
+  }    
 }
